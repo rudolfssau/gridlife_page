@@ -7,4 +7,3 @@ function showohide() {
         elements.style.display = "none";
       }
 }
-console.log("y")
