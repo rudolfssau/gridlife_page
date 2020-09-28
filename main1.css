@@ -1,0 +1,237 @@
+
+
+/* Site Resets: */
+
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    transition: opacity 0.3s ease-in-out;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+/* Header Content: */
+
+
+@media only screen and (min-width: 1160px) {
+    #dropdown-item-container {
+        display: none;
+    }
+}
+#nav-img-container:hover, #nav-text-container:hover, #dropdown-img-container:hover {   /* <-- Change Opacity On Very Element When Hovering Over*/
+    opacity: 20%;
+    cursor: pointer;
+}
+#header-black-container > ul, #header-blue-container > ul {   /* <-- Aligning The Elements In One Line */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#header-black-ul {   /* <--- Black Header UL */
+    background-color: black;
+    height: 80px;
+}
+#header-blue-ul {   /* <--- Blue Header UL */
+    background-color: rgba(9, 108, 152, 1);
+    height: 60px;
+}
+#black-nav-img {
+    width: 300px;
+}
+
+
+/* Header Text Section: */
+
+
+#nav-text {
+    font-family: 'Teko', sans-serif;
+    color: white;
+    font-size: 30px;
+    padding-right: 9px;
+    padding-left: 9px;
+}
+
+
+/* Main Content: */
+
+
+@media only screen and (max-width: 1450px) {
+    #latest-news-container {
+        position: relative;
+    }
+    #latest-news-container > #latest-news-img {
+        opacity: 40%;
+        width: 1400px;
+    }
+    #latest-news-container > #latest-news-img:hover {
+        opacity: 100%;
+    }
+    #latest-news-container > #latest-news-img:hover ~ #latest-news {
+        display: none;
+    }
+    #latest-news {
+        left: 25%;
+        position: absolute;
+    }
+    #aside-container > #aside1 > #aside1-pic {
+        opacity: 40%;
+    }
+    #aside-container > #aside1 > #aside1-pic:hover {
+        opacity: 90%;
+    }#aside-container > #aside1 > #aside1-pic:hover ~ #aside1-text {
+        display: none;
+    }
+    #aside-container > #aside2 > #aside2-pic {
+        opacity: 40%;
+    }
+    #aside-container > #aside2 > #aside2-pic:hover {
+        opacity: 90%;
+    }#aside-container > #aside2 > #aside2-pic:hover ~ #aside2-text {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1357px) {
+    #latest-news:hover {
+        opacity: 30%;
+    }
+}
+@media only screen and (max-width: 1160px) {
+    #latest-news-container {
+        position: relative;
+    }
+    #latest-news {
+        position: absolute;
+        right: 25%;
+    }
+}
+#latest-news-img {
+    opacity: 90%;
+}
+#latest-news {
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+}
+#latest-news-container {   /* <-- Latest News */
+    font-size: 50px;
+    font-family: 'Teko', sans-serif;
+    margin: 1%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    background-color: rgba(9, 108, 152, 0.8);
+    width: 98%;
+    height: auto;
+}
+#sitebody {   /* <-- Site Body Section */ 
+    display: flex;
+    flex-direction: column;
+    background-image: url("Pictures/gridlife-fcpeuro-press-7.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+}
+#aside-container {
+    position: relative;
+    width: 98%;
+    margin: 1%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+#aside1-text, #aside2-text {
+    padding: 10px;
+}
+#aside1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5%;
+    width: 50%;
+}
+#aside2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5%;
+    width: 50%; 
+} 
+#aside1-text {
+    background-color: rgba(100, 148, 192, 0.8);
+    position: absolute;
+    opacity: 100%;
+    color: white;
+    font-size: 2.9vw;
+    white-space: nowrap;
+}
+#aside2-text {
+    background-color: rgba(35, 48, 82, 0.8);
+    position: absolute;
+    opacity: 100%;
+    color: white;
+    font-size: 2.9vw;
+    white-space: nowrap;
+}
+#aside1-pic {
+    opacity: 90%;
+    width: 100%;
+    height: auto;
+}
+#aside2-pic {
+    opacity: 90%;
+    width: 100%;
+    height: auto;
+}
+#ucimg {
+    max-width: 333px;
+    width: auto;
+    height: 0.75em;
+}
+#uev {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 1%;
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#uev > h1 {
+    padding: 20px;
+    color: white;
+}
+#tdinfo-container {
+    width: 98%;
+    height: 400px;
+    background-color: rgba(9, 108, 152, 0.8);
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tdinfo-text {
+    color: white;
+    font-family: 'Teko', sans-serif;
+    font-size: 4.7vw;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* Footer Content: */
+
+
+#page-footer {
+    background-image: url("Pictures/white.png");
+    background-repeat: repeat;
+    background-size: 400px;
+    background-color: rgba(9, 108, 152, 0.3);
+    opacity: 30%;
+    width: 100%;
+    height: 200px;
+    margin-top: auto;
+}
