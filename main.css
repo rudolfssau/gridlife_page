@@ -220,6 +220,17 @@
     white-space: nowrap;
     overflow: hidden;
 }
+div > #seasonpass {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    color: white;
+    font-size: 2.5vw;
+}
+#seasonpassimg {
+    display: flex;
+    justify-content: center;
+}
 
 
 /* Footer Content: */
