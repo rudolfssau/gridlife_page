@@ -223,13 +223,11 @@
 div > #seasonpass {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
     margin: 5px;
     color: white;
     font-size: 2.5vw;
 }
 #seasonpassimg {
-=======
     margin: 10px;
     color: white;
     font-size: 2.5vw;
@@ -248,8 +246,8 @@ div > #seasonpass {
 }
 #upcoming-t-events {
     color: white;
+    background-color: black;
     font-size: 2.9vw;
->>>>>>> Recent Changes
     display: flex;
     justify-content: center;
 }
