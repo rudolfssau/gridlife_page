@@ -5,7 +5,7 @@ r = requests.get("https://www.trackdays.co.uk/track-days/brands-hatch/")
 soup = BeautifulSoup(r.text, 'html.parser')
 type(soup)
 posts = soup.find_all(class_= "record-row clearfix")
-file = open('/Users/rudolfssaukums/GitHubProjects/VisualStudio/Playing_arround/Testpages_copy/scrape.csv', 'w')
+file = open('/Users/rudolfssaukums/.bitnami/stackman/machines/xampp/volumes/root/htdocs/Testpages_revised/trackinfo.csv', 'w')
 writer = csv.writer(file)
 writer.writerow(['Date', 'Track Fromat', 'Track Name', 'Price'])
 for post in posts:

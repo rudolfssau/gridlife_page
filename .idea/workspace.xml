@@ -32,12 +32,17 @@
       <option name="presentableId" value="Default" />
       <updated>1601390272016</updated>
       <workItem from="1601390273936" duration="13000" />
-      <workItem from="1601390725645" duration="821000" />
+      <workItem from="1601390725645" duration="1260000" />
+      <workItem from="1601393066796" duration="27000" />
+      <workItem from="1601393162598" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="WindowStateProjectService">
     <state x="461" y="250" key="SettingsEditor" timestamp="1601390738287">
