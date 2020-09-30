@@ -43,6 +43,10 @@
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Adds Changes
 /* Header Text Section: */
 
 
@@ -89,7 +93,12 @@
     }
     #aside-container > #aside2 > #aside2-pic:hover {
         opacity: 90%;
+<<<<<<< HEAD
     }#aside-container > #aside2 > #aside2-pic:hover ~ #aside2-text {
+=======
+    }
+    #aside-container > #aside2 > #aside2-pic:hover ~ #aside2-text {
+>>>>>>> Adds Changes
         display: none;
     }
 }
@@ -220,6 +229,7 @@
     white-space: nowrap;
     overflow: hidden;
 }
+<<<<<<< HEAD
 div > #seasonpass {
     display: flex;
     justify-content: center;
@@ -239,11 +249,17 @@ div > #seasonpass {
     flex-flow: column nowrap;
     display: flex;
     justify-content: center;
+=======
+#seasonpass-container {
+    display: flex;
+    position: relative;
+>>>>>>> Adds Changes
 }
 #seasonpass-img {
     width: 100%;
     height: auto;
 }
+<<<<<<< HEAD
 #upcoming-t-events {
     color: white;
     background-color: black;
@@ -251,6 +267,61 @@ div > #seasonpass {
     display: flex;
     justify-content: center;
 }
+=======
+#seasonpass {
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 25%;
+    color: white;
+    font-size: 4vw;
+    background-color: rgb(176, 58, 49);
+}
+#seasonpass-img:hover ~ #seasonpass {
+    display: none;
+}
+/*#seasonpass-container {*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*}*/
+/*div > #seasonpass {*/
+/*    position: absolute;*/
+/*    margin-right: 1000px;*/
+/*    margin-left: auto;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    margin: 5px;*/
+/*    color: white;*/
+/*    font-size: 2.5vw;*/
+/*    background-color: rgb(176, 58, 49);*/
+/*}*/
+/*#seasonpass {*/
+/*    position: absolute;*/
+/*    margin-right: 10px;*/
+/*    margin-left: auto;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+/*#seasonpass-img {*/
+/*    color: white;*/
+/*    font-size: 2.5vw;*/
+/*}*/
+/*#seasonpass-container {*/
+/*    flex-flow: column nowrap;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+/*#seasonpass-img {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
+/*#upcoming-t-events {*/
+/*    color: white;*/
+/*    background-color: black;*/
+/*    font-size: 2.9vw;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+>>>>>>> Adds Changes
 
 
 /* Footer Content: */
