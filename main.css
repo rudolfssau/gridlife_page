@@ -259,7 +259,7 @@
     position: relative;
 }
 #seasonpass-img {
-    /*opacity: 40%;*/
+    opacity: 50%;
     width: 100%;
     height: auto;
 }
@@ -270,7 +270,12 @@ div > #seasonpass {
     font-size: 4vw;
     color: white;
 }
-
+#seasonpass-img:hover ~ #seasonpass {
+    display: none;
+}
+#seasonpass-img:hover {
+    opacity: 90%;
+}
 
 /* Footer Content: */
 
