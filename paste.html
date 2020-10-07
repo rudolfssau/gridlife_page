@@ -1,0 +1,21 @@
+<div>
+    <label>Name:</label>
+    John Smith
+</div>
+And you need to locate the text "John Smith" after the label element.
+
+In this case, you can locate the label element by text and then use .next_sibling property:
+
+from bs4 import BeautifulSoup
+
+data = """
+<div>
+    <label>Name:</label>
+    John Smith
+</div>
+"""
+
+soup = BeautifulSoup(data, "html.parser")
+
+label = soup.find("label", text="Name:")
+print(label.next_sibling.strip())

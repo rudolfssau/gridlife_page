@@ -1,3 +1,6 @@
+/#dropdown-item-container backed/
+
+
 var elements = document.getElementById("dropdown-item-container");
 elements.style.display ="none"
 function showohide() {
@@ -7,3 +10,7 @@ function showohide() {
         elements.style.display = "none";
       }
 }
+
+
+$('trackinfo').html('trackinfo.html');
+console.log('helppp')
