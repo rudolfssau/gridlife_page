@@ -14,5 +14,5 @@ for post in posts:
     trackName = post.find(class_="record-column column-center").text.strip()
     price = post.find(class_="column-center table-button clearfix").text.strip()
 print(date + " " + trackFromat + " " + trackName + " " + price)
-writer.writerow([date, trackFromat, trackName, price])
+writer.writerow([date,"" trackFromat, trackName, price])
 file.close()    
