@@ -51,7 +51,8 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
 
 
 finishedFormat = ["Date", "Track Name", "Track Venue Name", "Track Fromat"]
-trackInfo = ({"Date":numberOfDay}, {"Track Name":trackNames}, {"Name Of Venue":nameOfVenues}, {"Track Format":formats})
+trackInfo_obj = ({"Date":numberOfDay}, {"Track_Name":trackNames}, {"Name_Of_Venue":nameOfVenues}, {"Track_Format":formats})
+trackInfo = ({"Data":trackInfo_obj})
 
 with open("tracklistinfo.json", "w") as write_file:
     json.dump(trackInfo, write_file, indent=4)
