@@ -1,4 +1,3 @@
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import json
 import requests
@@ -52,8 +51,7 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
 
 
 finishedFormat = ["Date", "Track Name", "Track Venue Name", "Track Fromat"]
-trackInfo = (numberOfDay + nameOfVenues + trackNames + formats)
-
+trackInfo = ({"Date":numberOfDay}, {"Track Name":trackNames}, {"Name Of Venue":nameOfVenues}, {"Track Format":formats})
 
 with open("tracklistinfo.json", "w") as write_file:
     json.dump(trackInfo, write_file, indent=4)
