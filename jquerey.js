@@ -1,12 +1,14 @@
-$.getJSON('tracklistinfo.json',function (data) {
-    console.log(data)
-    $("#trackinfo").empty();
+function getArray() {
+    return $.getJSON('JSON_Data/Date.json');
+}
+getArray().done(function (data) {
     var output = "";
-    $.each(data, function (key, val) {
-        $(output).append(output += val.Track_Name)
+    $.each(data, function (key,val) {
+        // console.log(val.Date)
+        output += val.Date;
     });
     $("#trackinfo").html(output)
-});
+})
 //     var output = []
 //     $.each(data, function (key,val) {
 //         output += "<p>" + val.Date + "</p>";
