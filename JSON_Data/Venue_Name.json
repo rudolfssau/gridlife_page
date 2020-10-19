@@ -1,13 +1,15 @@
-{
-    "Venue_Name": [
-        "Brands Hatch",
-        "Brands Hatch",
-        "Brands Hatch",
-        "Brands Hatch",
-        "Brands Hatch",
-        "Brands Hatch",
-        "Brands Hatch",
-        "Brands Hatch",
-        "Brands Hatch"
-    ]
-}
+[
+    {
+        "Venue_Name": [
+            "Brands Hatch",
+            "Brands Hatch",
+            "Brands Hatch",
+            "Brands Hatch",
+            "Brands Hatch",
+            "Brands Hatch",
+            "Brands Hatch",
+            "Brands Hatch",
+            "Brands Hatch"
+        ]
+    }
+]

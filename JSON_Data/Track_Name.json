@@ -1,13 +1,15 @@
-{
-    "Track_Name": [
-        "Indy circuit",
-        "Indy circuit",
-        "Indy circuit",
-        "Grand Prix circuit",
-        "Indy circuit",
-        "Indy circuit",
-        "Indy circuit",
-        "Indy circuit",
-        "Indy circuit"
-    ]
-}
+[
+    {
+        "Track_Name": [
+            "Indy circuit",
+            "Indy circuit",
+            "Indy circuit",
+            "Grand Prix circuit",
+            "Indy circuit",
+            "Indy circuit",
+            "Indy circuit",
+            "Indy circuit",
+            "Indy circuit"
+        ]
+    }
+]
