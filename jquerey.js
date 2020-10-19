@@ -1,5 +1,5 @@
 function getArray() {
-    return $.getJSON('JSON_Data/Date.json');
+    return $.getJSON('JSON_Data/trackinfo.json');
 }
 getArray().done(function (data) {
     var output = "";

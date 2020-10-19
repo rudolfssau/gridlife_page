@@ -51,7 +51,7 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
 
 
 finishedFormat = ["Date", "Track Name", "Track Venue Name", "Track Fromat"]
-trackInfo = ({"Date":numberOfDay}, {"Track_Name":trackNames}, {"Name_Of_Venue":nameOfVenues}, {"Track_Format":formats})
+trackInfo = ([{"Date":numberOfDay}], {"Track_Name":trackNames}, {"Name_Of_Venue":nameOfVenues}, {"Track_Format":formats})
 
 Date = [{"Date":numberOfDay}]
 Track_Name = {"Track_Name":trackNames}
@@ -66,7 +66,7 @@ with open("JSON_Data/Venue_Name.json", "w") as write_file:
     json.dump(Venue_Name, write_file, indent=4)
 with open("JSON_Data/Track_Format.json", "w") as write_file:
     json.dump(Track_Format, write_file, indent=4)
-with open("JSON_Data/trackinfo.json", "w") as write_file:
+with open("JSON_Data/JSON_Data/trackinfo.json", "w") as write_file:
     json.dump(trackInfo, write_file, indent=4)
 
 
