@@ -12,8 +12,9 @@ days = soup.find_all(class_="record-column mob-col")
 for day in days:
     exactday = day.find_all("div", {"class": "record-txt"})
     for day in exactday:
-        numberOfDay.append (day.text)
+        numberOfDay.append(day.text)
         print(numberOfDay)
+
 
 # Finds all of the Venues (example: Brands Hatch)
 
@@ -49,9 +50,6 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
         formats.append (format.text.strip())
         print(formats)
 
-
-finishedFormat = ["Date", "Track Name", "Track Venue Name", "Track Fromat"]
-
 Date = [{"Date":numberOfDay}]
 Track_Name = [{"Track_Name":trackNames}]
 Venue_Name = [{"Venue_Name":nameOfVenues}]
@@ -65,4 +63,5 @@ with open("JSON_Data/Venue_Name.json", "w") as write_file:
     json.dump(Venue_Name, write_file, indent=4)
 with open("JSON_Data/Track_Format.json", "w") as write_file:
     json.dump(Track_Format, write_file, indent=4)
+
 

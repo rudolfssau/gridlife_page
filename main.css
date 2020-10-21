@@ -221,30 +221,6 @@
     white-space: nowrap;
     overflow: hidden;
 }
-/*div > #seasonpass {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    margin: 5px;*/
-/*    color: white;*/
-/*    font-size: 2.5vw;*/
-/*}*/
-/*#seasonpassimg {*/
-/*    margin: 10px;*/
-/*    color: white;*/
-/*    font-size: 2.5vw;*/
-/*}*/
-/*#seasonpass {*/
-/*    background-color: rgb(176, 58, 49);*/
-/*}*/
-/*#seasonpass-container {*/
-/*    flex-flow: column nowrap;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
-/*#seasonpass-img {*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*}*/
 #upcoming-t-events {
     color: white;
     background-color: black;
@@ -275,6 +251,9 @@ div > #seasonpass {
 }
 #seasonpass-img:hover {
     opacity: 90%;
+}
+#trackinfos {
+    background-color: rgba(9, 108, 152, 1);
 }
 
 /* Footer Content: */

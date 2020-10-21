@@ -4,28 +4,44 @@ function getArray() {
 getArray().done(function (data) {
     var output = "";
     $.each(data, function (key,val) {
-        // console.log(val.Date)
         output += val.Date;
     });
     $("#trackinfo").html(output)
 });
 
-// function getArray() {
-//     return $.getJSON('JSON_Data/Track_Name.json');
-// }
-// getArray().done(function (data) {
-//     var output = "";
-//     $.each(data, function (key,val) {
-//         // console.log(val.Date)
-//         output += val.Track_Name;
-//     });
-//     $("#trackinfo1").html(output)
-// });
-//     var output = []
-//     $.each(data, function (key,val) {
-//         output += "<p>" + val.Date + "</p>";
-//     });
-//     $("#trackinfo").html(output)
-// });
+function getArray_0() {
+    return $.getJSON('JSON_Data/Track_Name.json');
+}
+getArray_0().done(function (data) {
+    var output_0 = "";
+    $.each(data, function (key,val) {
+        output_0 += val.Track_Name;
+    });
+    $("#trackinfo1").html(output_0)
+});
 
+function getArray_1() {
+    return $.getJSON('JSON_Data/Venue_Name.json');
+}
+getArray_1().done(function (data) {
+    var output_1 = "";
+    $.each(data, function (key,val) {
+        output_1 += val.Venue_Name;
+    });
+    $("#trackinfo2").html(output_1)
+});
 
+function getArray_2() {
+    return $.getJSON('JSON_Data/Track_Format.json');
+}
+getArray_2().done(function (data) {
+    var output_2 = "";
+    $.each(data, function (key,val) {
+        output_2 += val.Track_Format;
+    });
+    $("#trackinfo3").html(output_2)
+});
+
+$(document).ready(function () {
+    
+})
