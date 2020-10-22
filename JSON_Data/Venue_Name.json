@@ -1,15 +1,29 @@
 [
     {
-        "Venue_Name": [
-            "Brands Hatch",
-            "Brands Hatch",
-            "Brands Hatch",
-            "Brands Hatch",
-            "Brands Hatch",
-            "Brands Hatch",
-            "Brands Hatch",
-            "Brands Hatch",
-            "Brands Hatch"
-        ]
+        "Venue": "Brands Hatch"
+    },
+    {
+        "Venue": "Brands Hatch"
+    },
+    {
+        "Venue": "Brands Hatch"
+    },
+    {
+        "Venue": "Brands Hatch"
+    },
+    {
+        "Venue": "Brands Hatch"
+    },
+    {
+        "Venue": "Brands Hatch"
+    },
+    {
+        "Venue": "Brands Hatch"
+    },
+    {
+        "Venue": "Brands Hatch"
+    },
+    {
+        "Venue": "Brands Hatch"
     }
 ]

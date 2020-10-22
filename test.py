@@ -7,61 +7,56 @@ soup = BeautifulSoup(r.text, 'html.parser')
 
 # Finds all of the days and the dd/mm/yy (example: Tue 27/10/20)
 
-numberOfDay = []
-days = soup.find_all(class_="record-column mob-col")
-for day in days:
-    exactday = day.find_all("div", {"class": "record-txt"})
-    for day in exactday:
-        numberOfDay.append(day.text)
-        print(numberOfDay)
-
+finalDate = []
+for days in soup.find_all(class_="ddd-hide"):
+    dateFormated = days.nextSibling
+    nameOfDate = days.text
+    completeDate_n = nameOfDate + dateFormated
+    finalDates = {"Date": completeDate_n}
+    finalDate.append(finalDates)
 
 # Finds all of the Venues (example: Brands Hatch)
 
-nameOfVenues = []
+nameOfVenue = []
 for venueName in soup.find_all("div", {"class": "record-column"}):
     if "Hatch" in venueName.text:
-        nameOfVenues.append (venueName.text.strip())
-        print(nameOfVenues)
+        nameOfV = {"Venue": venueName.text.strip()}
+        nameOfVenue.append(nameOfV)
 
 # Finds all of the names of the track (example: Indy Circuit)
 
 trackNames = []
 for trackName in soup.find_all(class_="record-column column-center"):
     if "circuit" in trackName.text:
-        trackNames.append (trackName.text.strip())
+        trackN = {"Track": trackName.text.strip()}
+        trackNames.append(trackN)
         print(trackNames)
 
 # Finds all of the specific track formats (example: 4 Groups p/h)
 
-formats = []
+trackFormat = []
 for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
     if "Pitlane" in format.text:
-        formats.append (format.text.strip())
-        print(formats)
+        fmat = {"Format": format.text.strip()}
+        trackFormat.append(fmat)
 
 for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
     if "p/h" in format.text:
-        formats.append (format.text.strip())
-        print(formats)
+        fmat = {"Format": format.text.strip()}
+        trackFormat.append(fmat)
 
 for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
     if "Track Day" in format.text:
-        formats.append (format.text.strip())
-        print(formats)
-
-Date = [{"Date":numberOfDay}]
-Track_Name = [{"Track_Name":trackNames}]
-Venue_Name = [{"Venue_Name":nameOfVenues}]
-Track_Format = [{"Track_Format":formats}]
+        fmat = {"Format": format.text.strip()}
+        trackFormat.append(fmat)
 
 with open("JSON_Data/Date.json", "w") as write_file:
-    json.dump(Date, write_file, indent=4)
+        json.dump(finalDate, write_file, indent=4)
 with open("JSON_Data/Track_Name.json", "w") as write_file:
-    json.dump(Track_Name, write_file, indent=4)
+        json.dump(trackNames, write_file, indent=4)
 with open("JSON_Data/Venue_Name.json", "w") as write_file:
-    json.dump(Venue_Name, write_file, indent=4)
+        json.dump(nameOfVenue, write_file, indent=4)
 with open("JSON_Data/Track_Format.json", "w") as write_file:
-    json.dump(Track_Format, write_file, indent=4)
+        json.dump(trackFormat, write_file, indent=4)
 
 
