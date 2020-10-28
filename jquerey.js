@@ -1,50 +1,22 @@
-
-
-
 function getArray() {
-    return $.getJSON('JSON_Data/Date.json');
+    return $.getJSON('JSON_Data/trackInfo.json');
 }
 getArray().done(function (data) {
-    var output = "";
-    $.each(data, function (key,val) {
-        output += val.Date;
-    });
-    $("#trackinfo").html(output)
+    console.log(data)
 });
 
-function getArray_0() {
-    return $.getJSON('JSON_Data/Track_Name.json');
-}
-getArray_0().done(function (data) {
-    var output_0 = "";
-    $.each(data, function (key,val) {
-        output_0 += val.Track;
-    });
-    $("#trackinfo1").html(output_0)
-});
 
-function getArray_1() {
-    return $.getJSON('JSON_Data/Venue_Name.json');
-}
-getArray_1().done(function (data) {
-    var output_1 = "";
-    $.each(data, function (key,val) {
-        output_1 += val.Venue;
-    });
-    $("#trackinfo2").html(output_1)
-});
 
-function getArray_2() {
-    return $.getJSON('JSON_Data/Track_Format.json');
-}
-getArray_2().done(function (data) {
-    var output_2 = "";
-    $.each(data, function (key,val) {
-        output_2 += val.Format;
-    });
-    $("#trackinfo3").html(output_2)
-});
-
-$(document).ready(function () {
-    
-})
+// function buildTable(data) {
+//     var table = document.getElementById("trackinfo")
+//     for(i = 0; i < table.length; i++) {
+//         var row =  `<tr>
+//                         <td>${data[i].Date}</td>
+//                         <td>${data[i].Venue}</td>
+//                         <td>${data[i].Track}</td>
+//                         <td>${data[i].Format}</td>
+//                     </tr>`
+//         table.innerHTML += row
+//     }
+// }
+// console.log(buildTable(janis))
