@@ -8,14 +8,18 @@ soup = BeautifulSoup(r.text, 'html.parser')
 
 # Finds all of the days and the dd/mm/yy (example: Tue 27/10/20)
 
-
+dateForDiv = []
 finalDate = []
 for days in soup.find_all(class_="ddd-hide"):
     dateFormated = days.nextSibling
     nameOfDate = days.text.strip()
     completeDate_n = nameOfDate + dateFormated
+    dfD = {"DateShortened": nameOfDate + " " + dateFormated[1] + dateFormated[2]}
     finalD = {"Date": completeDate_n}
+#   For displaying the full date "'Date': 'Mon 14/12/20'":
     finalDate.append(finalD)
+#   For displaying "Mon 12" for the element when not hovering over it:
+    dateForDiv.append(dfD)
 
 
 # Finds all of the venue names (example: Brand Hatch)
@@ -63,8 +67,7 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
 # Joins each variable together in a specific order
 
 
-zipped_values = list(zip(finalDate, nameOfVenue, trackName, trackFormat))
-print(zipped_values)
+zipped_values = list(zip(finalDate, dateForDiv, nameOfVenue, trackName, trackFormat))
 
 
 # Dumps it into a local JSON file

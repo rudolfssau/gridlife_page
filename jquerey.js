@@ -9,10 +9,10 @@ getList().done(function (response) {
     if (data != null) {
         jQuery.each(data, function (index, value) {
             console.log(value[0].Date)
-            $("#tDate").append('<td>' + value[0].Date + '</td>')
-            $("#tVenue").append('<td>' + value[1].Venue + '</td>')
-            $("#tTrack").append('<td>' + value[2].Track + '</td>')
-            $("#tFormat").append('<td>' + value[3].Format + '</td>')
+            $("#tDate").append('<td>' + "Date: " + value[0].Date + '</td>')
+            $("#tVenue").append('<td>' + "Venue: " + value[1].Venue + '</td>')
+            $("#tTrack").append('<td>' + "Track Name: " + value[2].Track + '</td>')
+            $("#tFormat").append('<td>' + "Track Format: " + value[3].Format + '</td>')
         })
     }
 })
