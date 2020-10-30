@@ -1,34 +1,6 @@
 [
     [
         {
-            "Date": "Tue 27/10/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Indy circuit"
-        },
-        {
-            "Format": "Open Pitlane"
-        }
-    ],
-    [
-        {
-            "Date": "Thu 29/10/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Indy circuit"
-        },
-        {
-            "Format": "Open Pitlane"
-        }
-    ],
-    [
-        {
             "Date": "Mon 02/11/20"
         },
         {
@@ -52,7 +24,7 @@
             "Track": "Grand Prix circuit"
         },
         {
-            "Format": "Open Pitlane Track Day"
+            "Format": "Open Pitlane"
         }
     ],
     [
@@ -66,7 +38,7 @@
             "Track": "Indy circuit"
         },
         {
-            "Format": "Open Pitlane"
+            "Format": "Open Pitlane Track Day"
         }
     ],
     [
@@ -108,7 +80,7 @@
             "Track": "Indy circuit"
         },
         {
-            "Format": "4 Groups p/h"
+            "Format": "Open Pitlane"
         }
     ],
     [

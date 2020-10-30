@@ -1,22 +1,18 @@
-function getArray() {
-    return $.getJSON('JSON_Data/trackInfo.json');
+function getList() {
+    return $.ajax({
+        type: "GET",
+        url: "JSON_Data/trackInfo.json"
+    })
 }
-getArray().done(function (data) {
-    console.log(data)
-});
-
-
-
-// function buildTable(data) {
-//     var table = document.getElementById("trackinfo")
-//     for(i = 0; i < table.length; i++) {
-//         var row =  `<tr>
-//                         <td>${data[i].Date}</td>
-//                         <td>${data[i].Venue}</td>
-//                         <td>${data[i].Track}</td>
-//                         <td>${data[i].Format}</td>
-//                     </tr>`
-//         table.innerHTML += row
-//     }
-// }
-// console.log(buildTable(janis))
+getList().done(function (response) {
+    var data = JSON.parse(response);
+    if (data != null) {
+        jQuery.each(data, function (index, value) {
+            console.log(value[0].Date)
+            $("#tDate").append('<td>' + value[0].Date + '</td>')
+            $("#tVenue").append('<td>' + value[1].Venue + '</td>')
+            $("#tTrack").append('<td>' + value[2].Track + '</td>')
+            $("#tFormat").append('<td>' + value[3].Format + '</td>')
+        })
+    }
+})
