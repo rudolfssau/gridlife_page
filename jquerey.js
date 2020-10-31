@@ -7,7 +7,7 @@ function getList() {
 $.getJSON("JSON_Data/trackInfo.json", function(response) {
     var janis = response[1];
     var janisText = janis[1].DateShortened;
-    // console.log(ajn)
+    console.log(response[0][1].DateShortened)
     janis.forEach(function(elCreate) {
         var elCreateDiv = document.createElement("div");
         elCreateDiv.appendChild(document.createTextNode(response[1][1].DateShortened));
@@ -25,3 +25,8 @@ getList().done(function (response) {
         })
     }
 })
+// var arrya = [1,2,3,4,65,6,7,8,6]
+// console.log(arrya[0])
+// for (a in arrya) {
+//     console.log(a)
+// }
