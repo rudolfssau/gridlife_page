@@ -12,7 +12,8 @@ function getDate() {
 }
 $.getJSON("JSON_Data/dateForDiv.json", function(response) {
     response.forEach(function (a, index) {
-        var elCreateDiv = document.createElement("div");
+        var elCreateDiv = document.createElement("div", );
+        elCreateDiv.id = "elCreateDiv"
         elCreateDiv.appendChild(document.createTextNode(a.DateShortened));
         document.body.appendChild(elCreateDiv)
     });
