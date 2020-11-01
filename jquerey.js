@@ -15,7 +15,7 @@ $.getJSON("JSON_Data/dateForDiv.json", function(response) {
         var elCreateDiv = document.createElement("div", );
         elCreateDiv.id = "elCreateDiv"
         elCreateDiv.appendChild(document.createTextNode(a.DateShortened));
-        document.body.appendChild(elCreateDiv)
+        document.getElementById("tShortDates").appendChild(elCreateDiv)
     });
 });
 getList().done(function (response) {

@@ -258,7 +258,11 @@ div > #seasonpass {
 #tbody {
     background-color: red;
 }
-#elCreateDiv {
+#tbody {
+    opacity: 0%;
+}
+#tShortDates:hover ~ #tbody {
+    opacity: 100%;
 }
 
 /* Footer Content: */
