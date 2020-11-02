@@ -10,14 +10,6 @@ function getDate() {
         url: "JSON_Data/dateForDiv.json"
     })
 }
-$.getJSON("JSON_Data/dateForDiv.json", function(response) {
-    response.forEach(function (a, index) {
-        var elCreateDiv = document.createElement("div", );
-        elCreateDiv.id = "elCreateDiv"
-        elCreateDiv.appendChild(document.createTextNode(a.DateShortened));
-        document.getElementById("tShortDates").appendChild(elCreateDiv)
-    });
-});
 getList().done(function (response) {
     var data = JSON.parse(response);
     if (data != null) {
