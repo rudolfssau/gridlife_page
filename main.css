@@ -254,16 +254,22 @@ div > #seasonpass {
 }
 #trackinfo {
     background-color: rgba(9, 108, 152, 1);
+    /*position: relative;*/
 }
-#tbody {
-    background-color: red;
-}
-#tbody {
+#tbody-container {
     opacity: 0%;
 }
-#tShortDates:hover ~ #tbody {
+#tShortDates-container {
+    /*position: relative;*/
+}
+#tShortDates-container:hover ~ #tbody-container {
     opacity: 100%;
 }
+#tShortDates-container:hover {
+    opacity: 30%;
+}
+
+
 
 /* Footer Content: */
 
