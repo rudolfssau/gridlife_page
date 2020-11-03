@@ -1,100 +1,20 @@
 [
     [
-        {
-            "Date": "Mon 02/11/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Indy circuit"
-        },
-        {
-            "Format": "Open Pitlane"
-        }
+        "Date: Fri 04/12/20",
+        "Venue: Brands Hatch",
+        "Track: Indy circuit",
+        "Format: Open Pitlane"
     ],
     [
-        {
-            "Date": "Tue 03/11/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Grand Prix circuit"
-        },
-        {
-            "Format": "Open Pitlane"
-        }
+        "Date: Mon 07/12/20",
+        "Venue: Brands Hatch",
+        "Track: Indy circuit",
+        "Format: Open Pitlane"
     ],
     [
-        {
-            "Date": "Tue 17/11/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Indy circuit"
-        },
-        {
-            "Format": "Open Pitlane Track Day"
-        }
-    ],
-    [
-        {
-            "Date": "Fri 20/11/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Indy circuit"
-        },
-        {
-            "Format": "Open Pitlane"
-        }
-    ],
-    [
-        {
-            "Date": "Fri 04/12/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Indy circuit"
-        },
-        {
-            "Format": "Open Pitlane"
-        }
-    ],
-    [
-        {
-            "Date": "Mon 07/12/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Indy circuit"
-        },
-        {
-            "Format": "Open Pitlane"
-        }
-    ],
-    [
-        {
-            "Date": "Mon 14/12/20"
-        },
-        {
-            "Venue": "Brands Hatch"
-        },
-        {
-            "Track": "Indy circuit"
-        },
-        {
-            "Format": "General Car Track Day"
-        }
+        "Date: Mon 14/12/20",
+        "Venue: Brands Hatch",
+        "Track: Indy circuit",
+        "Format: Open Pitlane"
     ]
 ]

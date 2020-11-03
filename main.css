@@ -252,9 +252,9 @@ div > #seasonpass {
 #seasonpass-img:hover {
     opacity: 90%;
 }
-th {
-    text-align: center;
-    background-color: red;
+table {
+    font-size: 2rem;
+    background-color: rgba(9, 108, 152, 1);
 }
 
 /* Footer Content: */

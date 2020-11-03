@@ -15,7 +15,7 @@ for days in soup.find_all(class_="ddd-hide"):
     nameOfDate = days.text.strip()
     completeDate_n = nameOfDate + dateFormated
     dfD = {"DateShortened": nameOfDate + " " + dateFormated[1] + dateFormated[2]}
-    finalD = {"Date": completeDate_n}
+    finalD = "Date: " + completeDate_n
 #   For displaying the full date "'Date': 'Mon 14/12/20'":
     finalDate.append(finalD)
 #   For displaying "Mon 12" for the element when not hovering over it:
@@ -30,7 +30,7 @@ nameOfVenue = []
 name = soup.find_all("div", {"class": "record-column"})
 for row in name:
     if "Hatch" in row.text:
-        nameOfV = {"Venue": row.text.strip()}
+        nameOfV = "Venue: " + row.text.strip()
         nameOfVenue.append(nameOfV)
 
 
@@ -41,7 +41,7 @@ trackName = []
 value  = soup.find_all(class_="record-column column-center")
 for row in value:
     if "circuit" in row.text.strip():
-        trackN = {"Track": row.text.strip()}
+        trackN = "Track: " + row.text.strip()
         trackName.append(trackN)
 
 
@@ -51,17 +51,17 @@ for row in value:
 trackFormat = []
 for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
     if "Pitlane" in format.text:
-        fmat = {"Format": format.text.strip()}
+        fmat = "Format: " + format.text.strip()
         trackFormat.append(fmat)
 
 for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
     if "p/h" in format.text:
-        fmat = {"Format": format.text.strip()}
+        fmat = "Format: " + format.text.strip()
         trackFormat.append(fmat)
 
 for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
     if "Track Day" in format.text:
-        fmat = {"Format": format.text.strip()}
+        fmat = "Format: " + format.text.strip()
         trackFormat.append(fmat)
 
 
