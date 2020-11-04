@@ -261,7 +261,6 @@ table {
 }
 #news-container {
     width: 100%;
-    /*margin: 1%;*/
     display: flex;
     flex-flow: row nowrap;
 }
@@ -269,7 +268,6 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*margin: 0.5%;*/
     width: 100%;
     background-color: rgba(256,256,256, 0.7);
 }
@@ -279,7 +277,6 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*margin: 0.5%;*/
     width: 100%;
     background-color: rgba(256,256,256, 0.7);
 }
@@ -303,6 +300,27 @@ table {
 }
 #news:hover {
     opacity: 100%;
+}
+#maincontent > #glgaming-top {
+    margin: 1%;
+    height: 700px;
+    display: flex;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+#glgaming-top-img {
+    padding-bottom: 90px;
+    align-items: center;
+    justify-content: center;
+}
+#glgaming-top-link {
+    padding: 15px;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    /*padding-top: 90px;*/
 }
 
 
