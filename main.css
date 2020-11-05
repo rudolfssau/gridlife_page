@@ -317,10 +317,9 @@ table {
 }
 #glgaming-top-link {
     padding: 15px;
-    border: 3px solid white;
-    border-radius: 10px;
+    border: 6px solid white;
+    border-radius: 15px;
     color: white;
-    /*padding-top: 90px;*/
 }
 
 
