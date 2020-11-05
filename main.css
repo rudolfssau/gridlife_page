@@ -305,7 +305,7 @@ table {
     margin: 1%;
     height: 700px;
     display: flex;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
@@ -316,10 +316,36 @@ table {
     justify-content: center;
 }
 #glgaming-top-link {
+    font-size: 20px;
     padding: 15px;
-    border: 6px solid white;
-    border-radius: 15px;
+    border: 3px solid white;
+    border-radius: 10px;
     color: white;
+}
+#discord-container-main {
+    padding-right: 60px;
+    padding-top: 120px;
+    height: 650px;
+    background-color: rgba(59, 60, 64, 0.9);
+    width: 98%;
+    position: relative;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+#discord-server-widget {
+    height: 400px;
+    width: 35%;
+}
+#discord-server-widget-container {
+    display: flex;
+    justify-content: flex-end;
+}
+#discord-container-text {
+    padding-left: 40px;
+    color: rgba(123, 123, 123);
+    position: absolute;
+    width: 60%;
 }
 
 
