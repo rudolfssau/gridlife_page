@@ -289,8 +289,8 @@ table {
 #news-img-1 {
     padding: 20px;
     opacity: 90%;
-    width: 619.548px;
-    height: 348.5px;
+    width: 100%;
+    height: auto;
 }
 #news-text-1, #news-text-2 {
     color: black;
@@ -370,6 +370,8 @@ table {
     font-size: 2rem;
 }
 #previous-broadcasts-video-container {
+    display: flex;
+    flex-flow: row nowrap;
     margin: 1%;
 }
 
