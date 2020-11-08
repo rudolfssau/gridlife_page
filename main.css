@@ -386,11 +386,36 @@ table {
 }
 #gitwu-container {
     padding-top: 200px;
-    padding-left: 13%;
+    padding-left: 6%;
+    padding-bottom: 200px;
+    padding-right: 50%;
 }
 #gitwu {
     color: white;
-    font-size: 3rem;
+    margin-bottom: 2%;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 17px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: rgba(59, 60, 64, 0.1);
+    border: 3px solid white;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#gitwu-contactform-container {
+    border-radius: 5px;
+    background-color: rgba(59, 60, 64, 0.8);
+    padding: 20px;
 }
 
 
