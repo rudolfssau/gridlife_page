@@ -59,6 +59,9 @@
 /* Main Content: */
 
 
+#maincontent {
+    width: 100%;
+}
 @media only screen and (max-width: 1450px) {
     #latest-news-container {
         position: relative;
@@ -380,6 +383,14 @@ table {
     display: flex;
     flex-flow: row nowrap;
     margin: 1%;
+}
+#gitwu-container {
+    padding-top: 200px;
+    padding-left: 13%;
+}
+#gitwu {
+    color: white;
+    font-size: 3rem;
 }
 
 

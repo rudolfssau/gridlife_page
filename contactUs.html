@@ -16,7 +16,7 @@
             <li id="nav-img-container"><a href="index.html" id="nav-img"><img src="Pictures/gridlife-logo.png" id="black-nav-img" alt="#"></a></li>
             <li id="nav-text-container"><a href="https://shop.grid.life/" id="nav-text">SHOP</a></li>
             <li id="nav-text-container"><a href="#" id="nav-text">TICKETS</a></li>
-            <li id="nav-text-container"><a href="#" id="nav-text">CONTACT US</a></li>
+            <li id="nav-text-container"><a href="contactUs.html" id="nav-text">CONTACT US</a></li>
             <li onclick="showohide()" id="dropdown-img-container"><a href="#"><img id="dropdown-img" src="Pictures/navpic/burger.svg" alt="#"></a></li>
         </ul>
     </div>
@@ -36,7 +36,18 @@
     </ul>
 </nav>
 <main id="maincontent">
-    
+    <div id="gitwu-container">
+        <h1 id="gitwu">GET IN TOUCH WITH US!</h1>
+        <div id="gitwu-contactform-container">
+            <form action="formdata.php"></form>
+            <label for="firstn">First Name</label>
+            <input type="text" id="firstn" name="firstname" placeholder="Your Name">
+            <label for="lastn">Last Name</label>
+            <input type="text" id="lastn" name="lastname" placeholder="Last Name">
+            <label for="email">E-Mail</label>
+            <input type="text" id="email" name="email" placeholder="Your E-Mail Adress">
+        </div>
+    </div>
 </main>
 <footer id="page-footer">
 </footer>
