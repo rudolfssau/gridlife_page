@@ -404,13 +404,16 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-    background-color: rgba(59, 60, 64, 0.1);
+    background-color: rgba(59, 60, 64, 0.01);
     border: 3px solid white;
     color: white;
     padding: 12px 20px;
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: rgba(9, 108, 152, 1)
 }
 #gitwu-contactform-container {
     border-radius: 5px;
