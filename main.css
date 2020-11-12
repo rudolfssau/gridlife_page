@@ -430,7 +430,6 @@ input[type=submit]:hover {
 }
 #videobackground-container {
     position: relative;
-    /*display: flex;*/
 }
 #videomessage-overlay {
     top: 1px;
@@ -442,12 +441,14 @@ input[type=submit]:hover {
     margin: 1%;
 }
 #videomessage {
-    width: 100%;
+    width: 98%;
+    margin: 1%;
     height: auto;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    text-align: center;
     top: 25%;
     position: absolute;
     color: white;
