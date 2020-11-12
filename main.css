@@ -422,7 +422,6 @@ input[type=submit]:hover {
     padding: 20px;
 }
 #backgroundvideo {
-    /*position: relative;*/
     width: 98%;
     height: auto;
     margin-top: 1%;
@@ -432,10 +431,15 @@ input[type=submit]:hover {
 #videobackground-container {
     position: relative;
     /*display: flex;*/
-    /*align-items: center;*/
 }
 #videomessage-overlay {
-
+    top: 1px;
+    position: absolute;
+    background-color: black;
+    opacity: 60%;
+    width: 98%;
+    height: 98%;
+    margin: 1%;
 }
 #videomessage {
     width: 100%;
@@ -453,10 +457,10 @@ input[type=submit]:hover {
     border: 3px solid white;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 10%;
+    margin-bottom: 9%;
 }
-#videomessage h2 {
-    padding-top: 10px;
+#videomessage h1 {
+    margin-bottom: 4%;
 }
 
 
