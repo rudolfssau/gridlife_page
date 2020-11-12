@@ -422,7 +422,7 @@ input[type=submit]:hover {
     padding: 20px;
 }
 #backgroundvideo {
-    position: relative;
+    /*position: relative;*/
     width: 98%;
     height: auto;
     margin-top: 1%;
@@ -438,8 +438,18 @@ input[type=submit]:hover {
 
 }
 #videomessage {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    top: 45%;
     position: absolute;
     color: white;
+}
+#videomessage h2 {
+    padding-top: 10px;
 }
 
 
