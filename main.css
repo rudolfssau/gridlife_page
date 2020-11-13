@@ -268,10 +268,6 @@ div > #seasonpass {
     font-size: 4vw;
     color: white;
 }
-table {
-    font-size: 2rem;
-    background-color: rgba(9, 108, 152, 1);
-}
 #news {
     opacity: 60%;
 }
@@ -489,7 +485,17 @@ input[type=submit]:hover {
 }
 #videomessage-lm-link:hover {
     opacity: 60%;
- }
+}
+table {
+    background-color: rgba(59, 60, 64, 0.8);
+    border-collapse: collapse;
+    border: 3px solid white;
+}
+#trackinfo {
+    font-size: 2rem;
+    width: 99%;
+    margin: 0.5%;
+}
 
 
 /* Footer Content: */
