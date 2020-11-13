@@ -23,9 +23,13 @@ getList().done(function (response) {
 })
 $(function () {
     $("#seasonpass-button").hover(function () {
-        $("#seasonpass-overlay").css("opacity", "30%");
+        $("#seasonpass-overlay").css("opacity", "0%");
+        $("#seasonpass-text").css("opacity", "60%");
+        $("#seasonpass-logo").css("opacity", "60%");
     }, function () {
-        $("#seasonpass-overlay").css("opacity", "60%");
+        $("#seasonpass-overlay").css("opacity", "80%");
+        $("#seasonpass-text").css("opacity", "100%");
+        $("#seasonpass-logo").css("opacity", "100%");
     });
 });
 $(function () {
