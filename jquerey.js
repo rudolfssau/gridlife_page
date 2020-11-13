@@ -21,4 +21,17 @@ getList().done(function (response) {
         })
     }
 })
-$
+$(function () {
+    $("#seasonpass-button").hover(function () {
+        $("#seasonpass-overlay").css("opacity", "30%");
+    }, function () {
+        $("#seasonpass-overlay").css("opacity", "60%");
+    });
+});
+$(function () {
+    $("#videomessage-lm-link").hover(function () {
+        $("#videomessage-overlay").css("opacity", "30%");
+    }, function () {
+        $("#videomessage-overlay").css("opacity", "60%");
+    });
+});
