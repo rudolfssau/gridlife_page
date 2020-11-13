@@ -39,3 +39,17 @@ $(function () {
         $("#videomessage-overlay").css("opacity", "60%");
     });
 });
+$(document).ready(function () {
+    $("#submit").click(function (event) {
+        event.preventDefault()
+        var email = $("#email").val()
+        var fname = $("#fname").val()
+        var lname = $("#lanme").val()
+        var statusElm = $("#status")
+        statusElm.empty()
+        if(email.length > 5 && email.includes("@") && email.italics(".")) {
+        } else {
+            statusElm.append("<div>The Email is invalid</div>>")
+        }
+    })
+});

@@ -453,10 +453,12 @@ input[type=submit]:hover {
     background-color: rgba(9, 108, 152, 1)
 }
 #gitwu-contactform-container {
-    /*position: relative;*/
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgba(59, 60, 64, 0.8);
     padding: 20px;
+}
+#firstn, #lastn, #email, #country, #subject {
+    border-radius: 10px;
 }
 #backgroundvideo {
     width: 98%;
