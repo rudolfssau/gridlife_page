@@ -460,6 +460,10 @@ input[type=submit]:hover {
 #firstn, #lastn, #email, #country, #subject {
     border-radius: 5px;
 }
+#status {
+    color: red;
+    margin-top: 2%;
+}
 #backgroundvideo {
     width: 98%;
     height: auto;

@@ -49,7 +49,10 @@ $(document).ready(function () {
         statusElm.empty()
         if(email.length > 5 && email.includes("@") && email.italics(".")) {
         } else {
-            statusElm.append("<div>The Email is invalid</div>")
+            statusElm.append("<div>That Email isn't valid</div>")
+        };
+        if(fname.length < 2 && fname.includes(".")) {
+            statusElm.append("<div>Invalid Name</div>")
         }
-    })
+    });
 });
