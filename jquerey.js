@@ -43,16 +43,19 @@ $(document).ready(function () {
     $("#submit").click(function (event) {
         event.preventDefault()
         var email = $("#email").val()
-        var fname = $("#fname").val()
-        var lname = $("#lanme").val()
+        var firstn = $("#firstn").val()
+        var lastn = $("#lastn").val()
         var statusElm = $("#status")
         statusElm.empty()
         if(email.length > 5 && email.includes("@") && email.italics(".")) {
         } else {
             statusElm.append("<div>That Email isn't valid</div>")
-        };
-        if(fname.length < 2 && fname.includes(".")) {
-            statusElm.append("<div>Invalid Name</div>")
+        }
+        if(firstn.length < 2 || firstn.includes("1") || firstn.includes("2") || firstn.includes("3") || firstn.includes("4") || firstn.includes("4") || firstn.includes("5") || firstn.includes("6") || firstn.includes("7") || firstn.includes(".") || firstn.includes(";") || firstn.includes("!") || firstn.includes("?")) {
+            statusElm.append("<div>Invalid First Name</div>")
+        }
+        if(lastn.length < 2 || lastn.includes("1") || lastn.includes("2") || lastn.includes("3") || lastn.includes("4") || lastn.includes("4") || lastn.includes("5") || lastn.includes("6") || lastn.includes("7") || lastn.includes(".") || lastn.includes(";") || lastn.includes("!") || lastn.includes("?")) {
+            statusElm.append("<div>Invalid Last Name</div>")
         }
     });
 });
