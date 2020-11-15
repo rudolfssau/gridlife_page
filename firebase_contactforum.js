@@ -12,7 +12,7 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+
 
 // Refrence collection for firebase
 var collectionRef = firebase.database().ref("subject");
