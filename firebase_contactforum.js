@@ -17,6 +17,7 @@ firebase.analytics();
 // Refrence collection for firebase
 var collectionRef = firebase.database().ref("subject");
 
+// Submit form
 document.getElementById('contactform').addEventListener('submit', submitForm);
 function submitForm(e) {
     e.preventDefault();
@@ -24,12 +25,20 @@ function submitForm(e) {
     var l_name = getInputValues("lastn")
     var email = getInputValues("email")
     var subject = getInputValues("subject")
-    console.log(f_name)
+
+    // Save message
+    saveMessage(f_name, l_name, email, subject)
 }
 function getInputValues(id) {
     return document.getElementById(id).value
 }
 // Saves to firebase
 function saveMessage(f_name, l_name, email, subject) {
-    
+    var newSubjectRef = collectionRef.push();
+    newSubjectRef.set({
+        f_name: f_name,
+        l_name: l_name,
+        email: email,
+        subject: subject
+    })
 }
