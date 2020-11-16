@@ -24,21 +24,23 @@ function submitForm(e) {
     var f_name = getInputValues("firstn")
     var l_name = getInputValues("lastn")
     var email = getInputValues("email")
+    var country = getInputValues("country")
     var subject = getInputValues("subject")
 
     // Save message
-    saveMessage(f_name, l_name, email, subject)
+    saveMessage(f_name, l_name, email, country, subject)
 }
 function getInputValues(id) {
     return document.getElementById(id).value
 }
 // Saves to firebase
-function saveMessage(f_name, l_name, email, subject) {
+function saveMessage(f_name, l_name, email, country,  subject) {
     var newSubjectRef = collectionRef.push();
     newSubjectRef.set({
         f_name: f_name,
         l_name: l_name,
         email: email,
+        country: country,
         subject: subject
     })
 }
