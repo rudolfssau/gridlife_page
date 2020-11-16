@@ -457,12 +457,25 @@ input[type=submit]:hover {
     background-color: rgba(59, 60, 64, 0.8);
     padding: 20px;
 }
+#contactform div {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
 #firstn, #lastn, #email, #country, #subject {
     border-radius: 5px;
 }
 #status {
     color: red;
     margin-top: 2%;
+}
+#contactform > #alert {
+    display: none;
+    border: 2px solid rgb(48, 151, 6);
+    border-radius: 5px;
+    margin: 0.5%;
+    padding: 10px;
+    background-color: rgba(76, 255, 65, 0.7);
 }
 #backgroundvideo {
     width: 98%;
@@ -526,9 +539,6 @@ table {
     font-size: 2rem;
     width: 99%;
     margin: 0.5%;
-}
-#alert {
-    padding: 10px;
 }
 
 

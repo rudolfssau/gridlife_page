@@ -26,12 +26,17 @@ function submitForm(e) {
     var email = getInputValues("email")
     var country = getInputValues("country")
     var subject = getInputValues("subject")
-
     // Save message
     saveMessage(f_name, l_name, email, country, subject)
 
 // Alert display
-
+    document.querySelector("#alert").style.display = "block";
+// Hide alert afterwards
+    setTimeout(function () {
+        document.querySelector("#alert").style.display = "none";
+    },3000);
+// Clear form after submission
+    document.getElementById("contactform").reset()
 }
 function getInputValues(id) {
     return document.getElementById(id).value
