@@ -29,6 +29,9 @@ function submitForm(e) {
 
     // Save message
     saveMessage(f_name, l_name, email, country, subject)
+
+// Alert display
+
 }
 function getInputValues(id) {
     return document.getElementById(id).value
