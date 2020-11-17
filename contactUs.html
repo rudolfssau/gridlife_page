@@ -41,6 +41,9 @@
         <div id="gitwu-contactform-container">
             <form id="contactform">
             <div id="alert">Your message has been sent, we will get back to you as soon as we can!</div>
+            <section id="invalidfirstn"></section>
+            <section id="invalidlastn"></section>
+            <section id="invalidemail"></section>
             <label for="firstn">First Name</label>
             <input type="text" id="firstn" name="firstname" placeholder="Your Name">
             <label for="lastn">Last Name</label>
@@ -61,16 +64,14 @@
             <label for="subject">Subject</label>
             <textarea name="subject" id="subject" cols="30" rows="10" placeholder="Write Here..."></textarea>
             <input type="submit" id="submit" value="Submit">
-            <section id="status"></section>
             </form>
         </div>
     </div>
 </main>
 <footer id="page-footer">
 </footer>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-<script src="firebase_contactforum.js"></script>
+<!--<script src="firebase_contactforum.js"></script>-->
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="JSON_Data/trackInfo.json"></script>
 <script src="jquerey.js"></script>

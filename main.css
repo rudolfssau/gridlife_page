@@ -457,7 +457,7 @@ input[type=submit]:hover {
     background-color: rgba(59, 60, 64, 0.8);
     padding: 20px;
 }
-#contactform div {
+#contactform #alert {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
@@ -465,11 +465,33 @@ input[type=submit]:hover {
 #firstn, #lastn, #email, #country, #subject {
     border-radius: 5px;
 }
-#status {
-    color: red;
+#invalidfirstn {
+    display: none;
+    border: 2px solid rgb(177, 0, 0);
+    border-radius: 5px;
+    background-color: rgba(250, 61, 61, 0.7);
+    color: black;
+    margin-top: 2%;
+}
+#invalidlastn {
+    display: none;
+    border: 2px solid rgb(177, 0, 0);
+    border-radius: 5px;
+    background-color: rgba(250, 61, 61, 0.7);
+    color: black;
+    margin-top: 2%;
+}
+#invalidemail {
+    justify-content: center;
+    display: none;
+    border: 2px solid rgb(177, 0, 0);
+    border-radius: 5px;
+    background-color: rgba(250, 61, 61, 0.7);
+    color: black;
     margin-top: 2%;
 }
 #contactform > #alert {
+    width: 100%;
     display: none;
     border: 2px solid rgb(48, 151, 6);
     border-radius: 5px;
