@@ -48,6 +48,7 @@ $(document).ready(function () {
         var invalidfn = $("#invalidfirstn")
         var invalidln = $("#invalidlastn")
         var invalidemail = $("#invalidemail")
+        var invalidsubj = $("#invalidsubject")
         invalidfn.empty()
         invalidemail.empty()
         invalidln.empty()
@@ -65,6 +66,9 @@ $(document).ready(function () {
         if(lastn.length < 2 || lastn.includes("1") || lastn.includes("2") || lastn.includes("3") || lastn.includes("4") || lastn.includes("4") || lastn.includes("5") || lastn.includes("6") || lastn.includes("7") || lastn.includes(".") || lastn.includes(";") || lastn.includes("!") || lastn.includes("?")) {
             event.preventDefault()
             invalidln.append("<div>Invalid Last Name</div>")
+        }
+        if(subject.length = 0) {
+            invalidsubj.append("<div>Subject is empty</div>>")
         }
     });
 });
