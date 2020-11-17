@@ -30,7 +30,7 @@ function submitForm(e) {
     saveMessage(f_name, l_name, email, country, subject)
 
 // Alert display
-    document.querySelector("#alert").style.display = "block";
+    document.querySelector("#alert").style.display = "flex";
 // Hide alert afterwards
     setTimeout(function () {
         document.querySelector("#alert").style.display = "none";
