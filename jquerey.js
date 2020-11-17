@@ -84,7 +84,7 @@ $(document).ready(function () {
             event.preventDefault()
             document.querySelector("#empty").style.display = "flex";
             document.querySelector("#empty").style.justifyContent = "center";
-            empty.append("<div>Please fill out all of the required fields</div>>")
+            empty.append("<div>Please fill out all of the required fields</div>")
         }
     });
 });
