@@ -472,6 +472,8 @@ input[type=submit]:hover {
     background-color: rgba(250, 61, 61, 0.7);
     color: black;
     margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 9px;
 }
 #invalidlastn {
     display: none;
@@ -480,6 +482,8 @@ input[type=submit]:hover {
     background-color: rgba(250, 61, 61, 0.7);
     color: black;
     margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 9px;
 }
 #invalidemail {
     display: none;
@@ -488,6 +492,8 @@ input[type=submit]:hover {
     background-color: rgba(250, 61, 61, 0.7);
     color: black;
     margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 9px;
 }
 #empty {
     display: none;
@@ -496,6 +502,8 @@ input[type=submit]:hover {
     background-color: rgba(250, 61, 61, 0.7);
     color: black;
     margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 9px;
 }
 #invalidsubject {
     display: none;
@@ -504,6 +512,8 @@ input[type=submit]:hover {
     background-color: rgba(250, 61, 61, 0.7);
     color: black;
     margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 9px;
 }
 #contactform > #alert {
     width: 100%;

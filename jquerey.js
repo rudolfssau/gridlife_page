@@ -55,8 +55,9 @@ $(document).ready(function () {
         invalidln.empty()
         invalidsubj.empty()
         empty.empty()
-        if (email.length > 1) {
+        if (email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
+                document.querySelector("#invalidemail").style.display = "none";
             } else {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "flex";
@@ -68,24 +69,33 @@ $(document).ready(function () {
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
+            } else {
+                document.querySelector("#invalidfirstn").style.display = "none";
             }
             if (lastn.length < 2 || lastn.includes("1") || lastn.includes("2") || lastn.includes("3") || lastn.includes("4") || lastn.includes("4") || lastn.includes("5") || lastn.includes("6") || lastn.includes("7") || lastn.includes(".") || lastn.includes(";") || lastn.includes("!") || lastn.includes("?")) {
                 event.preventDefault()
                 document.querySelector("#invalidlastn").style.display = "flex";
                 document.querySelector("#invalidlastn").style.justifyContent = "center";
                 invalidln.append("<div>Invalid Last Name</div>")
+            } else {
+                document.querySelector("#invalidlastn").style.display = "none";
             }
             if (subject.length == 0) {
                 event.preventDefault()
                 document.querySelector("#invalidsubject").style.display = "flex";
                 document.querySelector("#invalidsubject").style.justifyContent = "center";
                 invalidsubj.append("<div>Subject is empty</div>")
+            } else {
+                document.querySelector("#invalidsubject").style.display = "none";
             }
-        } else if (email.length < 1) {
+        }
+        if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "flex";
             document.querySelector("#empty").style.justifyContent = "center";
             empty.append("<div>Please fill out all of the required fields</div>")
+        } else {
+            document.querySelector("#empty").style.display = "none";
         }
     });
 });
