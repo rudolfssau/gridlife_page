@@ -588,6 +588,7 @@ input[type=submit]:hover {
 
 }
 #trackinfo {
+    /*display: none;*/
     background-color: rgba(59, 60, 64, 0.8);
     border-collapse: separate;
     border-spacing: 20px;
