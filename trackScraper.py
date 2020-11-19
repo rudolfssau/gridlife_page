@@ -76,7 +76,7 @@ zipped_values = list(zip(finalDate, nameOfVenue, trackName, trackFormat))
 
 with open("JSON_Data/trackInfo.json", "w") as write_file:
         json.dump(zipped_values, write_file, indent=4)
-with open("JSON_Data/dateForDiv.json", "w") as write_file:
+with open("JSON_Data/dateStripped.json", "w") as write_file:
         json.dump(dateForDiv, write_file, indent=4)
 
 

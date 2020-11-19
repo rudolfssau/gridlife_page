@@ -7,7 +7,7 @@ function getList() {
 function getDate() {
     return $.ajax({
         type: "GET",
-        url: "JSON_Data/dateForDiv.json"
+        url: "JSON_Data/dateStripped.json"
     })
 }
 getList().done(function (response) {
@@ -18,9 +18,17 @@ getList().done(function (response) {
             $("#tVenue").append('<td>' + value[1] + '</td>')
             $("#tTrack").append('<td>' + value[2] + '</td>')
             $("#tFormat").append('<td>' + value[3] + '</td>')
-        })
-    }
-})
+        });
+    };
+});
+getDate().done(function (done) {
+    var date =JSON.parse(done);
+    if (date != null) {
+        jQuery.each(date, function (index, value) {
+            $("")
+        });
+    };
+});
 $(function () {
     $("#seasonpass-button").hover(function () {
         $("#seasonpass-overlay").css("opacity", "0%");
