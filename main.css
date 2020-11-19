@@ -588,13 +588,24 @@ input[type=submit]:hover {
 
 }
 #trackinfo {
-    font-size: 3rem;
-    height: auto;
-    margin: 10%;
+    background-color: rgba(59, 60, 64, 0.8);
+    border-collapse: separate;
+    border-spacing: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    font-size: 2rem;
+    width: 98%;
+    margin: 1%;
+
 }
-#trackinfo > li {
-    padding: 10px;
-    border-bottom: 3px solid white;
+tbody {
+    font-size: 2rem;
+    height: auto;
+    margin: 1%;
+}
+td {
+
 }
 
 
