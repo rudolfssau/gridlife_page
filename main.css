@@ -588,7 +588,6 @@ input[type=submit]:hover {
 
 }
 #trackinfo {
-    /*display: none;*/
     background-color: rgba(59, 60, 64, 0.8);
     border-collapse: separate;
     border-spacing: 20px;
@@ -608,7 +607,7 @@ tbody {
     margin: 1%;
 }
 #tBody-back {
-    opacity: 0%;
+    opacity: 30%;
     position: relative;
 }
 #tBody-front {
@@ -618,10 +617,15 @@ tbody {
     width: 100%;
     justify-content: center;
     align-items: center;
-    height: auto;
 }
 #tDate-front {
     padding: 20px;
+    font-size: 3rem;
+    padding-left: 30px;
+}
+#tDate-front-value:nth-child(2) {
+    padding-left: 160px;
+    padding-right: 140px;
 }
 
 

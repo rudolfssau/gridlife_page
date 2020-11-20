@@ -25,7 +25,7 @@ getDate().done(function (done) {
     var date =JSON.parse(done);
     if (date != null) {
         jQuery.each(date, function (index, value) {
-            $("#tDate-front").append('<td>' + value.DateShortened + '</td>')
+            $("#tDate-front").append('<td id="tDate-front-value">' + value.DateShortened + '</td>')
         });
     };
 });
