@@ -26,23 +26,24 @@ for days in soup.find_all(class_="ddd-hide"):
 
 
 nameOfVenue = []
+item_nameOfVenue = {}
 name = soup.find_all("div", {"class": "record-column"})
 for row in name:
     if "Hatch" in row.text:
-        nameOfV = "Venue: " + row.text.strip()
-        nameOfVenue.append(nameOfV)
+        item_nameOfVenue["Venue Name"] = row.text.strip()
+        nameOfVenue.append(item_nameOfVenue)
 
 
 # Finds all of the track names (example: Indy circuit)
 
 
 trackName = []
+item_trackName = {}
 value  = soup.find_all(class_="record-column column-center")
 for row in value:
     if "circuit" in row.text.strip():
-        item = {}
-        item["janis"] = row.text.strip()
-        trackName.append(item)
+        item_trackName["Track Name"] = row.text.strip()
+        trackName.append(item_trackName)
 
 
 # Finds all of the track formats (example: Open Pitlane Track Day)
@@ -68,13 +69,13 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
 # Joins each variable together in a specific order
 
 
-zipped_values = list(zip(finalDate, nameOfVenue, trackName, trackFormat))
+zipped_values = list(zip(trackName, nameOfVenue))
 
 # Dumps it into a local JSON file
 
 #
 with open("JSON_Data/trackInfo.json", "w") as write_file:
-        json.dump(trackName, write_file, indent=4)
+        json.dump(zipped_values, write_file, indent=4)
 # with open("JSON_Data/dateStripped.json", "w") as write_file:
 #         json.dump(dateForDiv, write_file, indent=4)
 
