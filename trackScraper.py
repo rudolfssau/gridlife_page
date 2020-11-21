@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import json
+import csv
 import requests
 
 r = requests.get("https://www.trackdays.co.uk/track-days/brands-hatch/")
@@ -65,19 +65,14 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
         fmat = "Format: " + format.text.strip()
         trackFormat.append(fmat)
 
+file = open("Trackname_table/trackInfo.csv", "w")
+writer = csv.writer(file)
 
-# Joins each variable together in a specific order
+writer.writerow(["Track Name", "Date", "Venue", "Format"])
 
+writer.writerow([trackName, finalDate, nameOfVenue, trackFormat])
 
-zipped_values = list(zip(trackName, nameOfVenue))
-
-# Dumps it into a local JSON file
-
-#
-with open("JSON_Data/trackInfo.json", "w") as write_file:
-        json.dump(zipped_values, write_file, indent=4)
-# with open("JSON_Data/dateStripped.json", "w") as write_file:
-#         json.dump(dateForDiv, write_file, indent=4)
+file.close()
 
 
 
