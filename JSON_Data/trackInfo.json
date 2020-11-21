@@ -1,20 +1,11 @@
 [
-    [
-        "Date: Fri 04/12/20",
-        "Venue: Brands Hatch",
-        "Track: Indy circuit",
-        "Format: Open Pitlane"
-    ],
-    [
-        "Date: Mon 07/12/20",
-        "Venue: Brands Hatch",
-        "Track: Indy circuit",
-        "Format: Open Pitlane"
-    ],
-    [
-        "Date: Mon 14/12/20",
-        "Venue: Brands Hatch",
-        "Track: Indy circuit",
-        "Format: Open Pitlane"
-    ]
+    {
+        "janis": "Indy circuit"
+    },
+    {
+        "janis": "Indy circuit"
+    },
+    {
+        "janis": "Indy circuit"
+    }
 ]

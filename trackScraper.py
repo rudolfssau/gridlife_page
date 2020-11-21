@@ -20,7 +20,6 @@ for days in soup.find_all(class_="ddd-hide"):
     finalDate.append(finalD)
 #   For displaying "Mon 12" for the element when not hovering over it:
     dateForDiv.append(dfD)
-    print(dateForDiv)
 
 
 # Finds all of the venue names (example: Brand Hatch)
@@ -41,8 +40,9 @@ trackName = []
 value  = soup.find_all(class_="record-column column-center")
 for row in value:
     if "circuit" in row.text.strip():
-        trackN = "Track: " + row.text.strip()
-        trackName.append(trackN)
+        item = {}
+        item["janis"] = row.text.strip()
+        trackName.append(item)
 
 
 # Finds all of the track formats (example: Open Pitlane Track Day)
@@ -70,14 +70,13 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
 
 zipped_values = list(zip(finalDate, nameOfVenue, trackName, trackFormat))
 
-
 # Dumps it into a local JSON file
 
-
+#
 with open("JSON_Data/trackInfo.json", "w") as write_file:
-        json.dump(zipped_values, write_file, indent=4)
-with open("JSON_Data/dateStripped.json", "w") as write_file:
-        json.dump(dateForDiv, write_file, indent=4)
+        json.dump(trackName, write_file, indent=4)
+# with open("JSON_Data/dateStripped.json", "w") as write_file:
+#         json.dump(dateForDiv, write_file, indent=4)
 
 
 
