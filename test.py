@@ -11,10 +11,10 @@ track_Name = soup.find_all(class_="record-column column-center")
 track_Format = soup.find_all("div", {"class": "record-column pad-hide column-center"})
 
 rows = soup.find_all(class_="trackdays-table-left")
-print(rows)
 for row in rows:
     days = row.select(".record-txt .ddd-hide")
-    dayz = days.nextSibling
-    print(days)
+#     print(days)
+    for days in rows:
+        print(days.text.strip())
 
 # <div class="record-txt"><span class="ddd-hide">Mon</span> 07/12/20</div>
