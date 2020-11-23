@@ -30,56 +30,49 @@ item_nameOfVenue = {}
 name = soup.find_all("div", {"class": "record-column"})
 for row in name:
     if "Hatch" in row.text:
-        item_nameOfVenue["Venue Name"] = row.text.strip()
-        nameOfVenue.append(item_nameOfVenue)
+        nameOfV = "Venue: " + row.text.strip()
+        nameOfVenue.append(nameOfV)
 
-# print(item_nameOfVenue)
-janis = [row.text.strip() for row in name]
-print(janis)
+
 # Finds all of the track names (example: Indy circuit)
 
 
-# trackName = []
-# item_trackName = {}
-# value  = soup.find_all(class_="record-column column-center")
-# for row in value:
-#     if "circuit" in row.text.strip():
-#         item_trackName["Track Name"] = row.text.strip()
-#         trackName.append(item_trackName)
-#
-#
-# # Finds all of the track formats (example: Open Pitlane Track Day)
-#
-#
-# trackFormat = []
-# for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
-#     if "Pitlane" in format.text:
-#         fmat = "Format: " + format.text.strip()
-#         trackFormat.append(fmat)
-#
-# for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
-#     if "p/h" in format.text:
-#         fmat = "Format: " + format.text.strip()
-#         trackFormat.append(fmat)
-#
-# for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
-#     if "Track Day" in format.text:
-#         fmat = "Format: " + format.text.strip()
-#         trackFormat.append(fmat)
-
-with open("Trackname_table/test.json", "w") as write_file:
-        json.dump(janis, write_file, indent=4)
+trackName = []
+item_trackName = {}
+value  = soup.find_all(class_="record-column column-center")
+for row in value:
+    if "circuit" in row.text.strip():
+        item_trackName = "Track Name" + row.text.strip()
+        trackName.append(item_trackName)
 
 
-# file = open("Trackname_table/trackInfo.csv", "w")
-# writer = csv.writer(file)
-#
-# writer.writerow(["Track Name", "Date", "Venue", "Format"])
-#
-# writer.writerow([trackName, finalDate, nameOfVenue, trackFormat])
-#
-# file.close()
+# Finds all of the track formats (example: Open Pitlane Track Day)
 
+
+trackFormat = []
+for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
+    if "Pitlane" in format.text:
+        fmat = "Format: " + format.text.strip()
+        trackFormat.append(fmat)
+
+for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
+    if "p/h" in format.text:
+        fmat = "Format: " + format.text.strip()
+        trackFormat.append(fmat)
+
+for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
+    if "Track Day" in format.text:
+        fmat = "Format: " + format.text.strip()
+        trackFormat.append(fmat)
+
+
+zipped_values = list(zip(finalDate, nameOfVenue, trackName, trackFormat))
+
+
+with open("Trackname_table/trackinfo_full.json", "w") as write_file:
+        json.dump(zipped_values, write_file, indent=4)
+with open("Trackname_table/trackinfo_Date.json", "w") as write_file:
+        json.dump(dateForDiv, write_file, indent=4)
 
 
 
