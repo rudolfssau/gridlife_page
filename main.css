@@ -612,28 +612,7 @@ tbody {
     height: auto;
     margin: 1%;
 }
-#tBody-back {
-    opacity: 30%;
-}
-#tBody-front {
-    z-index: 2;
-    width: 98%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-#tDate-front {
-    border-spacing: 180px;
-    font-size: 3rem;
-}
-#tDate-front-value {
-    background-color: red;
-}
-#tDate-front-value:nth-child(2) {
-}
+
 
 
 /* Footer Content: */

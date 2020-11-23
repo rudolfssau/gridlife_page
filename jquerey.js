@@ -10,7 +10,6 @@ function getDate() {
         url: "Trackname_table/trackinfo_Date.json"
     })
 }
-console.log(getDate())
 getList().done(function (response) {
     var data = JSON.parse(response);
     if (data != null) {
