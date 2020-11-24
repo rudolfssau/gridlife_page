@@ -627,9 +627,68 @@ tbody {
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
-        color: red;
+        margin-left: -1%;
+    }
+    #button-underTable2 {
+        margin-left: 1%;
     }
 }
+@media only screen and (max-width: 1750px) {
+    #button-underTable {
+        margin-left: -2.4%;
+    }
+    #button-underTable2 {
+        margin-left: 2%;
+    }
+}
+@media only screen and (max-width: 1640px) {
+    #button-underTable {
+        margin-left: -4.8%;
+    }
+    #button-underTable2 {
+        margin-left: 4%;
+    }
+}
+@media only screen and (max-width: 1540px) {
+    #button-underTable {
+        margin-left: -7.2%;
+    }
+    #button-underTable2 {
+        margin-left: 6%;
+    }
+}
+@media only screen and (max-width: 1440px) {
+    #button-underTable {
+        margin-left: -9.4%;
+    }
+    #button-underTable2 {
+        margin-left: 8%;
+    }
+}
+/*@media only screen and (max-width: 1750px) {*/
+/*    #button-underTable {*/
+/*        margin-left: -2.4%;*/
+/*    }*/
+/*    #button-underTable2 {*/
+/*        margin-left: 2%;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-width: 1750px) {*/
+/*    #button-underTable {*/
+/*        margin-left: -2.4%;*/
+/*    }*/
+/*    #button-underTable2 {*/
+/*        margin-left: 2%;*/
+/*    }*/
+/*}*/
+/*@media only screen and (max-width: 1750px) {*/
+/*    #button-underTable {*/
+/*        margin-left: -2.4%;*/
+/*    }*/
+/*    #button-underTable2 {*/
+/*        margin-left: 2%;*/
+/*    }*/
+/*}*/
 
 /* Footer Content: */
 
