@@ -614,7 +614,7 @@ tbody {
     display: flex;
     justify-content: space-evenly;
 }
-#button-underTable {
+#button-underTable, #button-underTable1, #button-underTable2 {
     position: absolute;
     font-size: 17px;
     padding: 13px;
@@ -623,9 +623,13 @@ tbody {
     color: white;
     bottom: 0;
     margin-bottom: 2.3%;
-    flex-shrink: 1;
+    flex-shrink: 2;
 }
-
+@media only screen and (max-width: 1820px) {
+    #button-underTable {
+        color: red;
+    }
+}
 
 /* Footer Content: */
 
