@@ -665,30 +665,20 @@ tbody {
         margin-left: 8%;
     }
 }
-/*@media only screen and (max-width: 1750px) {*/
-/*    #button-underTable {*/
-/*        margin-left: -2.4%;*/
-/*    }*/
-/*    #button-underTable2 {*/
-/*        margin-left: 2%;*/
-/*    }*/
-/*}*/
-/*@media only screen and (max-width: 1750px) {*/
-/*    #button-underTable {*/
-/*        margin-left: -2.4%;*/
-/*    }*/
-/*    #button-underTable2 {*/
-/*        margin-left: 2%;*/
-/*    }*/
-/*}*/
-/*@media only screen and (max-width: 1750px) {*/
-/*    #button-underTable {*/
-/*        margin-left: -2.4%;*/
-/*    }*/
-/*    #button-underTable2 {*/
-/*        margin-left: 2%;*/
-/*    }*/
-/*}*/
+@media only screen and (max-width: 1370px) {
+    #table {
+        flex-flow: row wrap;
+    }
+    #tBody-back {
+        flex-flow: row wrap;
+    }
+}
+#button-underTable:hover {
+    background-color: white;
+    border: 3px solid black;
+    color: black;
+}
+
 
 /* Footer Content: */
 
