@@ -662,20 +662,42 @@ tbody {
         margin-left: 8%;
     }
 }
+#tDate-short {
+    display: none;
+}
 #button-underTable:hover {
     opacity: 60%;
-}#button-underTable1:hover {
+}
+#button-underTable1:hover {
     opacity: 60%;
-}#button-underTable2:hover {
+}
+#button-underTable2:hover {
     opacity: 60%;
 }
 @media only screen and (max-width: 1220px) {
     #tDate-back, #tVenue-back, #tTrack-back, #tFormat-back, #button-underTable-container {
         display: none;
     }
+    #table {
+        margin-bottom: 0;
+        margin: 1%;
+    }
     #tDate-short {
+        padding: 30px;
         display: flex;
         flex-direction: column;
+    }
+    #tDate-short-style {
+        margin-bottom: 10%;
+        margin-top: 10%;
+        border: 3px solid white;
+        font-size: 3rem;
+        padding: 60px;
+        border-radius: 10px;
+        background-color: rgba(256, 256, 256, 0.1);
+    }
+    #tDate-short-style:hover {
+        opacity: 20%;
     }
 }
 
