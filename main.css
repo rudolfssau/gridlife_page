@@ -218,10 +218,10 @@
     align-items: center;
 }
 #tdinfo-text {
+    /*justify-content: center;*/
     color: white;
     font-family: 'Teko', sans-serif;
-    font-size: 4.7vw;
-    white-space: nowrap;
+    font-size: 90px;
     overflow: hidden;
 }
 #seasonpass-container {
