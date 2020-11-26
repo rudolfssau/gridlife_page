@@ -674,9 +674,11 @@ tbody {
     }
 }
 #button-underTable:hover {
-    background-color: white;
-    border: 3px solid black;
-    color: black;
+    opacity: 60%;
+}#button-underTable1:hover {
+    opacity: 60%;
+}#button-underTable2:hover {
+    opacity: 60%;
 }
 
 
