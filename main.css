@@ -81,7 +81,7 @@
         position: absolute;
     }
     #aside-container > #aside1 > #aside1-pic {
-        opacity: 40%;
+        opacity: 70%;
     }
     #aside-container > #aside1 > #aside1-pic:hover {
         opacity: 90%;
@@ -89,7 +89,7 @@
          display: none;
      }
     #aside-container > #aside2 > #aside2-pic {
-        opacity: 40%;
+        opacity: 70%;
     }
     #aside-container > #aside2 > #aside2-pic:hover {
         opacity: 90%;
@@ -97,11 +97,6 @@
          display: none;
      }
 }
-/*@media only screen and (min-width: 1357px) {*/
-/*    #latest-news:hover {*/
-/*        opacity: 30%;*/
-/*    }*/
-/*}*/
 @media only screen and (max-width: 1160px) {
     #latest-news-container {
         position: relative;
@@ -218,10 +213,10 @@
     align-items: center;
 }
 #tdinfo-text {
-    /*justify-content: center;*/
+    margin: 17px;
     color: white;
     font-family: 'Teko', sans-serif;
-    font-size: 90px;
+    font-size: 4.7vw;
     overflow: hidden;
 }
 #seasonpass-container {
@@ -691,6 +686,17 @@ tbody {
     }
     #tDate-short-style:hover {
         opacity: 20%;
+    }
+    #aside-container {
+        flex-flow: column wrap;
+    }
+    #aside1 {
+        margin: 1%;
+        width: 100%;
+    }
+    #aside2 {
+        margin: 1%;
+        width: 100%;
     }
 }
 
