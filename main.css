@@ -597,8 +597,6 @@ input[type=submit]:hover {
     border-spacing: 20px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row nowrap;
     width: 98%;
     height: 100%;
     margin: 1%;
@@ -623,7 +621,6 @@ tbody {
     color: white;
     bottom: 0;
     margin-bottom: 2.3%;
-    flex-shrink: 2;
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
@@ -665,20 +662,21 @@ tbody {
         margin-left: 8%;
     }
 }
-@media only screen and (max-width: 1370px) {
-    #table {
-        flex-flow: row wrap;
-    }
-    #tBody-back {
-        flex-flow: row wrap;
-    }
-}
 #button-underTable:hover {
     opacity: 60%;
 }#button-underTable1:hover {
     opacity: 60%;
 }#button-underTable2:hover {
     opacity: 60%;
+}
+@media only screen and (max-width: 1220px) {
+    #tDate-back, #tVenue-back, #tTrack-back, #tFormat-back, #button-underTable-container {
+        display: none;
+    }
+    #tDate-short {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
