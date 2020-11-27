@@ -145,6 +145,7 @@
     padding: 10px;
 }
 #aside1 {
+    background-color: rgba(9, 108, 152, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,6 +153,7 @@
     width: 50%;
 }
 #aside2 {
+    background-color: rgba(9, 108, 152, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -698,6 +700,12 @@ tbody {
         margin-top: 0.5%;
         margin-left: -0%;
         width: 100%;
+    }
+    #aside1-text {
+        font-size: 50px;
+    }
+    #aside2-text {
+        font-size: 50px;
     }
 }
 
