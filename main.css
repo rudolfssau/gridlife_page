@@ -230,6 +230,9 @@
 #tdinfo-img {
     width: 100%;
 }
+#tdinfo-container1 {
+    display: none;
+}
 #seasonpass-container {
     margin: 1%;
     justify-content: center;
