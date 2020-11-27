@@ -691,11 +691,12 @@ tbody {
         flex-flow: column wrap;
     }
     #aside1 {
-        margin: 1%;
+        margin-bottom: 0.5%;
         width: 100%;
     }
     #aside2 {
-        margin: 1%;
+        margin-top: 0.5%;
+        margin-left: -0%;
         width: 100%;
     }
 }
