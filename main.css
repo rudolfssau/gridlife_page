@@ -719,6 +719,14 @@ tbody {
     #aside2-text {
         font-size: 50px;
     }
+    #tdinfo-container {
+    display: none;
+    }
+    #tdinfo-container1 {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
 }
 
 
