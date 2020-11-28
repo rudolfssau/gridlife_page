@@ -723,15 +723,30 @@ tbody {
     display: none;
     }
     #tdinfo-container1 {
+        text-align: center;
         display: flex;
-        width: 100%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 98%;
         height: auto;
+        margin-right: 1%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+    }
+    #tdinfo-text1 {
+        margin-right: 1%;
+        margin-left: 1%;
+        margin-bottom: 1%;
+        position: absolute;
+        margin: 17px;
+        color: white;
+        font-family: 'Teko', sans-serif;
+        font-size: 90px;
+        overflow: hidden;
     }
     #tdinfo-img1 {
         width: 100%;
-        margin-bottom: 1%;
-        margin-right: 1%;
-        margin-left: 1%;
     }
 }
 
