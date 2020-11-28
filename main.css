@@ -217,12 +217,10 @@
     margin-bottom: 1%;
 }
 #tdinfo-text {
-    margin-right: 1%;
-    margin-left: 1%;
-    margin-bottom: 1%;
     position: absolute;
-    margin: 17px;
+    padding: 10px;
     color: white;
+    background-color: rgba(93, 188, 210, 0.8);
     font-family: 'Teko', sans-serif;
     font-size: 4.7vw;
     overflow: hidden;
@@ -741,6 +739,7 @@ tbody {
         position: absolute;
         margin: 17px;
         color: white;
+        background-color: rgba(93, 188, 210, 0.8);
         font-family: 'Teko', sans-serif;
         font-size: 90px;
         overflow: hidden;
