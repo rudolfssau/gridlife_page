@@ -108,22 +108,13 @@
         display: none;
     }
 }
-@media only screen and (max-width: 1160px) {
-    #latest-news-container {
-        position: relative;
-    }
-    #latest-news {
-        position: absolute;
-        right: 25%;
-    }
-}
 #latest-news-img {
     opacity: 90%;
 }
 #latest-news {
     margin-right: auto;
     margin-left: auto;
-    color: white;
+    background-color: rgba(0, 29, 50, 0.8);
 }
 #latest-news-container {   /* <-- Latest News */
     font-size: 50px;
@@ -685,6 +676,13 @@ tbody {
     opacity: 60%;
 }
 @media only screen and (max-width: 1160px) {
+    #latest-news-container {
+        position: relative;
+    }
+    #latest-news {
+        position: absolute;
+        right: 25%;
+    }
     #tDate-back, #tVenue-back, #tTrack-back, #tFormat-back, #button-underTable-container {
         display: none;
     }
