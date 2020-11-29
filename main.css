@@ -114,7 +114,7 @@
 #latest-news {
     margin-right: auto;
     margin-left: auto;
-    background-color: rgba(0, 29, 50, 0.8);
+    color: white;
 }
 #latest-news-container {   /* <-- Latest News */
     font-size: 50px;
@@ -163,7 +163,7 @@
     width: 50%;
 }
 #aside1-text {
-    background-color: rgba(100, 148, 192, 0.8);
+    background-color: rgba(223, 176, 29, 0.8);
     position: absolute;
     opacity: 100%;
     color: white;
@@ -676,6 +676,10 @@ tbody {
     opacity: 60%;
 }
 @media only screen and (max-width: 1160px) {
+    #latest-news {
+        font-size: 90px;
+        background-color: rgba(0, 29, 50, 0.8);
+    }
     #latest-news-container {
         position: relative;
     }
@@ -746,7 +750,6 @@ tbody {
         margin-left: 1%;
         margin-bottom: 1%;
         position: absolute;
-        margin: 17px;
         color: white;
         background-color: rgba(93, 188, 210, 0.8);
         font-family: 'Teko', sans-serif;
