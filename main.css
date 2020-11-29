@@ -677,6 +677,9 @@ tbody {
 }
 @media only screen and (max-width: 1160px) {
     #latest-news {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 30px;
         font-size: 90px;
         background-color: rgba(0, 29, 50, 0.8);
     }
@@ -746,9 +749,10 @@ tbody {
         margin-bottom: 1%;
     }
     #tdinfo-text1 {
-        margin-right: 1%;
-        margin-left: 1%;
-        margin-bottom: 1%;
+        /*margin: 40px;*/
+        margin-right: 5%;
+        margin-left: 5%;
+        /*margin-bottom: 1%;*/
         position: absolute;
         color: white;
         background-color: rgba(93, 188, 210, 0.8);
