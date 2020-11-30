@@ -565,9 +565,11 @@ input[type=submit]:hover {
     border-radius: 10px;
     margin-bottom: 11%;
 }
-#videomessage h1 {
+#videomessage-h1 {
+    font-size: 4rem;
     margin-bottom: 3%;
-}#videomessage h2 {
+}#videomessage-h2 {
+    font-size: 2rem;
     margin-bottom: 5%;
 }
 #videomessage-lm-link {
@@ -782,6 +784,14 @@ tbody {
     }
     #backgroundvideo {
         border: 3px solid black;
+    }
+}
+@media only screen and (max-width: 959px) {
+    #videomessage-h1 {
+        font-size: 3.2rem;
+    }
+    #videomessage-h2 {
+        font-size: 1.7rem;
     }
 }
 
