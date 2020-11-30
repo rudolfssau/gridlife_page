@@ -147,7 +147,6 @@
     padding: 10px;
 }
 #aside1 {
-    border: 3px solid black;
     background-color: rgba(9, 108, 152, 0.8);
     display: flex;
     align-items: center;
@@ -156,7 +155,6 @@
     width: 50%;
 }
 #aside2 {
-    border: 3px solid black;
     background-color: rgba(9, 108, 152, 0.8);
     display: flex;
     align-items: center;
@@ -208,7 +206,6 @@
     color: white;
 }
 #tdinfo-container {
-    border: 3px solid rgba(93, 188, 210, 0.8);
     text-align: center;
     display: flex;
     align-items: center;
@@ -359,6 +356,8 @@ div > #seasonpass {
     flex-flow: column wrap;
 }
 #glgaming-top-img {
+    height: auto;
+    width: 100%;
     padding-bottom: 90px;
     align-items: center;
     justify-content: center;
@@ -722,10 +721,12 @@ tbody {
         flex-flow: column wrap;
     }
     #aside1 {
+        border: 3px solid black;
         margin-bottom: 0.5%;
         width: 100%;
     }
     #aside2 {
+        border: 3px solid black;
         margin-top: 0.5%;
         margin-left: -0%;
         width: 100%;
@@ -777,9 +778,9 @@ tbody {
         background-color: transparent;
     }
     #videomessage-logo {
-        margin-top: -40px;
+        margin-top: -50px;
     }
-    #videomessage-overlay {
+    #backgroundvideo {
         border: 3px solid black;
     }
 }
