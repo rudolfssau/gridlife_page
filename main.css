@@ -687,6 +687,7 @@ tbody {
         background-color: rgba(0, 29, 50, 0.8);
     }
     #latest-news-container {
+        border: 3px solid black;
         position: relative;
     }
     #latest-news {
@@ -774,6 +775,12 @@ tbody {
     }
     #tdinfo-img1:hover ~ #tdinfo-container1 {
         background-color: transparent;
+    }
+    #videomessage-logo {
+        margin-top: -40px;
+    }
+    #videomessage-overlay {
+        border: 3px solid black;
     }
 }
 
