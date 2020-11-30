@@ -147,7 +147,7 @@
     padding: 10px;
 }
 #aside1 {
-    border: 3px solid rgba(223, 176, 29, 0.8);
+    border: 3px solid black;
     background-color: rgba(9, 108, 152, 0.8);
     display: flex;
     align-items: center;
@@ -156,7 +156,7 @@
     width: 50%;
 }
 #aside2 {
-    border: 3px solid rgba(35, 48, 82, 0.8);
+    border: 3px solid black;
     background-color: rgba(9, 108, 152, 0.8);
     display: flex;
     align-items: center;
@@ -739,7 +739,7 @@ tbody {
     display: none;
     }
     #tdinfo-container1 {
-        border: 3px solid rgba(93, 188, 210, 0.8);
+        border: 3px solid black;
         background-color: rgba(9, 108, 152, 0.8);
         text-align: center;
         display: flex;
