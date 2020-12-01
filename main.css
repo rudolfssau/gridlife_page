@@ -276,6 +276,7 @@
     height: auto;
 }
 #seasonpass-button {
+    margin-top: 50px;
     position: absolute;
     font-size: 17px;
     padding: 13px;
@@ -813,6 +814,9 @@ tbody {
     }
     #previous-broadcasts-video-container > div {
         margin-left: 10px;
+    }
+    #seasonpass-button {
+        margin-top: 360px;
     }
 }
 
