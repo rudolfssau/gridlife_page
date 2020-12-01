@@ -357,13 +357,14 @@ div > #seasonpass {
     flex-flow: column wrap;
 }
 #glgaming-top-img {
-    height: auto;
-    width: 100%;
+    height: 400px;
+    width: auto;
     padding-bottom: 90px;
     align-items: center;
     justify-content: center;
 }
 #glgaming-top-link {
+    margin-bottom: 20px;
     font-size: 17px;
     padding: 13px;
     border: 4px solid white;
@@ -377,7 +378,7 @@ div > #seasonpass {
     padding-right: 60px;
     padding-top: 120px;
     height: 650px;
-    background-color: rgba(59, 60, 64, 0.8);
+    background-color: rgba(59, 60, 64, 0.9);
     width: 98%;
     position: relative;
     margin-right: 1%;
