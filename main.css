@@ -864,6 +864,45 @@ tbody {
         font-size: 40px;
     }
 }
+@media only screen and (max-width: 540px) {
+    #videomessage-logo {
+        margin-top: -25px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 535px) {
+    #videomessage-logo {
+        margin-top: -30px;
+        margin-bottom: 5px;
+    }
+    #videomessage-h1 {
+        font-size: 1.7rem;
+    }
+    #videomessage-h2 {
+        font-size: 0.9rem;
+    }
+    #latest-news {
+        font-size: 40px;
+    }
+    #tdinfo-text1 {
+        font-size: 40px;
+    }
+    #aside1-text {
+        font-size: 20px;
+    }
+    #aside2-text {
+        font-size: 20px;
+    }
+    #uev > h1 {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 654px) {
+    #videomessage-logo {
+        margin-top: -36px;
+        margin-bottom: 18px;
+    }
+}
 
 
 /* Footer Content: */
