@@ -845,6 +845,24 @@ tbody {
     #videomessage-h1 {
         font-size: 2.7rem;
     }
+    #videomessage-h2 {
+        font-size: 1.5rem;
+    }
+    #latest-news {
+        font-size: 50px;
+    }
+    #tdinfo-text1 {
+        font-size: 50px;
+    }
+    #aside1-text {
+        font-size: 30px;
+    }
+    #aside2-text {
+        font-size: 30px;
+    }
+    #uev > h1 {
+        font-size: 40px;
+    }
 }
 
 
