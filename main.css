@@ -825,6 +825,21 @@ tbody {
     #glgaming-top-img {
         height: 250px;
     }
+    #latest-news {
+        font-size: 70px;
+    }
+    #aside1-text {
+        font-size: 40px;
+    }
+    #aside2-pic {
+        font-size: 40px;
+    }
+    #uev > h1 {
+        font-size: 50px;
+    }
+    #tdinfo-text1 {
+        font-size: 70px;
+    }
 }
 
 
