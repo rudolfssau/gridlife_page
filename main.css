@@ -864,6 +864,15 @@ tbody {
         font-size: 40px;
     }
 }
+@media only screen and (max-width: 654px) {
+    #videomessage-logo {
+        margin-top: -35px;
+        margin-bottom: 18px;
+    }
+    #videomessage-lm-link {
+        margin-top: -10px;
+    }
+}
 @media only screen and (max-width: 540px) {
     #videomessage-logo {
         margin-top: -25px;
@@ -872,8 +881,8 @@ tbody {
 }
 @media only screen and (max-width: 535px) {
     #videomessage-logo {
-        margin-top: -30px;
-        margin-bottom: 5px;
+        margin-top: -20px;
+        margin-bottom: 25px;
     }
     #videomessage-h1 {
         font-size: 1.7rem;
@@ -895,12 +904,6 @@ tbody {
     }
     #uev > h1 {
         font-size: 30px;
-    }
-}
-@media only screen and (max-width: 654px) {
-    #videomessage-logo {
-        margin-top: -36px;
-        margin-bottom: 18px;
     }
 }
 
