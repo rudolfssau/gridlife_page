@@ -427,14 +427,12 @@ div > #seasonpass {
     margin: 1%;
 }
 #gitwu-container {
-    padding-top: 200px;
-    padding-left: 6%;
-    padding-bottom: 200px;
-    padding-right: 50%;
+    margin: 1%;
+    background-color: rgba(59, 60, 64, 0.9);
 }
 #gitwu {
+    padding: 20px;
     color: white;
-    margin-bottom: 2%;
 }
 input[type=text], select, textarea {
     width: 100%;
@@ -458,8 +456,6 @@ input[type=submit]:hover {
     background-color: rgba(9, 108, 152, 1)
 }
 #gitwu-contactform-container {
-    border-radius: 10px;
-    background-color: rgba(59, 60, 64, 0.8);
     padding: 20px;
 }
 #contactform #alert {
@@ -469,6 +465,10 @@ input[type=submit]:hover {
 }
 #firstn, #lastn, #email, #country, #subject {
     border-radius: 5px;
+}
+label {
+    font-weight: bold;
+    color: white;
 }
 #invalidfirstn {
     display: none;
