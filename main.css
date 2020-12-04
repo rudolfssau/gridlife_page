@@ -866,6 +866,28 @@ tbody {
     #uev > h1 {
         font-size: 40px;
     }
+    #discord-container-main {
+        flex-flow: row wrap;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: unset;
+    }
+    #discord-server-widget {
+        width: 100%;
+        position: unset;
+        margin-top: 10%;
+    }
+    #discord-server-widget-container {
+        margin: 0;
+        padding: 0;
+    }
+    #discord-container-text {
+        width: 100%;
+        position: unset;
+        margin: 0;
+        padding: 0;
+    }
 }
 @media only screen and (max-width: 654px) {
     #videomessage-logo {
