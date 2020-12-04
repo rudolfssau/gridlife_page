@@ -867,10 +867,6 @@ tbody {
         font-size: 40px;
     }
     #discord-container-main {
-        flex-flow: row wrap;
-        align-items: center;
-        display: flex;
-        justify-content: center;
         position: unset;
     }
     #discord-server-widget {
@@ -883,6 +879,10 @@ tbody {
         padding: 0;
     }
     #discord-container-text {
+        flex-flow: row wrap;
+        align-items: center;
+        display: flex;
+        justify-content: center;
         width: 100%;
         position: unset;
         margin: 0;
