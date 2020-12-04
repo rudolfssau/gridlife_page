@@ -428,7 +428,6 @@ div > #seasonpass {
 }
 #gitwu-container {
     margin: 1%;
-    background-color: rgba(59, 60, 64, 0.9);
 }
 #gitwu {
     padding: 20px;
@@ -456,6 +455,7 @@ input[type=submit]:hover {
     background-color: rgba(9, 108, 152, 1)
 }
 #gitwu-contactform-container {
+    background-color: rgba(59, 60, 64, 0.9);
     padding: 20px;
 }
 #contactform #alert {
