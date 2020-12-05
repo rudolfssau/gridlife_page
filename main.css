@@ -690,6 +690,26 @@ tbody {
 #button-underTable2:hover {
     opacity: 60%;
 }
+#previous-broadcasts-video {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+#previous-broadcasts-video-iframe0 {
+    margin-right: 1%;
+    width: 24.2%;
+}
+#previous-broadcasts-video-iframe1 {
+    margin-right: 1%;
+    width: 24.2%;
+}
+#previous-broadcasts-video-iframe2 {
+    margin-right: 1%;
+    width: 24.2%;
+}
+#previous-broadcasts-video-iframe3 {
+    width: 24.2%;
+}
 @media only screen and (max-width: 1160px) {
     #latest-news {
         padding-top: 10px;
