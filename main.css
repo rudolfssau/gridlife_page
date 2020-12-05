@@ -399,6 +399,12 @@ div > #seasonpass {
     position: absolute;
     width: 60%;
 }
+#discord-container-text-h2 {
+    padding-bottom: 50px;
+}
+#discord-container-text-h3 {
+    padding-bottom: 70px;
+}
 #maincontent > #video-container {
     width: 98%;
     height: auto;
@@ -866,33 +872,33 @@ tbody {
     #uev > h1 {
         font-size: 40px;
     }
-    #discord-container-main, #discord-container-text, #discord-server-widget-container, #discord-server-widget {
-        height: auto;
-        width: 100%;
+    #discord-container-main, #discord-container-text, #discord-server-widget-container, #discord-server-widget, #discord-container-text-h2, #discord-container-text-h3 {
         position: unset;
         padding: 0;
         margin: 0;
     }
-    /*#discord-server-widget {*/
-    /*    width: 100%;*/
-    /*    position: unset;*/
-    /*    margin-top: 13%;*/
-    /*}*/
-    /*#discord-server-widget-container {*/
-    /*    width: 108%;*/
-    /*    margin: 0;*/
-    /*    padding: 0;*/
-    /*}*/
-    /*#discord-container-text {*/
-    /*    flex-flow: row wrap;*/
-    /*    align-items: center;*/
-    /*    display: flex;*/
-    /*    justify-content: center;*/
-    /*    width: 100%;*/
-    /*    position: unset;*/
-    /*    margin: 0;*/
-    /*    padding: 0;*/
-    /*}*/
+    #discord-server-widget {
+        width: 100%;
+    }
+    #discord-container-main {
+        margin: 1%;
+        height: auto;
+    }
+    #glgaming-top-link {
+        margin-bottom: 50px;
+    }
+    #discord-container-text {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    #discord-container-text-h2 {
+        margin: 30px;
+    }
+    #discord-container-text-h3 {
+        margin: 30px;
+    }
 }
 @media only screen and (max-width: 654px) {
     #videomessage-logo {
