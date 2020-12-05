@@ -866,28 +866,33 @@ tbody {
     #uev > h1 {
         font-size: 40px;
     }
-    #discord-container-main {
-        position: unset;
-    }
-    #discord-server-widget {
+    #discord-container-main, #discord-container-text, #discord-server-widget-container, #discord-server-widget {
+        height: auto;
         width: 100%;
         position: unset;
-        margin-top: 10%;
-    }
-    #discord-server-widget-container {
-        margin: 0;
         padding: 0;
-    }
-    #discord-container-text {
-        flex-flow: row wrap;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        position: unset;
         margin: 0;
-        padding: 0;
     }
+    /*#discord-server-widget {*/
+    /*    width: 100%;*/
+    /*    position: unset;*/
+    /*    margin-top: 13%;*/
+    /*}*/
+    /*#discord-server-widget-container {*/
+    /*    width: 108%;*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*}*/
+    /*#discord-container-text {*/
+    /*    flex-flow: row wrap;*/
+    /*    align-items: center;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    width: 100%;*/
+    /*    position: unset;*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*}*/
 }
 @media only screen and (max-width: 654px) {
     #videomessage-logo {
