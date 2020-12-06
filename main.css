@@ -863,9 +863,9 @@ tbody {
     #news-container-2 {
         padding-bottom: 140px;
     }
-    #previous-broadcasts-video-container > div {
-        margin-left: 10px;
-    }
+    /*#previous-broadcasts-video-container > div {*/
+    /*    margin-left: 10px;*/
+    /*}*/
     #seasonpass-button {
         margin-top: 360px;
     }
@@ -940,8 +940,20 @@ tbody {
     }
     #previous-broadcasts-video-iframe0, #previous-broadcasts-video-iframe1, #previous-broadcasts-video-iframe2, #previous-broadcasts-video-iframe3 {
         width: 100%;
-        height: 50%;
+        height: auto;
         margin: 0;
+    }
+    #previous-broadcasts-video-iframe0 {
+        margin-bottom: 1%;
+    }
+    #previous-broadcasts-video-iframe1 {
+        margin-bottom: 1%;
+    }
+    #previous-broadcasts-video-iframe2 {
+          margin-bottom: 1%;
+    }
+    #previous-broadcasts-video-iframe3 {
+        margin-bottom: 1%;
     }
 }
 @media only screen and (max-width: 654px) {
