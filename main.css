@@ -299,12 +299,10 @@ div > #seasonpass {
     opacity: 60%;
 }
 #news-container {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-}
-#news-container-1 {
-    padding-bottom: 80px;
+    /*white-space: nowrap;*/
+    padding-top: 16px;
+    flex-flow: row wrap;
+    padding-bottom: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,19 +310,20 @@ div > #seasonpass {
     height: auto;
     background-color: rgba(256,256,256, 0.7);
 }
-#news-container-2 {
-    padding-top: 100px;
-    padding-bottom: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    background-color: rgba(256,256,256, 0.7);
-}
+/*#news-container-2 {*/
+/*    padding-top: 100px;*/
+/*    padding-bottom: 200px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    background-color: rgba(256,256,256, 0.7);*/
+/*}*/
 #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
-    width: 619px;
-    height: 348px;
+    /*text-wrap: none;*/
+    width: 33%;
+    height: 100%;
 }
 #news-img-2 {
     padding: 23px;
@@ -342,7 +341,7 @@ div > #seasonpass {
     color: black;
     padding-left: 25px;
     padding-right: 55px;
-    font-size: 2rem;
+    font-size: 20px;
 }
 #news:hover {
     opacity: 100%;
