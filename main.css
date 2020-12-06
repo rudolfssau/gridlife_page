@@ -819,6 +819,24 @@ tbody {
     #glgaming-top-img {
         height: 300px;
     }
+    #previous-broadcasts-video {
+        flex-flow: row wrap;
+    }
+    #previous-broadcasts-video-iframe0, #previous-broadcasts-video-iframe1, #previous-broadcasts-video-iframe2, #previous-broadcasts-video-iframe3 {
+        width: 49.5%;
+        margin: 0;
+        padding: 0;
+    }
+    #previous-broadcasts-video-iframe0 {
+        margin-bottom: 1%;
+        margin-right: 1%;
+    }
+    #previous-broadcasts-video-iframe1 {
+        margin-bottom: 1%;
+    }
+    #previous-broadcasts-video-iframe2 {
+        margin-right: 1%;
+    }
 }
 @media only screen and (max-width: 959px) {
     #videomessage-h1 {
