@@ -313,6 +313,9 @@ div > #seasonpass {
     width: 33%;
     height: 360px;
 }
+#news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
+    margin-bottom: -23px;
+}
 #news-img-2 {
     padding: 23px;
     opacity: 90%;
@@ -325,7 +328,7 @@ div > #seasonpass {
     width: 100%;
     height: auto;
 }
-#news-text-1, #news-text-2 {
+#news-text-1, #news-text-2, #news-text-2-0, #news-text-1-0 {
     color: black;
     padding-left: 25px;
     padding-right: 55px;
@@ -719,6 +722,15 @@ tbody {
     }
     #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-1, #news-container-2-nested-2 {
         width: 50%;
+    }
+    #news-container-1-nested-0 {
+        margin-top: -17px;
+    }
+    #news-container-1-nested-1, #news-container-1-nested-2 {
+        margin-bottom: 23px;
+    }
+    #news-text-1-0, #news-text-2-0 {
+        font-size: 1.6rem;
     }
     #tDate-back, #tVenue-back, #tTrack-back, #tFormat-back, #button-underTable-container {
         display: none;
