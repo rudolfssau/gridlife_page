@@ -322,7 +322,7 @@ div > #seasonpass {
     height: auto;
     background-color: rgba(256,256,256, 0.7);
 }
-#news-container-1-nested {
+#news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
     width: 619px;
     height: 348px;
 }
