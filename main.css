@@ -299,7 +299,6 @@ div > #seasonpass {
     opacity: 60%;
 }
 #news-container {
-    /*white-space: nowrap;*/
     padding-top: 16px;
     flex-flow: row wrap;
     padding-bottom: 46px;
@@ -323,7 +322,7 @@ div > #seasonpass {
 #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
     /*text-wrap: none;*/
     width: 33%;
-    height: 100%;
+    height: 360px;
 }
 #news-img-2 {
     padding: 23px;
