@@ -311,7 +311,7 @@ div > #seasonpass {
 }
 #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
     width: 33%;
-    height: 360px;
+    height: 24vw;
 }
 #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
     margin-bottom: -23px;
@@ -660,6 +660,26 @@ tbody {
         margin-left: 6%;
     }
 }
+@media only screen and (max-width: 1498px) {
+    #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
+        height: 25vw;
+    }
+}
+@media only screen and (max-width: 1438px) {
+    #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
+        height: 28vw;
+    }
+}
+@media only screen and (max-width: 1284px) {
+    #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
+        height: 30vw;
+    }
+}
+@media only screen and (max-width: 1199px) {
+    #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
+        height: 32vw;
+    }
+}
 @media only screen and (max-width: 1160px) {
     #button-underTable {
         margin-left: -9.4%;
@@ -720,6 +740,9 @@ tbody {
         width: 100%;
         height: 30%;
     }
+    #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
+        height: unset;
+    }
     #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-1, #news-container-2-nested-2 {
         width: 50%;
     }
@@ -731,6 +754,12 @@ tbody {
     }
     #news-text-1-0, #news-text-2-0 {
         font-size: 1.6rem;
+    }
+    #news-container-2-nested-0 {
+        margin-bottom: 0.5%;
+    }
+    #news-container-1-nested-0 {
+        margin-bottom: 2%;
     }
     #tDate-back, #tVenue-back, #tTrack-back, #tFormat-back, #button-underTable-container {
         display: none;
@@ -851,12 +880,6 @@ tbody {
     }
     #videomessage-h2 {
         font-size: 1.7rem;
-    }
-    #news-text-1 {
-        font-size: 1.8rem;
-    }
-    #news-text-2 {
-        font-size: 1.8rem;
     }
     #news-img-1 {
         padding: 10px;
