@@ -911,6 +911,7 @@ tbody {
         font-size: 40px;
     }
     #discord-container-main, #discord-container-text, #discord-server-widget-container, #discord-server-widget, #discord-container-text-h2, #discord-container-text-h3 {
+        height: auto;
         position: unset;
         padding: 0;
         margin: 0;
@@ -936,6 +937,11 @@ tbody {
     }
     #discord-container-text-h3 {
         margin: 30px;
+    }
+    #previous-broadcasts-video-iframe0, #previous-broadcasts-video-iframe1, #previous-broadcasts-video-iframe2, #previous-broadcasts-video-iframe3 {
+        width: 100%;
+        height: 50%;
+        margin: 0;
     }
 }
 @media only screen and (max-width: 654px) {
