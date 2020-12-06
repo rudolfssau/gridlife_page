@@ -916,6 +916,7 @@ tbody {
     }
     #discord-server-widget {
         width: 100%;
+        height: 40vh;
     }
     #discord-container-main {
         margin: 1%;
