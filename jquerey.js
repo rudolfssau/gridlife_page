@@ -65,7 +65,13 @@ $(document).ready(function () {
         invalidln.empty()
         invalidsubj.empty()
         empty.empty()
+        dropDownCountry = document.getElementById("country")[0].value;
         if (email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
+            if (dropDownCountry == "select") {
+                document.querySelector("#invalidcountry").style.display = "flex";
+                document.querySelector("#invalidcountry").style.justifyContent = "center";
+                country.append("<div>Please Select Your Country</div>")
+            }
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 document.querySelector("#invalidemail").style.display = "none";
             } else {
@@ -120,6 +126,5 @@ function validateDropDown() {
         alert("Sveiki")
     }
 }
-console.log(validateDropDown())
 
 
