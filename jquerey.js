@@ -110,3 +110,16 @@ $(document).ready(function () {
     });
 });
 
+
+// Checks if something is selected in dropdown menu
+
+
+function validateDropDown() {
+    var dropDown = document.getElementById("country")[0].value;
+    if (dropDown == "select") {
+        alert("Sveiki")
+    }
+}
+console.log(validateDropDown())
+
+
