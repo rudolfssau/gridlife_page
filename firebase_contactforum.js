@@ -1,5 +1,3 @@
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
     apiKey: "AIzaSyDWnYM3v_cYVvXR3zSrShgpszY8wISM3lo",
     authDomain: "gridlife-contact-forum.firebaseapp.com",
