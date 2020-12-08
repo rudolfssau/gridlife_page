@@ -49,28 +49,28 @@ $(function () {
 });
 $(document).ready(function () {
     $("#submit").click(function (event) {
-        var firstn = $("#firstn").val()
-        var lastn = $("#lastn").val()
-        var email = $("#email").val()
-        var country = $("#country").val()
-        var subject = $("#subject").val()
-        var invalidfn = $("#invalidfirstn")
-        var invalidln = $("#invalidlastn")
-        var invalidemail = $("#invalidemail")
-        var invalidcountry = $("#invalidcountry")
-        var invalidsubj = $("#invalidsubject")
-        var empty = $("#empty")
-        invalidfn.empty()
-        invalidemail.empty()
-        invalidln.empty()
-        invalidsubj.empty()
-        empty.empty()
-        dropDownCountry = document.getElementById("country")[0].value;
+        var firstn = $("#firstn").val();
+        var lastn = $("#lastn").val();
+        var email = $("#email").val();
+        var country = document.getElementById("country")[0].value;
+        var subject = $("#subject").val();
+        var invalidfn = $("#invalidfirstn");
+        var invalidln = $("#invalidlastn");
+        var invalidemail = $("#invalidemail");
+        var invalidcountry = $("#invalidcountry");
+        var invalidsubj = $("#invalidsubject");
+        var empty = $("#empty");
+        invalidfn.empty();
+        invalidemail.empty();
+        invalidln.empty();
+        invalidsubj.empty();
+        invalidcountry.empty();
+        empty.empty();
         if (email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
-            if (dropDownCountry === "select") {
+            if (country === "select") {
                 document.querySelector("#invalidcountry").style.display = "flex";
                 document.querySelector("#invalidcountry").style.justifyContent = "center";
-                document.querySelector("#invalidcountry").append("<div>Please Select Your Country</div>")
+                invalidcountry.append("<div>Please Select Your Country</div>")
                 console.log("HEy")
             }
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
