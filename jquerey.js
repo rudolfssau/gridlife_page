@@ -60,18 +60,20 @@ $(document).ready(function () {
         var invalidcountry = $("#invalidcountry");
         var invalidsubj = $("#invalidsubject");
         var empty = $("#empty");
+        var emptyFields = $("#pfotrFields");
         invalidfn.empty();
         invalidemail.empty();
         invalidln.empty();
         invalidsubj.empty();
         invalidcountry.empty();
         empty.empty();
+        emptyFields.empty();
         if (email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
             if (country === "select") {
+                event.preventDefault();
                 document.querySelector("#invalidcountry").style.display = "flex";
                 document.querySelector("#invalidcountry").style.justifyContent = "center";
                 invalidcountry.append("<div>Please Select Your Country</div>")
-                console.log("HEy")
             }
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 document.querySelector("#invalidemail").style.display = "none";
@@ -114,21 +116,13 @@ $(document).ready(function () {
         } else {
             document.querySelector("#empty").style.display = "none";
         }
-        if (firstn.length > 0) {
-        //    fill out the ramaining sunjects
+        if (firstn.length > 0 && lastn.length == 0 && email.length == 0 && subject.length == 0 && country === "select") {
+            event.preventDefault()
+            document.querySelector("#invalidfirstn").style.display = "flex";
+            document.querySelector("#invalidfirstn").style.justifyContent = "center";
+            invalidfn.append("<div>Invalid First Name</div>")
         }
     });
 });
-
-
-// Checks if something is selected in dropdown menu
-
-
-function validateDropDown() {
-    var dropDown = document.getElementById("country")[0].value;
-    if (dropDown == "select") {
-        alert("Sveiki")
-    }
-}
 
 
