@@ -67,7 +67,7 @@ $(document).ready(function () {
         invalidsubj.empty();
         invalidcountry.empty();
         empty.empty();
-        if (email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
+        if (email.length > 0 && firstn.length > 0 && lastn.length > 0 && subject.length > 0) {
             if (country === "select") {
                 event.preventDefault();
                 document.querySelector("#invalidcountry").style.display = "flex";
@@ -109,6 +109,9 @@ $(document).ready(function () {
                 document.querySelector("#invalidsubject").style.display = "none";
             }
         }
+
+
+
         if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "flex";
@@ -116,6 +119,33 @@ $(document).ready(function () {
             empty.append("<div>Please fill out all of the required fields</div>")
         } else {
             document.querySelector("#empty").style.display = "none";
+        }
+        if (firstn.length > 2 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
+            event.preventDefault()
+            document.querySelector("#pfotrFields").style.display = "flex";
+            document.querySelector("#pfotrFields").style.justifyContent = "center";
+        } else if (firstn.length < 2 && lastn.length >= 0 && email.length >= 0 && subject.length >= 0) {
+            event.preventDefault()
+            document.querySelector("#invalidfirstn").style.display = "flex";
+            document.querySelector("#invalidfirstn").style.justifyContent = "center";
+            invalidfn.append("<div>Invalid First Name</div>")
+        } else {
+            document.querySelector("#invalidfirstn").style.display = "none";
+        }
+        if (firstn.length > 2 && lastn.length > 0 && email.length == 0 && subject.length == 0) {
+            event.preventDefault()
+            document.querySelector("#pfotrFields").style.display = "flex";
+            document.querySelector("#pfotrFields").style.justifyContent = "center";
+        } else if (firstn.length > 0 && lastn.length >= 0 && email.length >= 0 && subject.length >= 0) {
+            if (email.length > 5 && email.includes("@") && email.includes(".")) {
+                event.preventDefault()
+                document.querySelector("#invalidemail").style.display = "none";
+            } else {
+                event.preventDefault()
+                document.querySelector("#invalidemail").style.display = "flex";
+                document.querySelector("#invalidemail").style.justifyContent = "center";
+                invalidemail.append("<div>Invalid Email</div>")
+            }
         }
     });
 });
