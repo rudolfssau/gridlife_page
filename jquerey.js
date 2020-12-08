@@ -68,12 +68,28 @@ $(document).ready(function () {
         invalidcountry.empty();
         empty.empty();
         emptyFields.empty();
+        // if (firstn.length > 0 && lastn.length == 0 && email.length == 0 && subject.length == 0 && country === "select") {
+        //     event.preventDefault()
+        //     document.querySelector("#invalidfirstn").style.display = "flex";
+        //     document.querySelector("#invalidfirstn").style.justifyContent = "center";
+        //     invalidfn.append("<div>Invalid First Name</div>");
+        //     document.querySelector("#invalidcountry").style.display = "none";
+        //     document.querySelector("#invalidemail").style.display = "none";
+        //     document.querySelector("#invalidlastn").style.display = "none";
+        //     document.querySelector("#invalidsubject").style.display = "none";
+        //     document.querySelector("#empty").style.display = "none";
+        //     document.querySelector("#pfotrFields").style.display = "flex";
+        //     document.querySelector("#pfotrFields").style.justifyContent = "center";
+        //     emptyFields.append("<div>Please Fill Out The Remaining Fields</div>");
+        // }
         if (email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
             if (country === "select") {
                 event.preventDefault();
                 document.querySelector("#invalidcountry").style.display = "flex";
                 document.querySelector("#invalidcountry").style.justifyContent = "center";
                 invalidcountry.append("<div>Please Select Your Country</div>")
+            } else {
+                document.querySelector("#invalidcountry").style.display = "none";
             }
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 document.querySelector("#invalidemail").style.display = "none";
@@ -103,7 +119,7 @@ $(document).ready(function () {
                 event.preventDefault()
                 document.querySelector("#invalidsubject").style.display = "flex";
                 document.querySelector("#invalidsubject").style.justifyContent = "center";
-                invalidsubj.append("<div>Subject is empty</div>")
+                invalidsubj.append("<div>Subject Is Empty</div>")
             } else {
                 document.querySelector("#invalidsubject").style.display = "none";
             }
@@ -115,12 +131,6 @@ $(document).ready(function () {
             empty.append("<div>Please fill out all of the required fields</div>")
         } else {
             document.querySelector("#empty").style.display = "none";
-        }
-        if (firstn.length > 0 && lastn.length == 0 && email.length == 0 && subject.length == 0 && country === "select") {
-            event.preventDefault()
-            document.querySelector("#invalidfirstn").style.display = "flex";
-            document.querySelector("#invalidfirstn").style.justifyContent = "center";
-            invalidfn.append("<div>Invalid First Name</div>")
         }
     });
 });
