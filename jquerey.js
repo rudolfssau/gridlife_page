@@ -120,23 +120,23 @@ $(document).ready(function () {
         } else {
             document.querySelector("#empty").style.display = "none";
         }
-        if (firstn.length > 2 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
+        if (firstn.length > 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
             document.querySelector("#pfotrFields").style.display = "flex";
             document.querySelector("#pfotrFields").style.justifyContent = "center";
-        } else if (firstn.length < 2 && lastn.length >= 0 && email.length >= 0 && subject.length >= 0) {
-            event.preventDefault()
-            document.querySelector("#invalidfirstn").style.display = "flex";
-            document.querySelector("#invalidfirstn").style.justifyContent = "center";
-            invalidfn.append("<div>Invalid First Name</div>")
-        } else {
-            document.querySelector("#invalidfirstn").style.display = "none";
-        }
-        if (firstn.length > 2 && lastn.length > 0 && email.length == 0 && subject.length == 0) {
+            if (firstn.length < 2 || firstn.includes("1") || firstn.includes("2") || firstn.includes("3") || firstn.includes("4") || firstn.includes("4") || firstn.includes("5") || firstn.includes("6") || firstn.includes("7") || firstn.includes(".") || firstn.includes(";") || firstn.includes("!") || firstn.includes("?")) {
+                event.preventDefault()
+                document.querySelector("#invalidfirstn").style.display = "flex";
+                document.querySelector("#invalidfirstn").style.justifyContent = "center";
+                invalidfn.append("<div>Invalid First Name</div>")
+            } else {
+                document.querySelector("#invalidfirstn").style.display = "none";
+            }
+        } else if (firstn.length > 0 && lastn.length > 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
             document.querySelector("#pfotrFields").style.display = "flex";
             document.querySelector("#pfotrFields").style.justifyContent = "center";
-        } else if (firstn.length > 0 && lastn.length >= 0 && email.length >= 0 && subject.length >= 0) {
+        } else if (firstn.length > 0 && lastn.length > 0 && email.length > 0 && subject.length == 0) {
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "none";
