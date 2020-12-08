@@ -67,17 +67,6 @@ $(document).ready(function () {
         invalidsubj.empty();
         invalidcountry.empty();
         empty.empty();
-        emptyFields.empty();
-        // if (email.length == 0 || firstn.length > 0 || lastn.length == 0 || subject.length == 0 || country === "select") {
-        //     document.querySelector("#pfotrFields").style.display = "flex";
-        //     document.querySelector("#pfotrFields").style.justifyContent = "center";
-        //     document.querySelector("#invalidfirstn").style.display = "none";
-        //     emptyFields.append("<div>Please Fill Out The Remaining Fields</div>");
-        //     document.querySelector("#invalidcountry").style.display = "none";
-        //     document.querySelector("#invalidemail").style.display = "none";
-        //     document.querySelector("#invalidlastn").style.display = "none";
-        //     document.querySelector("#invalidsubject").style.display = "none";
-        // }
         if (email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
             if (country === "select") {
                 event.preventDefault();
@@ -99,7 +88,7 @@ $(document).ready(function () {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
-                invalidfn.append("<div>Invalid First Name</div>");
+                invalidfn.append("<div>Invalid First Name</div>")
             } else {
                 document.querySelector("#invalidfirstn").style.display = "none";
             }
@@ -115,20 +104,19 @@ $(document).ready(function () {
                 event.preventDefault()
                 document.querySelector("#invalidsubject").style.display = "flex";
                 document.querySelector("#invalidsubject").style.justifyContent = "center";
-                invalidsubj.append("<div>Subject Is Empty</div>")
+                invalidsubj.append("<div>Subject is empty</div>")
             } else {
                 document.querySelector("#invalidsubject").style.display = "none";
             }
-            // if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
-            //     event.preventDefault()
-            //     document.querySelector("#empty").style.display = "flex";
-            //     document.querySelector("#empty").style.justifyContent = "center";
-            //     empty.append("<div>Please fill out all of the required fields</div>")
-            // } else {
-            //     document.querySelector("#empty").style.display = "none";
-            // }
+        }
+        if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
+            event.preventDefault()
+            document.querySelector("#empty").style.display = "flex";
+            document.querySelector("#empty").style.justifyContent = "center";
+            empty.append("<div>Please fill out all of the required fields</div>")
+        } else {
+            document.querySelector("#empty").style.display = "none";
         }
     });
 });
-
 
