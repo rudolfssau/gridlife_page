@@ -68,6 +68,16 @@ $(document).ready(function () {
         invalidcountry.empty();
         empty.empty();
         emptyFields.empty();
+        // if (email.length == 0 || firstn.length > 0 || lastn.length == 0 || subject.length == 0 || country === "select") {
+        //     document.querySelector("#pfotrFields").style.display = "flex";
+        //     document.querySelector("#pfotrFields").style.justifyContent = "center";
+        //     document.querySelector("#invalidfirstn").style.display = "none";
+        //     emptyFields.append("<div>Please Fill Out The Remaining Fields</div>");
+        //     document.querySelector("#invalidcountry").style.display = "none";
+        //     document.querySelector("#invalidemail").style.display = "none";
+        //     document.querySelector("#invalidlastn").style.display = "none";
+        //     document.querySelector("#invalidsubject").style.display = "none";
+        // }
         if (email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
             if (country === "select") {
                 event.preventDefault();
@@ -90,16 +100,6 @@ $(document).ready(function () {
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>");
-                if (firstn.length < 2 || lastn.length == 0 || email.length == 0 || subject.length == 0 || country === "select") {
-                    document.querySelector("#pfotrFields").style.display = "flex";
-                    document.querySelector("#pfotrFields").style.justifyContent = "center";
-                    document.querySelector("#invalidfirstn").style.display = "none";
-                    emptyFields.append("<div>Please Fill Out The Remaining Fields</div>");
-                    document.querySelector("#invalidcountry").style.display = "none";
-                    document.querySelector("#invalidemail").style.display = "none";
-                    document.querySelector("#invalidlastn").style.display = "none";
-                    document.querySelector("#invalidsubject").style.display = "none";
-                }
             } else {
                 document.querySelector("#invalidfirstn").style.display = "none";
             }
