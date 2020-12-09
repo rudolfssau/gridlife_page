@@ -116,10 +116,13 @@ $(document).ready(function () {
             event.preventDefault()
             document.querySelector("#empty").style.display = "flex";
             document.querySelector("#empty").style.justifyContent = "center";
-            empty.append("<div>Please Fill Out The Remaining Fields</div>")
+            empty.append("<div>Please Fill Out All Of The Required Fields</div>")
         } else {
             document.querySelector("#empty").style.display = "none";
         }
+
+        //First Name validation rules
+
         if (firstn.length > 0) {
             event.preventDefault()
             document.querySelector("#pfotrFields").style.display = "flex";
@@ -137,6 +140,9 @@ $(document).ready(function () {
             document.querySelector("#pfotrFields").style.display = "flex";
             document.querySelector("#pfotrFields").style.justifyContent = "center";
         }
+
+        //Email validation rules
+
         if (email.length > 0) {
             event.preventDefault()
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
@@ -154,9 +160,11 @@ $(document).ready(function () {
                 invalidemail.append("<div>Invalid Email</div>")
             }
         }
+
+        //Last Name validation rules
+
         if (lastn.length > 0) {
             event.preventDefault()
-            console.log("Bro")
             if (lastn.length < 2 || lastn.includes("1") || lastn.includes("2") || lastn.includes("3") || lastn.includes("4") || lastn.includes("4") || lastn.includes("5") || lastn.includes("6") || lastn.includes("7") || lastn.includes(".") || lastn.includes(";") || lastn.includes("!") || lastn.includes("?")) {
                 event.preventDefault()
                 document.querySelector("#invalidlastn").style.display = "flex";
@@ -171,6 +179,26 @@ $(document).ready(function () {
                 document.querySelector("#invalidlastn").style.display = "none";
             }
         }
+
+        //Country Select validation rules
+
+        if (country == "select") {
+            event.preventDefault()
+            document.querySelector("#invalidcountry").style.display = "flex";
+            document.querySelector("#invalidcountry").style.justifyContent = "center";
+            invalidcountry.append("<div>Please Select Your Country</div>")
+            if (country != "select" && email.length == 0 && firstn.length == 0 && lastn.length == 0 && subject.length == 0) {
+                event.preventDefault()
+                document.querySelector("#pfotrFields").style.display = "flex";
+                document.querySelector("#pfotrFields").style.justifyContent = "center";
+            }
+        } else {
+            event.preventDefault()
+            document.querySelector("#invalidcountry").style.display = "none";
+        }
+
+        //Subject validation rules
+
     });
 });
 
