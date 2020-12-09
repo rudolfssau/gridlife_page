@@ -116,7 +116,7 @@ $(document).ready(function () {
             event.preventDefault()
             document.querySelector("#empty").style.display = "flex";
             document.querySelector("#empty").style.justifyContent = "center";
-            empty.append("<div>Please fill out all of the required fields</div>")
+            empty.append("<div>Please Fill Out The Remaining Fields</div>")
         } else {
             document.querySelector("#empty").style.display = "none";
         }
@@ -139,7 +139,6 @@ $(document).ready(function () {
         }
         if (email.length > 0) {
             event.preventDefault()
-            console.log("Bro")
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "none";
@@ -153,6 +152,23 @@ $(document).ready(function () {
                 document.querySelector("#invalidemail").style.display = "flex";
                 document.querySelector("#invalidemail").style.justifyContent = "center";
                 invalidemail.append("<div>Invalid Email</div>")
+            }
+        }
+        if (lastn.length > 0) {
+            event.preventDefault()
+            console.log("Bro")
+            if (lastn.length < 2 || lastn.includes("1") || lastn.includes("2") || lastn.includes("3") || lastn.includes("4") || lastn.includes("4") || lastn.includes("5") || lastn.includes("6") || lastn.includes("7") || lastn.includes(".") || lastn.includes(";") || lastn.includes("!") || lastn.includes("?")) {
+                event.preventDefault()
+                document.querySelector("#invalidlastn").style.display = "flex";
+                document.querySelector("#invalidlastn").style.justifyContent = "center";
+                invalidln.append("<div>Invalid Last Name</div>")
+                if (email.length == 0 && firstn.length == 0 && lastn.length > 0 && subject.length == 0) {
+                    event.preventDefault()
+                    document.querySelector("#pfotrFields").style.display = "flex";
+                    document.querySelector("#pfotrFields").style.justifyContent = "center";
+                }
+            } else {
+                document.querySelector("#invalidlastn").style.display = "none";
             }
         }
     });
