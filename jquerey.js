@@ -143,11 +143,10 @@ $(document).ready(function () {
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "none";
-                if (email.length > 0) {
+                if (email.length > 5 && firstn.length == 0 && lastn.length == 0 && subject.length == 0) {
                     event.preventDefault()
-                    console.log("Bro")
-                    // document.querySelector("#pfotrFields").style.display = "flex";
-                    // document.querySelector("#pfotrFields").style.justifyContent = "center";
+                    document.querySelector("#pfotrFields").style.display = "flex";
+                    document.querySelector("#pfotrFields").style.justifyContent = "center";
                 }
             } else {
                 event.preventDefault()
