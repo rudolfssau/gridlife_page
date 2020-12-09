@@ -120,7 +120,7 @@ $(document).ready(function () {
         } else {
             document.querySelector("#empty").style.display = "none";
         }
-        if (firstn.length > 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
+        if (firstn.length > 0) {
             event.preventDefault()
             document.querySelector("#pfotrFields").style.display = "flex";
             document.querySelector("#pfotrFields").style.justifyContent = "center";
@@ -132,14 +132,23 @@ $(document).ready(function () {
             } else {
                 document.querySelector("#invalidfirstn").style.display = "none";
             }
-        } else if (firstn.length > 0 && lastn.length > 0 && email.length == 0 && subject.length == 0) {
+        } else if (firstn.length > 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
             document.querySelector("#pfotrFields").style.display = "flex";
             document.querySelector("#pfotrFields").style.justifyContent = "center";
-        } else if (firstn.length > 0 && lastn.length > 0 && email.length > 0 && subject.length == 0) {
+        }
+        if (email.length > 0) {
+            event.preventDefault()
+            console.log("Bro")
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "none";
+                if (email.length > 0) {
+                    event.preventDefault()
+                    console.log("Bro")
+                    // document.querySelector("#pfotrFields").style.display = "flex";
+                    // document.querySelector("#pfotrFields").style.justifyContent = "center";
+                }
             } else {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "flex";
