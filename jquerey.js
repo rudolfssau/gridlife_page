@@ -68,6 +68,10 @@ $(document).ready(function () {
         invalidcountry.empty();
         empty.empty();
         emptyFields.empty();
+        var style = document.querySelector("#pfotrFields").style.display;
+        var jcontectStyle = document.querySelector("#pfotrFields").style.justifyContent;
+
+
         // if (email.length > 0 && firstn.length > 0 && lastn.length > 0 && subject.length > 0) {
         //     if (country === "select") {
         //         event.preventDefault();
@@ -120,22 +124,36 @@ $(document).ready(function () {
 
 
 
+        //Lai uztaisitu to Please FIll out All of the requiered fields, katram validation rule ir vajadzigs uztaisit velvienu ieksejo if stataemnt kas parbauda vai jau ir sie parametri ielikti
+        //     document.querySelector("#pfotrFields").style.display = "flex";
+        //     document.querySelector("#pfotrFields").style.justifyContent = "center";
+        //     emptyFields.append("<div>Please Fill Out The Remainig Fields</div>")
+        // Ja nav, tad izejot no if statemnt to enablo
+
+
 
 
         //First Name validation rules
 
         if (firstn.length > 0) {
+            event.preventDefault()
+            document.querySelector("#empty").style.display = "none";
             if (firstn.length < 2 || firstn.includes("1") || firstn.includes("2") || firstn.includes("3") || firstn.includes("4") || firstn.includes("4") || firstn.includes("5") || firstn.includes("6") || firstn.includes("7") || firstn.includes(".") || firstn.includes(";") || firstn.includes("!") || firstn.includes("?")) {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
                 if (country == "select" && email.length == 0 && firstn.length > 0 && lastn.length == 0 && subject.length == 0) {
-                    document.querySelector("#pfotrFields").style.display = "flex";
-                    document.querySelector("#pfotrFields").style.justifyContent = "center";
-                    emptyFields.append("<div>Please Fill Out The Remainig Fields</div>")
+                    if (style == "flex" && jcontectStyle == "center") {
+                        event.preventDefault();
+                    } else {
+                        document.querySelector("#pfotrFields").style.display = "flex";
+                        document.querySelector("#pfotrFields").style.justifyContent = "center";
+                        emptyFields.append("<div>Please Fill Out The Remainig Fields</div>")
+                    }
                 }
             } else {
+                document.querySelector("#pfotrFields").style.display = "none";
                 document.querySelector("#invalidfirstn").style.display = "none";
             }
         }
@@ -143,15 +161,19 @@ $(document).ready(function () {
         //Email validation rules
 
         if (email.length > 0) {
-            document.querySelector("#pfotrFields").style.display = "flex";
-            document.querySelector("#pfotrFields").style.justifyContent = "center";
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "none";
-                if (email.length > 5 && firstn.length == 0 && lastn.length == 0 && subject.length == 0) {
-                    event.preventDefault()
-                    document.querySelector("#pfotrFields").style.display = "flex";
-                    document.querySelector("#pfotrFields").style.justifyContent = "center";
+                if (email.length > 0 && firstn.length == 0 && lastn.length == 0 && subject.length == 0) {
+                    if (document.querySelector("#pfotrFields").style.display = "flex") {
+                        event.preventDefault();
+                        console.log("bro")
+                    } else {
+                        console.log("Else")
+                    }
+                //     event.preventDefault()
+                //     document.querySelector("#pfotrFields").style.display = "flex";
+                //     document.querySelector("#pfotrFields").style.justifyContent = "center";
                 }
             } else {
                 event.preventDefault()
@@ -164,7 +186,7 @@ $(document).ready(function () {
         //Last Name validation rules
 
         if (lastn.length > 0) {
-            event.preventDefault()
+            // event.preventDefault()
             if (lastn.length < 2 || lastn.includes("1") || lastn.includes("2") || lastn.includes("3") || lastn.includes("4") || lastn.includes("4") || lastn.includes("5") || lastn.includes("6") || lastn.includes("7") || lastn.includes(".") || lastn.includes(";") || lastn.includes("!") || lastn.includes("?")) {
                 event.preventDefault()
                 document.querySelector("#invalidlastn").style.display = "flex";
@@ -201,12 +223,12 @@ $(document).ready(function () {
                 document.querySelector("#invalidsubject").style.justifyContent = "center";
                 invalidsubj.append("<div>Subject Is Empty</div>")
             }
-            if (country == "select" && email.length == 0 && firstn.length == 0 && lastn.length == 0 && subject.length > 0) {
-                event.preventDefault()
-                document.querySelector("#pfotrFields").style.display = "flex";
-                document.querySelector("#pfotrFields").style.justifyContent = "center";
-                emptyFields.append("<div>Please Fill Out The Remainig Fields</div>")
-            }
+            // if (country == "select" && email.length == 0 && firstn.length == 0 && lastn.length == 0 && subject.length > 0) {
+            //     event.preventDefault()
+            //     document.querySelector("#pfotrFields").style.display = "flex";
+            //     document.querySelector("#pfotrFields").style.justifyContent = "center";
+            //     emptyFields.append("<div>Please Fill Out The Remainig Fields</div>")
+            // }
         }
         if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
