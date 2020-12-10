@@ -130,7 +130,23 @@ $(document).ready(function () {
         // Ja nav, tad izejot no if statemnt to enablo
 
 
-
+        if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
+            if (pjoutfStyle == "flex") {
+                document.querySelector("#empty").style.display = "none";
+                event.preventDefault();
+            } else if (pjoutfStyle != "flex") {
+                document.querySelector("#pfotrFields").style.display = "flex";
+                document.querySelector("#pfotrFields").style.justifyContent = "center";
+            }
+        } else if (country != "select" || email.length == 0 || firstn.length != 0 || lastn.length != 0 || subject.length != 0) {
+            if (pjoutfStyle == "flex") {
+                document.querySelector("#empty").style.display = "none";
+                event.preventDefault();
+            } else if (pjoutfStyle != "flex") {
+                document.querySelector("#pfotrFields").style.display = "flex";
+                document.querySelector("#pfotrFields").style.justifyContent = "center";
+            }
+        }
 
         //First Name validation rules
 
@@ -142,8 +158,8 @@ $(document).ready(function () {
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
-                if (country == "select" && email.length == 0 && firstn.length > 0 && lastn.length == 0 && subject.length == 0) {
-                    if (pjoutfStyle == "flex") {
+                if (country == "select" || email.length == 0 || firstn.length > 0 || lastn.length == 0 || subject.length == 0) {
+                    if (pjoutfStyle == "flex" ) {
                         event.preventDefault();
                     } else if (pjoutfStyle != "flex") {
                         document.querySelector("#pfotrFields").style.display = "flex";
@@ -151,7 +167,7 @@ $(document).ready(function () {
                     }
                 }
             } else {
-                document.querySelector("#pfotrFields").style.display = "none";
+                // document.querySelector("#pfotrFields").style.display = "none";
                 document.querySelector("#invalidfirstn").style.display = "none";
             }
         }
@@ -187,7 +203,8 @@ $(document).ready(function () {
         //Last Name validation rules
 
         if (lastn.length > 0) {
-            // event.preventDefault()
+            event.preventDefault()
+            document.querySelector("#empty").style.display = "none";
             if (lastn.length < 2 || lastn.includes("1") || lastn.includes("2") || lastn.includes("3") || lastn.includes("4") || lastn.includes("4") || lastn.includes("5") || lastn.includes("6") || lastn.includes("7") || lastn.includes(".") || lastn.includes(";") || lastn.includes("!") || lastn.includes("?")) {
                 event.preventDefault()
                 document.querySelector("#invalidlastn").style.display = "flex";
@@ -195,6 +212,16 @@ $(document).ready(function () {
                 invalidln.append("<div>Invalid Last Name</div>")
             } else {
                 document.querySelector("#invalidlastn").style.display = "none";
+            }
+            if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length > 0 || subject.length == 0) {
+                if (pjoutfStyle == "flex") {
+                    event.preventDefault()
+                    console.log("bro")
+                } else if (pjoutfStyle != "flex") {
+                    event.preventDefault()
+                    document.querySelector("#pfotrFields").style.display = "flex";
+                    document.querySelector("#pfotrFields").style.justifyContent = "center";
+                }
             }
         }
 
@@ -233,6 +260,7 @@ $(document).ready(function () {
         }
         if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
+            document.querySelector("#pfotrFields").style.display = "none";
             document.querySelector("#empty").style.display = "flex";
             document.querySelector("#empty").style.justifyContent = "center";
             empty.append("<div>Please Fill Out All Of The Required Fields</div>")
