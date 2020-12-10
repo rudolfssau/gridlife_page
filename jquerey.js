@@ -249,19 +249,23 @@ $(document).ready(function () {
 
         if (subject.length > 0) {
             event.preventDefault()
-            document.querySelector("#invalidsubject").style.display = "none";
+            document.querySelector("#empty").style.display = "none";
             if (subject.length == 0) {
+                event.preventDefault()
                 event.preventDefault()
                 document.querySelector("#invalidsubject").style.display = "flex";
                 document.querySelector("#invalidsubject").style.justifyContent = "center";
                 invalidsubj.append("<div>Subject Is Empty</div>")
+                if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length > 0) {
+                    if (pjoutfStyle == "flex") {
+                        event.preventDefault()
+                    } else if (pjoutfStyle != "flex") {
+                        event.preventDefault()
+                        document.querySelector("#pfotrFields").style.display = "flex";
+                        document.querySelector("#pfotrFields").style.justifyContent = "center";
+                    }
+                }
             }
-            // if (country == "select" && email.length == 0 && firstn.length == 0 && lastn.length == 0 && subject.length > 0) {
-            //     event.preventDefault()
-            //     document.querySelector("#pfotrFields").style.display = "flex";
-            //     document.querySelector("#pfotrFields").style.justifyContent = "center";
-            //     emptyFields.append("<div>Please Fill Out The Remainig Fields</div>")
-            // }
         }
         if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
