@@ -67,10 +67,9 @@ $(document).ready(function () {
         invalidsubj.empty();
         invalidcountry.empty();
         empty.empty();
-        emptyFields.empty();
-        var style = document.querySelector("#pfotrFields").style.display;
-        var jcontectStyle = document.querySelector("#pfotrFields").style.justifyContent;
-
+        // emptyFields.empty();
+        var pjoutfStyle = document.querySelector("#pfotrFields").style.display;
+        var emptyStyle = document.querySelector("#empty").style.display;
 
         // if (email.length > 0 && firstn.length > 0 && lastn.length > 0 && subject.length > 0) {
         //     if (country === "select") {
@@ -144,12 +143,11 @@ $(document).ready(function () {
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
                 if (country == "select" && email.length == 0 && firstn.length > 0 && lastn.length == 0 && subject.length == 0) {
-                    if (style == "flex" && jcontectStyle == "center") {
+                    if (pjoutfStyle == "flex") {
                         event.preventDefault();
-                    } else {
+                    } else if (pjoutfStyle != "flex") {
                         document.querySelector("#pfotrFields").style.display = "flex";
                         document.querySelector("#pfotrFields").style.justifyContent = "center";
-                        emptyFields.append("<div>Please Fill Out The Remainig Fields</div>")
                     }
                 }
             } else {
@@ -161,25 +159,28 @@ $(document).ready(function () {
         //Email validation rules
 
         if (email.length > 0) {
-            if (email.length > 5 && email.includes("@") && email.includes(".")) {
-                event.preventDefault()
-                document.querySelector("#invalidemail").style.display = "none";
-                if (email.length > 0 && firstn.length == 0 && lastn.length == 0 && subject.length == 0) {
-                    if (document.querySelector("#pfotrFields").style.display = "flex") {
-                        event.preventDefault();
-                        console.log("bro")
-                    } else {
-                        console.log("Else")
-                    }
-                //     event.preventDefault()
-                //     document.querySelector("#pfotrFields").style.display = "flex";
-                //     document.querySelector("#pfotrFields").style.justifyContent = "center";
-                }
-            } else {
+            if (emptyStyle == "flex") {
+                document.querySelector("#empty").style.display = "none";
+            }
+            if (email.length < 5) {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "flex";
                 document.querySelector("#invalidemail").style.justifyContent = "center";
                 invalidemail.append("<div>Invalid Email</div>")
+            }
+            if (email.length > 5 && email.includes("@") && email.includes(".")) {
+                event.preventDefault()
+                document.querySelector("#invalidemail").style.display = "none";
+            }
+            if (country == "select" || email.length > 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
+                if (pjoutfStyle == "flex") {
+                    event.preventDefault()
+                    console.log("bro")
+                } else if (pjoutfStyle != "flex") {
+                    event.preventDefault()
+                    document.querySelector("#pfotrFields").style.display = "flex";
+                    document.querySelector("#pfotrFields").style.justifyContent = "center";
+                }
             }
         }
 
