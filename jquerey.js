@@ -89,6 +89,8 @@ $(document).ready(function () {
                 document.querySelector("#pfotrFields").style.display = "flex";
                 document.querySelector("#pfotrFields").style.justifyContent = "center";
             }
+        } else if (country != "select" || email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
+
         }
 
         //First Name validation rules
@@ -111,6 +113,7 @@ $(document).ready(function () {
                 }
             } else {
                 document.querySelector("#invalidfirstn").style.display = "none";
+                console.log("bro")
             }
         }
 
@@ -175,6 +178,7 @@ $(document).ready(function () {
                 document.querySelector("#invalidcountry").style.display = "flex";
                 document.querySelector("#invalidcountry").style.justifyContent = "center";
                 invalidcountry.append("<div>Please Select Your Country</div>")
+                return false
             }
             if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
                 if (pjoutfStyle == "flex") {
@@ -186,8 +190,12 @@ $(document).ready(function () {
                     document.querySelector("#pfotrFields").style.justifyContent = "center";
                 }
             }
+            if (country != "select") {
+                return true
+                invalidcountry.empty()
+                document.querySelector("#invalidcountry").style.display = "none";
+            }
         }
-
 
         //Subject validation rules
 
