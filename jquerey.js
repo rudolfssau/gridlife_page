@@ -103,6 +103,7 @@ $(document).ready(function () {
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
+                return false
                 if (country == "select" || email.length == 0 || firstn.length > 0 || lastn.length == 0 || subject.length == 0) {
                     if (pjoutfStyle == "flex" ) {
                         event.preventDefault();
@@ -113,7 +114,7 @@ $(document).ready(function () {
                 }
             } else {
                 document.querySelector("#invalidfirstn").style.display = "none";
-                console.log("bro")
+                return true
             }
         }
 
@@ -128,10 +129,12 @@ $(document).ready(function () {
                 document.querySelector("#invalidemail").style.display = "flex";
                 document.querySelector("#invalidemail").style.justifyContent = "center";
                 invalidemail.append("<div>Invalid Email</div>")
+                return false
             }
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "none";
+                return true
             }
             if (country == "select" || email.length > 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
                 if (pjoutfStyle == "flex") {
@@ -154,8 +157,10 @@ $(document).ready(function () {
                 document.querySelector("#invalidlastn").style.display = "flex";
                 document.querySelector("#invalidlastn").style.justifyContent = "center";
                 invalidln.append("<div>Invalid Last Name</div>")
+                return false
             } else {
                 document.querySelector("#invalidlastn").style.display = "none";
+                return true
             }
             if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length > 0 || subject.length == 0) {
                 if (pjoutfStyle == "flex") {
@@ -170,44 +175,46 @@ $(document).ready(function () {
 
         //Country Select validation rules
 
-        if (country == "select") {
-            event.preventDefault()
-            document.querySelector("#empty").style.display = "none";
-            if (country == "select") {
-                event.preventDefault();
-                document.querySelector("#invalidcountry").style.display = "flex";
-                document.querySelector("#invalidcountry").style.justifyContent = "center";
-                invalidcountry.append("<div>Please Select Your Country</div>")
-                return false
-            }
-            if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
-                if (pjoutfStyle == "flex") {
-                    event.preventDefault()
-                } else if (pjoutfStyle != "flex") {
-                    event.preventDefault()
-                    document.querySelector("#invalidcountry").style.display = "none";
-                    document.querySelector("#pfotrFields").style.display = "flex";
-                    document.querySelector("#pfotrFields").style.justifyContent = "center";
-                }
-            }
-            if (country != "select") {
-                return true
-                invalidcountry.empty()
-                document.querySelector("#invalidcountry").style.display = "none";
-            }
-        }
+        // if (country == "select") {
+        //     event.preventDefault()
+        //     document.querySelector("#empty").style.display = "none";
+        //     if (country == "select") {
+        //         event.preventDefault();
+        //         document.querySelector("#invalidcountry").style.display = "flex";
+        //         document.querySelector("#invalidcountry").style.justifyContent = "center";
+        //         invalidcountry.append("<div>Please Select Your Country</div>")
+        //         return false
+        //     }
+        //     if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
+        //         if (pjoutfStyle == "flex") {
+        //             event.preventDefault()
+        //         } else if (pjoutfStyle != "flex") {
+        //             event.preventDefault()
+        //             document.querySelector("#invalidcountry").style.display = "none";
+        //             document.querySelector("#pfotrFields").style.display = "flex";
+        //             document.querySelector("#pfotrFields").style.justifyContent = "center";
+        //         }
+        //     }
+        //     if (country != "select") {
+        //         return true
+        //         invalidcountry.empty()
+        //         document.querySelector("#invalidcountry").style.display = "none";
+        //     }
+        // }
 
         //Subject validation rules
 
         if (subject.length > 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
+            return true
             if (subject.length == 0) {
                 event.preventDefault()
                 event.preventDefault()
                 document.querySelector("#invalidsubject").style.display = "flex";
                 document.querySelector("#invalidsubject").style.justifyContent = "center";
                 invalidsubj.append("<div>Subject Is Empty</div>")
+                return false
                 if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length > 0) {
                     if (pjoutfStyle == "flex") {
                         event.preventDefault()
@@ -219,6 +226,9 @@ $(document).ready(function () {
                 }
             }
         }
+
+        //Overall validation
+
         if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
             document.querySelector("#pfotrFields").style.display = "none";
@@ -229,6 +239,14 @@ $(document).ready(function () {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
         }
+
+        // if ((firstn = true) && (lastn = true) && (email == true)) {
+        //     console.log("Sveiki")
+        // }
+        if (firstn = true) {
+            console.log("true")
+        }
+
     });
 });
 
