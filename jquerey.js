@@ -47,32 +47,32 @@ $(function () {
         $("#videomessage-overlay").css("opacity", "60%");
     });
 });
-$(document).ready(function () {
-    $("#submit").click(function (event) {
-        var firstn = $("#firstn").val();
-        var lastn = $("#lastn").val();
-        var email = $("#email").val();
-        var country = $("#country").val();
-        var subject = $("#subject").val();
-        var invalidfn = $("#invalidfirstn");
-        var invalidln = $("#invalidlastn");
-        var invalidemail = $("#invalidemail");
-        var invalidcountry = $("#invalidcountry");
-        var invalidsubj = $("#invalidsubject");
-        var empty = $("#empty");
-        var emptyFields = $("#pfotrFields");
-        invalidfn.empty();
-        invalidemail.empty();
-        invalidln.empty();
-        invalidsubj.empty();
-        invalidcountry.empty();
-        empty.empty();
+var firstn = $("#firstn").val();
+var lastn = $("#lastn").val();
+var email = $("#email").val();
+var country = $("#country").val();
+var subject = $("#subject").val();
+var invalidfn = $("#invalidfirstn");
+var invalidln = $("#invalidlastn");
+var invalidemail = $("#invalidemail");
+var invalidcountry = $("#invalidcountry");
+var invalidsubj = $("#invalidsubject");
+var empty = $("#empty");
+var emptyFields = $("#pfotrFields");
+invalidfn.empty();
+invalidemail.empty();
+invalidln.empty();
+invalidsubj.empty();
+invalidcountry.empty();
+empty.empty();
 
 
-        var pjoutfStyle = document.querySelector("#pfotrFields").style.display;
-        var emptyStyle = document.querySelector("#empty").style.display;
+var pjoutfStyle = document.querySelector("#pfotrFields").style.display;
+var emptyStyle = document.querySelector("#empty").style.display;
 
 
+function check(event) {
+    function pfotrfields() {
         if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
             if (pjoutfStyle == "flex") {
                 document.querySelector("#empty").style.display = "none";
@@ -92,9 +92,11 @@ $(document).ready(function () {
         } else if (country != "select" || email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
 
         }
+    }
 
-        //First Name validation rules
+//First Name validation rules
 
+    function fname() {
         if (firstn.length > 1) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
@@ -119,9 +121,11 @@ $(document).ready(function () {
                 }
             }
         }
+    }
 
-        //Email validation rules
+//Email validation rules
 
+    function email() {
         if (email.length > 0) {
             if (emptyStyle == "flex") {
                 document.querySelector("#empty").style.display = "none";
@@ -148,9 +152,11 @@ $(document).ready(function () {
                 }
             }
         }
+    }
 
-        //Last Name validation rules
+//Last Name validation rules
 
+    function lastN() {
         if (lastn.length > 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
@@ -174,38 +180,40 @@ $(document).ready(function () {
                 }
             }
         }
+    }
 
-        //Country Select validation rules
+//Country Select validation rules
 
-        // if (country == "select") {
-        //     event.preventDefault()
-        //     document.querySelector("#empty").style.display = "none";
-        //     if (country == "select") {
-        //         event.preventDefault();
-        //         document.querySelector("#invalidcountry").style.display = "flex";
-        //         document.querySelector("#invalidcountry").style.justifyContent = "center";
-        //         invalidcountry.append("<div>Please Select Your Country</div>")
-        //         return false
-        //     }
-        //     if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
-        //         if (pjoutfStyle == "flex") {
-        //             event.preventDefault()
-        //         } else if (pjoutfStyle != "flex") {
-        //             event.preventDefault()
-        //             document.querySelector("#invalidcountry").style.display = "none";
-        //             document.querySelector("#pfotrFields").style.display = "flex";
-        //             document.querySelector("#pfotrFields").style.justifyContent = "center";
-        //         }
-        //     }
-        //     if (country != "select") {
-        //         return true
-        //         invalidcountry.empty()
-        //         document.querySelector("#invalidcountry").style.display = "none";
-        //     }
-        // }
+// if (country == "select") {
+//     event.preventDefault()
+//     document.querySelector("#empty").style.display = "none";
+//     if (country == "select") {
+//         event.preventDefault();
+//         document.querySelector("#invalidcountry").style.display = "flex";
+//         document.querySelector("#invalidcountry").style.justifyContent = "center";
+//         invalidcountry.append("<div>Please Select Your Country</div>")
+//         return false
+//     }
+//     if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
+//         if (pjoutfStyle == "flex") {
+//             event.preventDefault()
+//         } else if (pjoutfStyle != "flex") {
+//             event.preventDefault()
+//             document.querySelector("#invalidcountry").style.display = "none";
+//             document.querySelector("#pfotrFields").style.display = "flex";
+//             document.querySelector("#pfotrFields").style.justifyContent = "center";
+//         }
+//     }
+//     if (country != "select") {
+//         return true
+//         invalidcountry.empty()
+//         document.querySelector("#invalidcountry").style.display = "none";
+//     }
+// }
 
-        //Subject validation rules
+//Subject validation rules
 
+    function subject() {
         if (subject.length > 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
@@ -228,9 +236,11 @@ $(document).ready(function () {
                 }
             }
         }
+    }
 
-        //Overall validation
+//Overall validation
 
+    function overallCheck() {
         if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
             document.querySelector("#pfotrFields").style.display = "none";
@@ -241,17 +251,26 @@ $(document).ready(function () {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
         }
+    }
+}
 
-
-        if (firstn = "sveiki") {
-            event.preventDefault()
-            console.log("notsafe")
-        }
-        if (firstn = "safe") {
-            event.preventDefault()
-            console.log("safe")
-        }
-
-    });
+console.log(check())
+// $(document).ready(function () {
+//     $("#submit").click(function (event) {
+//         fname();
+//         lastN();
+//         subject();
+//         email();
+//         overallCheck();
+    // });
+// });
+$("#submit").on('click', function(event) {
+    event.preventDefault()
+    check()
+    // lastN();
+    // subject();
+    // email();
+    // overallCheck();
+    console.log("Bro")
 });
 
