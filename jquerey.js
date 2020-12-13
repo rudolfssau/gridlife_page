@@ -95,15 +95,20 @@ $(document).ready(function () {
 
         //First Name validation rules
 
-        if (firstn.length == 0) {
+        if (firstn.length > 1) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
+            if (firstn > 2) {
+                event.preventDefault()
+                document.querySelector("#invalidfirstn").style.display = "none";
+                return "safe";
+            }
             if (firstn.length < 2) {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
-                return;
+                // return "sveiki";
                 if (country == "select" || email.length == 0 || firstn.length > 0 || lastn.length == 0 || subject.length == 0) {
                     if (pjoutfStyle == "flex" ) {
                         event.preventDefault();
@@ -112,10 +117,6 @@ $(document).ready(function () {
                         document.querySelector("#pfotrFields").style.justifyContent = "center";
                     }
                 }
-            } else if (firstn.length > 2) {
-                event.preventDefault()
-                document.querySelector("#invalidfirstn").style.display = "none";
-                return;
             }
         }
 
@@ -241,11 +242,14 @@ $(document).ready(function () {
             document.querySelector("#empty").style.display = "none";
         }
 
-        if ((firstn = true) && (lastn = true) && (email == true)) {
-            console.log("Sveiki")
+
+        if (firstn = "sveiki") {
+            event.preventDefault()
+            console.log("notsafe")
         }
-        if (firstn = true) {
-            console.log("true")
+        if (firstn = "safe") {
+            event.preventDefault()
+            console.log("safe")
         }
 
     });
