@@ -47,32 +47,33 @@ $(function () {
         $("#videomessage-overlay").css("opacity", "60%");
     });
 });
-var firstn = $("#firstn").val();
-var lastn = $("#lastn").val();
-var email = $("#email").val();
-var country = $("#country").val();
-var subject = $("#subject").val();
-var invalidfn = $("#invalidfirstn");
-var invalidln = $("#invalidlastn");
-var invalidemail = $("#invalidemail");
-var invalidcountry = $("#invalidcountry");
-var invalidsubj = $("#invalidsubject");
-var empty = $("#empty");
-var emptyFields = $("#pfotrFields");
-invalidfn.empty();
-invalidemail.empty();
-invalidln.empty();
-invalidsubj.empty();
-invalidcountry.empty();
-empty.empty();
+$(document).ready(function () {
+    $("#submit").click(function (event) {
+
+        var firstn = $("#firstn").val();
+        var lastn = $("#lastn").val();
+        var email = $("#email").val();
+        var country = $("#country").val();
+        var subject = $("#subject").val();
+        var invalidfn = $("#invalidfirstn");
+        var invalidln = $("#invalidlastn");
+        var invalidemail = $("#invalidemail");
+        var invalidcountry = $("#invalidcountry");
+        var invalidsubj = $("#invalidsubject");
+        var empty = $("#empty");
+        var emptyFields = $("#pfotrFields");
+        invalidfn.empty();
+        invalidemail.empty();
+        invalidln.empty();
+        invalidsubj.empty();
+        invalidcountry.empty();
+        empty.empty();
 
 
-var pjoutfStyle = document.querySelector("#pfotrFields").style.display;
-var emptyStyle = document.querySelector("#empty").style.display;
+        var pjoutfStyle = document.querySelector("#pfotrFields").style.display;
+        var emptyStyle = document.querySelector("#empty").style.display;
 
 
-function check(event) {
-    function pfotrfields() {
         if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
             if (pjoutfStyle == "flex") {
                 document.querySelector("#empty").style.display = "none";
@@ -92,25 +93,22 @@ function check(event) {
         } else if (country != "select" || email.length > 0 || firstn.length > 0 || lastn.length > 0 || subject.length > 0) {
 
         }
-    }
 
-//First Name validation rules
+        //First Name validation rules
 
-    function fname() {
-        if (firstn.length > 1) {
+        if (firstn.length > 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
             if (firstn > 2) {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "none";
-                return "safe";
+                $('#contactform').submit();
             }
             if (firstn.length < 2) {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
-                // return "sveiki";
                 if (country == "select" || email.length == 0 || firstn.length > 0 || lastn.length == 0 || subject.length == 0) {
                     if (pjoutfStyle == "flex" ) {
                         event.preventDefault();
@@ -121,11 +119,9 @@ function check(event) {
                 }
             }
         }
-    }
 
-//Email validation rules
+        //Email validation rules
 
-    function email() {
         if (email.length > 0) {
             if (emptyStyle == "flex") {
                 document.querySelector("#empty").style.display = "none";
@@ -135,12 +131,11 @@ function check(event) {
                 document.querySelector("#invalidemail").style.display = "flex";
                 document.querySelector("#invalidemail").style.justifyContent = "center";
                 invalidemail.append("<div>Invalid Email</div>")
-                return false
             }
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
                 event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "none";
-                return true
+                $('#contactform').submit();
             }
             if (country == "select" || email.length > 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
                 if (pjoutfStyle == "flex") {
@@ -152,11 +147,9 @@ function check(event) {
                 }
             }
         }
-    }
 
-//Last Name validation rules
+        //Last Name validation rules
 
-    function lastN() {
         if (lastn.length > 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
@@ -168,6 +161,7 @@ function check(event) {
                 return false
             } else {
                 document.querySelector("#invalidlastn").style.display = "none";
+                $('#contactform').submit();
                 return true
             }
             if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length > 0 || subject.length == 0) {
@@ -180,51 +174,50 @@ function check(event) {
                 }
             }
         }
-    }
+        //Country Select validation rules
 
-//Country Select validation rules
+        // if (country == "select") {
+        //     event.preventDefault()
+        //     document.querySelector("#empty").style.display = "none";
+        //     if (country == "select") {
+        //         event.preventDefault();
+        //         document.querySelector("#invalidcountry").style.display = "flex";
+        //         document.querySelector("#invalidcountry").style.justifyContent = "center";
+        //         invalidcountry.append("<div>Please Select Your Country</div>")
+        //         return false
+        //     }
+        //     if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
+        //         if (pjoutfStyle == "flex") {
+        //             event.preventDefault()
+        //         } else if (pjoutfStyle != "flex") {
+        //             event.preventDefault()
+        //             document.querySelector("#invalidcountry").style.display = "none";
+        //             document.querySelector("#pfotrFields").style.display = "flex";
+        //             document.querySelector("#pfotrFields").style.justifyContent = "center";
+        //         }
+        //     }
+        //     if (country != "select") {
+        //         return true
+        //         invalidcountry.empty()
+        //         document.querySelector("#invalidcountry").style.display = "none";
+        //     }
+        // }
 
-// if (country == "select") {
-//     event.preventDefault()
-//     document.querySelector("#empty").style.display = "none";
-//     if (country == "select") {
-//         event.preventDefault();
-//         document.querySelector("#invalidcountry").style.display = "flex";
-//         document.querySelector("#invalidcountry").style.justifyContent = "center";
-//         invalidcountry.append("<div>Please Select Your Country</div>")
-//         return false
-//     }
-//     if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
-//         if (pjoutfStyle == "flex") {
-//             event.preventDefault()
-//         } else if (pjoutfStyle != "flex") {
-//             event.preventDefault()
-//             document.querySelector("#invalidcountry").style.display = "none";
-//             document.querySelector("#pfotrFields").style.display = "flex";
-//             document.querySelector("#pfotrFields").style.justifyContent = "center";
-//         }
-//     }
-//     if (country != "select") {
-//         return true
-//         invalidcountry.empty()
-//         document.querySelector("#invalidcountry").style.display = "none";
-//     }
-// }
+        //Subject validation rules
 
-//Subject validation rules
-
-    function subject() {
         if (subject.length > 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
-            return true
+            if (subject > 2) {
+                document.querySelector("#invalidsubject").style.display = "none";
+                $('#contactform').submit();
+            }
             if (subject.length == 0) {
                 event.preventDefault()
                 event.preventDefault()
                 document.querySelector("#invalidsubject").style.display = "flex";
                 document.querySelector("#invalidsubject").style.justifyContent = "center";
                 invalidsubj.append("<div>Subject Is Empty</div>")
-                return false
                 if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length > 0) {
                     if (pjoutfStyle == "flex") {
                         event.preventDefault()
@@ -236,11 +229,9 @@ function check(event) {
                 }
             }
         }
-    }
 
-//Overall validation
+        //Overall validation
 
-    function overallCheck() {
         if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && subject.length == 0) {
             event.preventDefault()
             document.querySelector("#pfotrFields").style.display = "none";
@@ -251,26 +242,17 @@ function check(event) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
         }
-    }
-}
 
-console.log(check())
-// $(document).ready(function () {
-//     $("#submit").click(function (event) {
-//         fname();
-//         lastN();
-//         subject();
-//         email();
-//         overallCheck();
-    // });
-// });
-$("#submit").on('click', function(event) {
-    event.preventDefault()
-    check()
-    // lastN();
-    // subject();
-    // email();
-    // overallCheck();
-    console.log("Bro")
+
+        if (firstn = "sveiki") {
+            event.preventDefault()
+            console.log("notsafe")
+        }
+        if (firstn = "safe") {
+            event.preventDefault()
+            console.log("safe")
+        }
+
+    });
 });
 
