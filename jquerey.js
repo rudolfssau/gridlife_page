@@ -99,10 +99,10 @@ $(document).ready(function () {
         if (firstn.length > 0) {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
-            if (firstn > 2) {
+            if (firstn.length > 2) {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "none";
-                $('#contactform').submit();
+                return true
             }
             if (firstn.length < 2) {
                 event.preventDefault()
@@ -118,6 +118,22 @@ $(document).ready(function () {
                     }
                 }
             }
+        }
+        // if (firstn.length > 2) {
+        //     event.preventDefault()
+        //     document.querySelector("#invalidfirstn").style.display = "none";
+        //     return true
+        // }
+        // if (firstn.length < 2) {
+        //     event.preventDefault()
+        //     document.querySelector("#invalidfirstn").style.display = "flex";
+        //     document.querySelector("#invalidfirstn").style.justifyContent = "center";
+        //     invalidfn.append("<div>Invalid First Name</div>")
+        // }
+
+        if (firstn = true) {
+            event.preventDefault()
+            console.log("true")
         }
 
         //Email validation rules
@@ -146,6 +162,7 @@ $(document).ready(function () {
                     document.querySelector("#pfotrFields").style.justifyContent = "center";
                 }
             }
+            return true
         }
 
         //Last Name validation rules
@@ -173,6 +190,7 @@ $(document).ready(function () {
                     document.querySelector("#pfotrFields").style.justifyContent = "center";
                 }
             }
+            return true
         }
         //Country Select validation rules
 
@@ -228,6 +246,7 @@ $(document).ready(function () {
                     }
                 }
             }
+            return true
         }
 
         //Overall validation
@@ -241,16 +260,6 @@ $(document).ready(function () {
         } else if (firstn.length > 0 && lastn.length > 0 && email.length > 0 && subject.length > 0 && country != "select") {
             event.preventDefault()
             document.querySelector("#empty").style.display = "none";
-        }
-
-
-        if (firstn = "sveiki") {
-            event.preventDefault()
-            console.log("notsafe")
-        }
-        if (firstn = "safe") {
-            event.preventDefault()
-            console.log("safe")
         }
 
     });
