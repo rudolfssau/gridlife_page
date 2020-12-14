@@ -97,19 +97,17 @@ $(document).ready(function () {
         //First Name validation rules
 
         if (firstn.length > 0) {
-            event.preventDefault()
+            // event.preventDefault()
             document.querySelector("#empty").style.display = "none";
             if (firstn.length > 2) {
-                event.preventDefault()
+                // event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "none";
-                return ">2"
             }
             if (firstn.length < 2) {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
-                return "<2"
                 if (country == "select" || email.length == 0 || firstn.length > 0 || lastn.length == 0 || subject.length == 0) {
                     if (pjoutfStyle == "flex" ) {
                         event.preventDefault();
@@ -119,17 +117,6 @@ $(document).ready(function () {
                     }
                 }
             }
-        }
-        if (firstn.length > 2) {
-            event.preventDefault()
-            document.querySelector("#invalidfirstn").style.display = "none";
-            return true
-        }
-        if (firstn.length < 2) {
-            event.preventDefault()
-            document.querySelector("#invalidfirstn").style.display = "flex";
-            document.querySelector("#invalidfirstn").style.justifyContent = "center";
-            invalidfn.append("<div>Invalid First Name</div>")
         }
 
 
@@ -147,7 +134,6 @@ $(document).ready(function () {
                 invalidemail.append("<div>Invalid Email</div>")
             }
             if (email.length > 5 && email.includes("@") && email.includes(".")) {
-                event.preventDefault()
                 document.querySelector("#invalidemail").style.display = "none";
                 $('#contactform').submit();
             }
@@ -160,24 +146,21 @@ $(document).ready(function () {
                     document.querySelector("#pfotrFields").style.justifyContent = "center";
                 }
             }
-            return true
         }
 
         //Last Name validation rules
 
+
         if (lastn.length > 0) {
-            event.preventDefault()
             document.querySelector("#empty").style.display = "none";
             if (lastn.length < 2 || lastn.includes("1") || lastn.includes("2") || lastn.includes("3") || lastn.includes("4") || lastn.includes("4") || lastn.includes("5") || lastn.includes("6") || lastn.includes("7") || lastn.includes(".") || lastn.includes(";") || lastn.includes("!") || lastn.includes("?")) {
                 event.preventDefault()
                 document.querySelector("#invalidlastn").style.display = "flex";
                 document.querySelector("#invalidlastn").style.justifyContent = "center";
                 invalidln.append("<div>Invalid Last Name</div>")
-                return false
             } else {
                 document.querySelector("#invalidlastn").style.display = "none";
                 $('#contactform').submit();
-                return true
             }
             if (country == "select" || email.length == 0 || firstn.length == 0 || lastn.length > 0 || subject.length == 0) {
                 if (pjoutfStyle == "flex") {
@@ -188,7 +171,6 @@ $(document).ready(function () {
                     document.querySelector("#pfotrFields").style.justifyContent = "center";
                 }
             }
-            return true
         }
         //Country Select validation rules
 
@@ -200,20 +182,17 @@ $(document).ready(function () {
                 document.querySelector("#invalidcountry").style.display = "flex";
                 document.querySelector("#invalidcountry").style.justifyContent = "center";
                 invalidcountry.append("<div>Please Select Your Country</div>")
-                return false
             }
             if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
                 if (pjoutfStyle == "flex") {
                     event.preventDefault()
                 } else if (pjoutfStyle != "flex") {
-                    event.preventDefault()
                     document.querySelector("#invalidcountry").style.display = "none";
                     document.querySelector("#pfotrFields").style.display = "flex";
                     document.querySelector("#pfotrFields").style.justifyContent = "center";
                 }
             }
             if (country != "select") {
-                return true
                 invalidcountry.empty()
                 document.querySelector("#invalidcountry").style.display = "none";
             }
@@ -222,14 +201,12 @@ $(document).ready(function () {
         //Subject validation rules
 
         if (subject.length > 0) {
-            event.preventDefault()
             document.querySelector("#empty").style.display = "none";
             if (subject > 2) {
                 document.querySelector("#invalidsubject").style.display = "none";
                 $('#contactform').submit();
             }
             if (subject.length == 0) {
-                event.preventDefault()
                 event.preventDefault()
                 document.querySelector("#invalidsubject").style.display = "flex";
                 document.querySelector("#invalidsubject").style.justifyContent = "center";
@@ -238,13 +215,11 @@ $(document).ready(function () {
                     if (pjoutfStyle == "flex") {
                         event.preventDefault()
                     } else if (pjoutfStyle != "flex") {
-                        event.preventDefault()
                         document.querySelector("#pfotrFields").style.display = "flex";
                         document.querySelector("#pfotrFields").style.justifyContent = "center";
                     }
                 }
             }
-            return true
         }
 
         //Overall validation
@@ -256,7 +231,6 @@ $(document).ready(function () {
             document.querySelector("#empty").style.justifyContent = "center";
             empty.append("<div>Please Fill Out All Of The Required Fields</div>")
         } else if (firstn.length > 0 && lastn.length > 0 && email.length > 0 && subject.length > 0 && country != "select") {
-            event.preventDefault()
             document.querySelector("#empty").style.display = "none";
         }
 
