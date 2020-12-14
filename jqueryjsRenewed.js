@@ -1,9 +1,6 @@
-$("#contactform").submit(function () {
-    event.preventDefault()
-    // console.log("bro")
-    // $("#submit").click(function (event) {
+$(document).ready(function () {
+    $("#submit").click(function (event) {
         event.preventDefault()
-        check()
         var firstn = $("#firstn").val();
         var lastn = $("#lastn").val();
         var email = $("#email").val();
@@ -22,13 +19,8 @@ $("#contactform").submit(function () {
         invalidsubj.empty();
         invalidcountry.empty();
         empty.empty();
-
-        function check() {
-            if (firstn.length == 0) {
-                console.log("janis")
-            }
-        }
-    // });
+        console.log("workds")
+    });
 });
 
 
