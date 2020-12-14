@@ -102,13 +102,14 @@ $(document).ready(function () {
             if (firstn.length > 2) {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "none";
-                return true
+                return ">2"
             }
             if (firstn.length < 2) {
                 event.preventDefault()
                 document.querySelector("#invalidfirstn").style.display = "flex";
                 document.querySelector("#invalidfirstn").style.justifyContent = "center";
                 invalidfn.append("<div>Invalid First Name</div>")
+                return "<2"
                 if (country == "select" || email.length == 0 || firstn.length > 0 || lastn.length == 0 || subject.length == 0) {
                     if (pjoutfStyle == "flex" ) {
                         event.preventDefault();
@@ -119,22 +120,19 @@ $(document).ready(function () {
                 }
             }
         }
-        // if (firstn.length > 2) {
-        //     event.preventDefault()
-        //     document.querySelector("#invalidfirstn").style.display = "none";
-        //     return true
-        // }
-        // if (firstn.length < 2) {
-        //     event.preventDefault()
-        //     document.querySelector("#invalidfirstn").style.display = "flex";
-        //     document.querySelector("#invalidfirstn").style.justifyContent = "center";
-        //     invalidfn.append("<div>Invalid First Name</div>")
-        // }
-
-        if (firstn = true) {
+        if (firstn.length > 2) {
             event.preventDefault()
-            console.log("true")
+            document.querySelector("#invalidfirstn").style.display = "none";
+            return true
         }
+        if (firstn.length < 2) {
+            event.preventDefault()
+            document.querySelector("#invalidfirstn").style.display = "flex";
+            document.querySelector("#invalidfirstn").style.justifyContent = "center";
+            invalidfn.append("<div>Invalid First Name</div>")
+        }
+
+
 
         //Email validation rules
 
@@ -194,32 +192,32 @@ $(document).ready(function () {
         }
         //Country Select validation rules
 
-        // if (country == "select") {
-        //     event.preventDefault()
-        //     document.querySelector("#empty").style.display = "none";
-        //     if (country == "select") {
-        //         event.preventDefault();
-        //         document.querySelector("#invalidcountry").style.display = "flex";
-        //         document.querySelector("#invalidcountry").style.justifyContent = "center";
-        //         invalidcountry.append("<div>Please Select Your Country</div>")
-        //         return false
-        //     }
-        //     if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
-        //         if (pjoutfStyle == "flex") {
-        //             event.preventDefault()
-        //         } else if (pjoutfStyle != "flex") {
-        //             event.preventDefault()
-        //             document.querySelector("#invalidcountry").style.display = "none";
-        //             document.querySelector("#pfotrFields").style.display = "flex";
-        //             document.querySelector("#pfotrFields").style.justifyContent = "center";
-        //         }
-        //     }
-        //     if (country != "select") {
-        //         return true
-        //         invalidcountry.empty()
-        //         document.querySelector("#invalidcountry").style.display = "none";
-        //     }
-        // }
+        if (country == "select") {
+            event.preventDefault()
+            document.querySelector("#empty").style.display = "none";
+            if (country == "select") {
+                event.preventDefault();
+                document.querySelector("#invalidcountry").style.display = "flex";
+                document.querySelector("#invalidcountry").style.justifyContent = "center";
+                invalidcountry.append("<div>Please Select Your Country</div>")
+                return false
+            }
+            if (country != "select" || email.length == 0 || firstn.length == 0 || lastn.length == 0 || subject.length == 0) {
+                if (pjoutfStyle == "flex") {
+                    event.preventDefault()
+                } else if (pjoutfStyle != "flex") {
+                    event.preventDefault()
+                    document.querySelector("#invalidcountry").style.display = "none";
+                    document.querySelector("#pfotrFields").style.display = "flex";
+                    document.querySelector("#pfotrFields").style.justifyContent = "center";
+                }
+            }
+            if (country != "select") {
+                return true
+                invalidcountry.empty()
+                document.querySelector("#invalidcountry").style.display = "none";
+            }
+        }
 
         //Subject validation rules
 
