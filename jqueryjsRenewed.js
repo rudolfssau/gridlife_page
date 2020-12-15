@@ -50,6 +50,17 @@ $(document).ready(function () {
         if (email.length > 5 && email.includes("@") && email.includes(".")) {
             document.querySelector("#invalidemail").style.display = "none";
         }
+
+
+        if (subject.length < 1) {
+            event.preventDefault()
+            document.querySelector("#invalidsubject").style.display = "flex";
+            document.querySelector("#invalidsubject").style.justifyContent = "center";
+            invalidsubj.append("<div>Subject Is Empty</div>")
+        }
+        if (subject.length > 1) {
+            document.querySelector("#invalidsubject").style.display = "none";
+        }
     });
 });
 
