@@ -20,7 +20,7 @@ $(document).ready(function () {
         invalidcountry.empty();
         empty.empty();
 
-        
+
         if (firstn.length < 2 || firstn.includes("!") || firstn.includes("@")) {
             event.preventDefault()
             document.querySelector("#invalidfirstn").style.display = "flex";
@@ -67,8 +67,8 @@ $(document).ready(function () {
 
         if (subject.length == 0) {
             event.preventDefault()
-            document.querySelector("#invalidsubject").style.display = "flex";
-            document.querySelector("#invalidsubject").style.justifyContent = "center";
+            // document.querySelector("#invalidsubject").style.display = "flex";
+            // document.querySelector("#invalidsubject").style.justifyContent = "center";
             invalidsubj.append("<div>Subject Is Empty</div>")
         }
         if (subject.length > 0) {
@@ -81,7 +81,7 @@ $(document).ready(function () {
             document.querySelector("#invalidlastn").style.display = "none";
             document.querySelector("#invalidemail").style.display = "none";
             document.querySelector("#invalidcountry").style.display = "none";
-            document.querySelector("#invalidsubject").style.display = "none";
+            // document.querySelector("#invalidsubject").style.display = "none";
             document.querySelector("#empty").style.display = "flex";
             document.querySelector("#empty").style.justifyContent = "center";
             empty.append("<div>Please Fill Out All Of The Required Fields</div>")
