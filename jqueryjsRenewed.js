@@ -61,6 +61,17 @@ $(document).ready(function () {
         if (subject.length > 1) {
             document.querySelector("#invalidsubject").style.display = "none";
         }
+
+
+        if (country == "select") {
+            event.preventDefault();
+            document.querySelector("#invalidcountry").style.display = "flex";
+            document.querySelector("#invalidcountry").style.justifyContent = "center";
+            invalidcountry.append("<div>Please Select Your Country</div>")
+        }
+        if (country != "select") {
+            document.querySelector("#invalidcountry").style.display = "none";
+        }
     });
 });
 
