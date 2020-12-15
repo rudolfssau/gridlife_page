@@ -1,6 +1,8 @@
 $(document).ready(function () {
     $("#submit").click(function (event) {
-        // event.preventDefault()
+
+        //Variable declaration for alerts and items in HTML
+
         var firstn = $("#firstn").val();
         var lastn = $("#lastn").val();
         var email = $("#email").val();
@@ -20,6 +22,7 @@ $(document).ready(function () {
         invalidcountry.empty();
         empty.empty();
 
+        //First name validation
 
         if (firstn.length < 2 || firstn.includes("!") || firstn.includes("@")) {
             event.preventDefault()
@@ -31,6 +34,13 @@ $(document).ready(function () {
             document.querySelector("#invalidfirstn").style.display = "none";
         }
 
+        //Experimental section
+
+        if (firstn.length > 0 && lastn.length == 0 && email.length == 0 && country == "select" && subject.length == 0) {
+            console.log("First name")
+        }
+
+        //Last name validation
 
         if (lastn.length < 2) {
             event.preventDefault()
@@ -42,6 +52,13 @@ $(document).ready(function () {
             document.querySelector("#invalidlastn").style.display = "none";
         }
 
+        //Experimental section
+
+        if (firstn.length == 0 && lastn.length > 0 && email.length == 0 && country == "select" && subject.length == 0) {
+            console.log("Last name")
+        }
+
+        //Email validation
 
         if (email.length < 5) {
             event.preventDefault()
@@ -53,6 +70,13 @@ $(document).ready(function () {
             document.querySelector("#invalidemail").style.display = "none";
         }
 
+        //Experimental section
+
+        if (firstn.length == 0 && lastn.length == 0 && email.length > 0 && country == "select" && subject.length == 0) {
+            console.log("E-mail")
+        }
+
+        //Country dropdown validation
 
         if (country == "select") {
             event.preventDefault();
@@ -64,17 +88,31 @@ $(document).ready(function () {
             document.querySelector("#invalidcountry").style.display = "none";
         }
 
+        //Experimental section
 
-        if (subject.length == 0) {
+        if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && country != "select" && subject.length == 0) {
+            console.log("Country")
+        }
+
+        //Subject validation
+
+        if (subject.length < 2) {
             event.preventDefault()
             document.querySelector("#invalidsubject").style.display = "flex";
             document.querySelector("#invalidsubject").style.justifyContent = "center";
             invalidsubj.append("<div>Subject Is Empty</div>")
         }
-        if (subject.length > 0) {
+        if (subject.length > 2) {
             document.querySelector("#invalidsubject").style.display = "none";
         }
 
+        //Experimental section
+
+        if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && country == "select" && subject.length > 0) {
+            console.log("Subject")
+        }
+
+        //Whole document validation (If all fields are empty, this will pop up
 
         if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && country == "select" && subject.length == 0) {
             document.querySelector("#invalidfirstn").style.display = "none";
