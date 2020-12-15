@@ -19,6 +19,8 @@ $(document).ready(function () {
         invalidsubj.empty();
         invalidcountry.empty();
         empty.empty();
+
+        
         if (firstn.length < 2 || firstn.includes("!") || firstn.includes("@")) {
             event.preventDefault()
             document.querySelector("#invalidfirstn").style.display = "flex";
@@ -52,17 +54,6 @@ $(document).ready(function () {
         }
 
 
-        if (subject.length < 1) {
-            event.preventDefault()
-            document.querySelector("#invalidsubject").style.display = "flex";
-            document.querySelector("#invalidsubject").style.justifyContent = "center";
-            invalidsubj.append("<div>Subject Is Empty</div>")
-        }
-        if (subject.length > 1) {
-            document.querySelector("#invalidsubject").style.display = "none";
-        }
-
-
         if (country == "select") {
             event.preventDefault();
             document.querySelector("#invalidcountry").style.display = "flex";
@@ -71,6 +62,29 @@ $(document).ready(function () {
         }
         if (country != "select") {
             document.querySelector("#invalidcountry").style.display = "none";
+        }
+
+
+        if (subject.length == 0) {
+            event.preventDefault()
+            document.querySelector("#invalidsubject").style.display = "flex";
+            document.querySelector("#invalidsubject").style.justifyContent = "center";
+            invalidsubj.append("<div>Subject Is Empty</div>")
+        }
+        if (subject.length > 0) {
+            document.querySelector("#invalidsubject").style.display = "none";
+        }
+
+
+        if (firstn.length == 0 && lastn.length == 0 && email.length == 0 && country == "select" && subject.length == 0) {
+            document.querySelector("#invalidfirstn").style.display = "none";
+            document.querySelector("#invalidlastn").style.display = "none";
+            document.querySelector("#invalidemail").style.display = "none";
+            document.querySelector("#invalidcountry").style.display = "none";
+            document.querySelector("#invalidsubject").style.display = "none";
+            document.querySelector("#empty").style.display = "flex";
+            document.querySelector("#empty").style.justifyContent = "center";
+            empty.append("<div>Please Fill Out All Of The Required Fields</div>")
         }
     });
 });
