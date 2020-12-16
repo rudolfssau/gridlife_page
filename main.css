@@ -680,7 +680,19 @@ tbody {
     font-size: 3rem;
 }
 #introduction-text {
-
+    font-size: 2.5rem;
+    color: white;
+}
+#rules-1st-part, #rules-2nd-part {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#rules {
+    color: white;
+}
+#rules-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
