@@ -691,6 +691,8 @@ tbody {
     font-size: 3.4rem;
 }
 #introduction-text, #compgroups-text {
+    padding-bottom: 10px;
+    padding-top: 10px;
     font-size: 3.4rem;
     color: white;
 }
@@ -708,6 +710,8 @@ tbody {
     padding-bottom: 20px;
 }
 #street-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 2.4rem;
 }
 @media only screen and (max-width: 1820px) {
