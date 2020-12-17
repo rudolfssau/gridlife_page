@@ -664,6 +664,9 @@ tbody {
     margin-right: 1%;
     background-color: rgba(59, 60, 64, 0.9);
 }
+#rules-0 {
+    border-bottom: 4px solid white;
+}
 #img-layout-0 {
     width: 98%;
     height: auto;
@@ -679,13 +682,16 @@ tbody {
     border-bottom: 4px solid white;
     margin-bottom: 20px;
 }
+#rules-2nd-part {
+    padding-top: 20px;
+}
 #layout-text {
     margin: 10px;
     color: white;
-    font-size: 3rem;
+    font-size: 3.4rem;
 }
 #introduction-text, #compgroups-text {
-    font-size: 2.5rem;
+    font-size: 3.4rem;
     color: white;
 }
 #rules-1st-part, #rules-2nd-part {
@@ -700,6 +706,9 @@ tbody {
 }
 #rules-text:nth-last-child(1) {
     padding-bottom: 20px;
+}
+#street-text {
+    font-size: 2.4rem;
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
