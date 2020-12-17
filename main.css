@@ -658,6 +658,9 @@ tbody {
 #img-container-layout {
     width: auto;
 }
+#rules {
+    background-color: red;
+}
 #img-layout-0 {
     margin-top: 1%;
     width: 98%;
@@ -679,7 +682,7 @@ tbody {
     color: white;
     font-size: 3rem;
 }
-#introduction-text {
+#introduction-text, #compgroups-text {
     font-size: 2.5rem;
     color: white;
 }
@@ -691,8 +694,8 @@ tbody {
     color: white;
 }
 #rules-text {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
