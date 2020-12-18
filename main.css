@@ -703,7 +703,11 @@ tbody {
 #rules {
     color: white;
 }
-#rules-text {
+#rules-text-last {
+    border-bottom: 4px solid white;
+    padding-bottom: 40px;
+}
+#rules-text, #rules-text-last {
     margin-top: 20px;
 }
 #rules-text:nth-last-child(1) {
@@ -713,6 +717,14 @@ tbody {
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 2.4rem;
+}
+#button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid white;
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
