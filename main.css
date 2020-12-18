@@ -708,7 +708,7 @@ tbody {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-#rules-2nd-part {
+#rules-2nd-part, #rules-1st-part {
     padding-top: 20px;
 }
 #layout-text {
@@ -1135,6 +1135,9 @@ tbody {
     }
     #news-container-nested-1and2 {
         display: none;
+    }
+    #button-container {
+        padding-bottom: unset;
     }
 }
 @media only screen and (max-width: 654px) {
