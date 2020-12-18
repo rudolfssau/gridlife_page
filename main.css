@@ -656,6 +656,7 @@ tbody {
     margin-bottom: 2.3%;
 }
 #img-container-layout {
+    padding-top: 40px;
     width: auto;
 }
 #rules {
