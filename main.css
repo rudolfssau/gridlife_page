@@ -655,11 +655,23 @@ tbody {
     bottom: 0;
     margin-bottom: 2.3%;
 }
-#img-container-layout {
-    padding-top: 40px;
+#img-container-layout-0 {
+    padding-top: 45px;
     width: auto;
+    border-bottom: 4px solid white;
+    padding-bottom: 45px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#img-container-layout-1 {
+    padding-top: 45px;
+    width: auto;
+    padding-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 #rules {
+    margin-bottom: 1%;
     margin-top: 1%;
     margin-left: 1%;
     margin-right: 1%;
