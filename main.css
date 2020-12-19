@@ -752,6 +752,11 @@ tbody {
     padding-bottom: 20px;
     border-bottom: 4px solid white;
 }
+#lastSeasDrivers-text {
+    margin: 10px;
+    color: white;
+    font-size: 3.4rem;
+}
 @media only screen and (max-width: 1820px) {
     #button-underTable {
         margin-left: -1%;
