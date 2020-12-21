@@ -781,6 +781,13 @@ tbody {
 #lastSeasDrivers-img {
     width: 100%;
 }
+#topdrivers-table, #topdrivers-container {
+    width: 100%;
+}
+#topdrivers-table-header {
+    background-color: red;
+    padding: 10px;
+}
 @media only screen and (max-width: 1820px) {
     #button-underTable {
         margin-left: -1%;
