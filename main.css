@@ -784,9 +784,24 @@ tbody {
 #topdrivers-table, #topdrivers-container {
     width: 100%;
 }
-#topdrivers-table-header {
-    background-color: red;
+#topdrivers-container {
+    width: 98%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#topdrivers-table-header-th {
     padding: 10px;
+}
+#topdrivers-table-header {
+    background-color: rgba(9, 108, 152, 1);
+}
+#topdrivers-table-data, #topdrivers-table-header {
+    text-align: center;
+    color: white;
+}
+#topdrivers-table-data {
+    background-color: rgba(59, 60, 64, 0.9);
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
