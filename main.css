@@ -797,7 +797,7 @@ tbody {
 #topdrivers-table-data {
     background-color: rgba(59, 60, 64, 0.9);
 }
-#jDavis, #jNewgarden, #jDing {
+#driver {
     font-size: 50px;
     font-family: 'Teko', sans-serif;
     text-align: center;
@@ -809,12 +809,12 @@ tbody {
     height: auto;
     margin-bottom: 1%;
 }
-#jDavis-text-name, #jNewgarden-text-name, #jDing-text-name {
+#driver-text-name {
     margin-right: auto;
     margin-left: auto;
     color: white;
 }
-#jDavis-text-info, #jNewgarden-text-info, #jDing-text-info {
+#driver-text-info {
     padding-top: 50px;
     padding-left: 30px;
     padding-right: 30px;
@@ -823,7 +823,7 @@ tbody {
     margin-left: auto;
     color: white;
 }
-#jDavis-img, #jNewgarden-img, #jDing-img {
+#driver-img {
     opacity: 90%;
 }
 #topdrivers-container {
