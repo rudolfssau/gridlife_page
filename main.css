@@ -803,6 +803,34 @@ tbody {
 #topdrivers-table-data {
     background-color: rgba(59, 60, 64, 0.9);
 }
+#jDavis {
+    font-size: 50px;
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(9, 108, 152, 0.8);
+    width: 100%;
+    height: auto;
+}
+#jDavis-text-name {
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+}
+#jDavis-text-info {
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+}
+#jDavis-img {
+    opacity: 90%;
+}
+#topdrivers-container {
+    display: flex;
+    justify-content: center;
+}
 @media only screen and (max-width: 1820px) {
     #button-underTable {
         margin-left: -1%;
