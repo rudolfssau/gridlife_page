@@ -784,12 +784,6 @@ tbody {
 #topdrivers-table, #topdrivers-container {
     width: 100%;
 }
-#topdrivers-container {
-    width: 98%;
-    margin-top: 1%;
-    margin-left: 1%;
-    margin-right: 1%;
-}
 #topdrivers-table-header-th {
     padding: 10px;
 }
@@ -803,7 +797,7 @@ tbody {
 #topdrivers-table-data {
     background-color: rgba(59, 60, 64, 0.9);
 }
-#jDavis {
+#jDavis, #jNewgarden {
     font-size: 50px;
     font-family: 'Teko', sans-serif;
     text-align: center;
@@ -813,24 +807,35 @@ tbody {
     background-color: rgba(9, 108, 152, 0.8);
     width: 100%;
     height: auto;
+    margin-bottom: 1%;
 }
-#jDavis-text-name {
+#jDavis-text-name, #jNewgarden-text-name {
     margin-right: auto;
     margin-left: auto;
     color: white;
 }
-#jDavis-text-info {
+#jDavis-text-info, #jNewgarden-text-info {
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 2rem;
     margin-right: auto;
     margin-left: auto;
     color: white;
 }
-#jDavis-img {
+#jDavis-img, #jNewgarden-img {
     opacity: 90%;
 }
 #topdrivers-container {
+    flex-flow: row wrap;
     display: flex;
     justify-content: center;
+    width: auto;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
+
 @media only screen and (max-width: 1820px) {
     #button-underTable {
         margin-left: -1%;
