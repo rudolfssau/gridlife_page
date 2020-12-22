@@ -765,6 +765,7 @@ tbody {
     font-size: 3.4rem;
 }
 #lastSeasDrivers {
+    background-color: rgba(14, 11, 4, 0.6);
     margin-top: 1%;
     margin-right: 1%;
     margin-left: 1%;
@@ -779,6 +780,7 @@ tbody {
     position: absolute;
 }
 #lastSeasDrivers-img {
+    z-index: -1;
     width: 100%;
 }
 #topdrivers-table, #topdrivers-container {
