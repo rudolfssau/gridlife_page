@@ -872,6 +872,18 @@ tbody {
     #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
         height: 25vw;
     }
+    #driver-img {
+        width: 100%;
+        opacity: 40%;
+    }
+    #driver {
+        position: relative;
+    }
+    #driver-text-container {
+        position: absolute;
+        z-index: 2;
+        /*background-color: rgba(9, 108, 152, 0.8);*/
+    }
 }
 @media only screen and (max-width: 1438px) {
     #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
