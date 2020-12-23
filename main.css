@@ -767,11 +767,6 @@ tbody {
     justify-content: center;
     position: relative;
 }
-#thisSeasonsDriv {
-    display: flex;
-    flex-flow: column wrap;
-    background-color: unset;
-}
 #lastSeasDrivers-text {
     padding: 20px;
     background-color: rgba(14, 11, 4, 0.8);
@@ -839,17 +834,19 @@ tbody {
     margin-right: 1%;
 }
 #thisSeasonsDriv {
+    display: flex;
+    flex-flow: column wrap;
     background-color: rgba(59, 60, 64, 0.9);
     margin-bottom: 1%;
 }
 #thisSeasonsDriv-heading {
-    border-bottom: 4px solid white;
     padding: 20px;
     width: 100%;
     font-size: 3.4rem;
     color: white;
 }
 #thisSeasonsDriv-street {
+    width: 100%;
     color: white;
     font-size: 3.6rem;
 }
