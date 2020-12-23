@@ -768,6 +768,8 @@ tbody {
     position: relative;
 }
 #thisSeasonsDriv {
+    display: flex;
+    flex-flow: column wrap;
     background-color: unset;
 }
 #lastSeasDrivers-text {
@@ -841,18 +843,16 @@ tbody {
     margin-bottom: 1%;
 }
 #thisSeasonsDriv-heading {
+    border-bottom: 4px solid white;
     padding: 20px;
-    /*margin-bottom: 2%;*/
+    width: 100%;
     font-size: 3.4rem;
     color: white;
 }
-/*#thisSeasonDriv-header {*/
-/*    */
-/*}*/
-/*#thisSeasonsDriv-note {
-    color: rgba(250, 61, 61, 0.8);
-    padding-left: 15px;
-}*/
+#thisSeasonsDriv-street {
+    color: white;
+    font-size: 3.6rem;
+}
 @media only screen and (max-width: 1820px) {
     #button-underTable {
         margin-left: -1%;
