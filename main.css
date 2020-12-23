@@ -842,10 +842,17 @@ tbody {
 }
 #thisSeasonsDriv-heading {
     padding: 20px;
-    margin-bottom: 2%;
+    /*margin-bottom: 2%;*/
     font-size: 3.4rem;
     color: white;
 }
+/*#thisSeasonDriv-header {*/
+/*    */
+/*}*/
+/*#thisSeasonsDriv-note {
+    color: rgba(250, 61, 61, 0.8);
+    padding-left: 15px;
+}*/
 @media only screen and (max-width: 1820px) {
     #button-underTable {
         margin-left: -1%;
