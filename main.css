@@ -752,19 +752,12 @@ tbody {
     padding-bottom: 20px;
     border-bottom: 4px solid white;
 }
-/*#lineup-container {*/
-/*    margin-bottom: 1%;*/
-/*    margin-top: 1%;*/
-/*    margin-left: 1%;*/
-/*    margin-right: 1%;*/
-/*    background-color: rgba(59, 60, 64, 0.9);*/
-/*}*/
 #lastSeasDrivers-text {
     margin: 10px;
     color: white;
     font-size: 3.4rem;
 }
-#lastSeasDrivers {
+#lastSeasDrivers, #thisSeasonsDriv {
     background-color: rgba(14, 11, 4, 0.6);
     margin-top: 1%;
     margin-right: 1%;
@@ -773,6 +766,9 @@ tbody {
     align-items: center;
     justify-content: center;
     position: relative;
+}
+#thisSeasonsDriv {
+    background-color: unset;
 }
 #lastSeasDrivers-text {
     padding: 20px;
@@ -811,6 +807,9 @@ tbody {
     height: auto;
     margin-bottom: 1%;
 }
+#driver:nth-last-child(1) {
+    margin-bottom: unset;
+}
 #driver-text-name {
     margin-right: auto;
     margin-left: auto;
@@ -837,7 +836,16 @@ tbody {
     margin-left: 1%;
     margin-right: 1%;
 }
-
+#thisSeasonsDriv {
+    background-color: rgba(59, 60, 64, 0.9);
+    margin-bottom: 1%;
+}
+#thisSeasonsDriv-heading {
+    padding: 20px;
+    margin-bottom: 2%;
+    font-size: 3.4rem;
+    color: white;
+}
 @media only screen and (max-width: 1820px) {
     #button-underTable {
         margin-left: -1%;
