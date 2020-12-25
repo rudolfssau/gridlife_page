@@ -757,7 +757,7 @@ tbody {
     color: white;
     font-size: 3.4rem;
 }
-#lastSeasDrivers, #thisSeasonsDriv {
+#lastSeasDrivers {
     background-color: rgba(14, 11, 4, 0.6);
     margin-top: 1%;
     margin-right: 1%;
@@ -833,16 +833,19 @@ tbody {
     margin-left: 1%;
     margin-right: 1%;
 }
-#signUpForEvents {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    background-color: rgba(59, 60, 64, 0.9);
+#signUpForum {
+    background-color: rgba(14, 11, 4, 0.8);
     margin-bottom: 1%;
+    margin-top: 1%;
     margin-right: 1%;
     margin-left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-flow: column wrap;
 }
-#signUpForEvents-heading {
+#signUpForum-heading-text {
     padding: 20px;
     width: 100%;
     font-size: 3.4rem;
