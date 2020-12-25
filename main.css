@@ -833,22 +833,20 @@ tbody {
     margin-left: 1%;
     margin-right: 1%;
 }
-#thisSeasonsDriv {
+#signUpForEvents {
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
     background-color: rgba(59, 60, 64, 0.9);
     margin-bottom: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
 }
-#thisSeasonsDriv-heading {
+#signUpForEvents-heading {
     padding: 20px;
     width: 100%;
     font-size: 3.4rem;
     color: white;
-}
-#thisSeasonsDriv-street {
-    width: 100%;
-    color: white;
-    font-size: 3.6rem;
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
