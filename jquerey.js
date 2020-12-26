@@ -53,6 +53,8 @@ $(function () {
     });
 });
 
+//Adds validation to contactUs.html (Contact Us)
+
 $(document).ready(function () {
     $("#submit").click(function (event) {
 
@@ -154,5 +156,45 @@ $(document).ready(function () {
             document.querySelector("#empty").style.justifyContent = "center";
             empty.append("<div>Please Fill Out All Of The Required Fields</div>")
         }
+    });
+});
+
+//Adds validation to Sign Up forum at carLineup.html (Sign Up)
+
+
+$(document).ready(function () {
+    $("#sUFsubmit").click(function (event) {
+
+        //Variable declaration for input boxes from html
+
+        var sUFfirstN = $("#sUFfirstN").val();
+        var sUFlastN = $("#sUFlastN").val();
+        var sUFstate = $("#sUFstate").val();
+        var sUFcarManufacturer = $("#sUFcarManufacturer").val();
+        var sUFcarModel = $("#sUFcarModel").val();
+        var sUFcarMY = $("#sUFcarMY").val();
+        var sUFcarMods = $("#sUFcarMods").val();
+        var sUFdrivetrain = $("#sUFdrivetrain").val();
+        var sUFclassEntry = $("#sUFclassEntry").val();
+
+        //Empty variable declaration and emptying by default
+
+        var sUFinvalidFName = $("#sUFinvalidFName");
+        var sUFinvalidLastN = $("#sUFinvalidLastN");
+        var sUFinvalidState = $("#sUFinvalidState");
+        var sUFinvalidCarManuf = $("#sUFinvalidCarManuf");
+        var sUFinvalidCarModel = $("#sUFinvalidCarModel");
+        var sUFinvalidcarMY = $("#sUFinvalidcarMY");
+        var sUFinvalidMods = $("#sUFinvalidMods");
+        var sUFinvalidCarDrivetr = $("#sUFinvalidCarDrivetr");
+        var sUFinvalidClass = $("#sUFinvalidClass");
+
+        //First Name validation
+
+        if (sUFfirstN.length == 0) {
+            event.preventDefault()
+            console.log("janis")
+        }
+
     });
 });
