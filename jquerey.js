@@ -201,6 +201,14 @@ $(document).ready(function () {
         sUFinvalidLastN.empty();
         sUFinvalidAge.empty();
         sUFinvalidEmail.empty();
+        sUFinvalidState.empty();
+        sUFinvalidCarManuf.empty();
+        sUFinvalidCarModel.empty();
+        sUFinvalidcarMY.empty();
+        sUFinvalidMods.empty();
+        sUFinvalidCarDrivetr.empty();
+        sUFinvalidClass.empty();
+        sUFempty.empty();
 
         //First Name validation
 
@@ -239,6 +247,47 @@ $(document).ready(function () {
         }
         if (sUFage.includes("1") || sUFage.includes("2") || sUFage.includes("3") || sUFage.includes("4") || sUFage.includes("5") || sUFage.includes("6") || sUFage.includes("7") || sUFage.includes("8") || sUFage.includes("9") || sUFage.includes("10")) {
             document.querySelector("#sUFinvalidAge").style.display = "none";
+        }
+
+        //E-Mail validation
+
+        if (sUFemail.length < 5) {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidEmail").style.display = "flex";
+            document.querySelector("#sUFinvalidEmail").style.justifyContent = "center";
+            sUFinvalidEmail.append("<div>Invalid E-Mail Address</div>")
+        }
+        if (sUFemail.length > 5 && sUFemail.includes("@") && sUFemail.includes(".")) {
+            document.querySelector("#sUFinvalidEmail").style.display = "none";
+        }
+
+        //State validation
+
+
+        // if (sUFstate.length < 2) {
+        //     event.preventDefault()
+        //     document.querySelector("#sUFempty").style.display = "none";
+        //     document.querySelector("#sUFinvalidState").style.display = "flex";
+        //     document.querySelector("#sUFinvalidState").style.justifyContent = "center";
+        //     sUFinvalidState.append("<div>Invalid State Name</div>")
+        // }
+        if (sUFstate.length > 2) {
+            var testSample = /^[a-zA-Z]+$/
+            for (i = 0; i < sUFstate.length; i++) {
+                if (testSample.test(sUFstate[i])) {
+                    event.preventDefault()
+                    document.querySelector("#sUFinvalidState").style.display = "none";
+                    console.log("if")
+                } else {
+                    event.preventDefault()
+                    document.querySelector("#sUFempty").style.display = "none";
+                    document.querySelector("#sUFinvalidState").style.display = "flex";
+                    document.querySelector("#sUFinvalidState").style.justifyContent = "center";
+                    sUFinvalidState.append("<div>Invalid State Name</div>")
+                    console.log("else")
+                }
+            }
         }
     });
 });
