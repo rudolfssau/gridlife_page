@@ -275,13 +275,11 @@ $(document).ready(function () {
             for (i = 0; i < sUFstate.length; i++) {
                 if (chart.test(sUFstate[i])) {
                     document.querySelector("#sUFinvalidState").style.display = "none";
-                    console.log("yes")
                 } else {
                     event.preventDefault()
                     document.querySelector("#sUFempty").style.display = "none";
                     document.querySelector("#sUFinvalidState").style.display = "flex";
                     document.querySelector("#sUFinvalidState").style.justifyContent = "center";
-                    console.log("No")
                 }
             }
         }
@@ -299,7 +297,7 @@ $(document).ready(function () {
             var numBr = /^[0-9]+$/
             for (i = 0; i < sUFcarManufacturer.length; i++) {
                 if (numBr.test(sUFcarManufacturer[i])) {
-                    // event.preventDefault()
+                    event.preventDefault()
                     sUFinvalidCarManuf.empty();
                     sUFinvalidCarManuf.append("<div>Car Manufacturer Can't Contain Numbers</div>")
                 }
@@ -308,10 +306,108 @@ $(document).ready(function () {
             for (i = 0; i < sUFcarManufacturer.length; i++) {
                 if (chartr.test(sUFcarManufacturer[i])) {
                     document.querySelector("#sUFinvalidCarManuf").style.display = "none";
-                    sUFinvalidCarManuf.empty();
                 }
             }
         }
 
+        //Car Model Year validation
+
+        if (sUFcarModel.length < 1) {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidCarModel").style.display = "flex";
+            document.querySelector("#sUFinvalidCarModel").style.justifyContent = "center";
+            sUFinvalidCarModel.append("<div>Invalid Car Model</div>")
+        }
+        if (sUFcarModel.length > 1) {
+            document.querySelector("#sUFinvalidCarModel").style.display = "none";
+        }
+
+        //Car Model Year validation
+
+        if (sUFcarMY.length < 2) {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidcarMY").style.display = "flex";
+            document.querySelector("#sUFinvalidcarMY").style.justifyContent = "center";
+            sUFinvalidcarMY.append("<div>Invalid Car Model Year</div>")
+        }
+        if (sUFcarMY.length >= 2) {
+            var numBr = /^[0-9]+$/
+            for (i = 0; i < sUFcarMY.length; i++) {
+                if (numBr.test(sUFcarMY[i])) {
+                    document.querySelector("#sUFinvalidcarMY").style.display = "none";
+                    sUFinvalidcarMY.empty();
+                    console.log("num")
+                }
+            }
+            var chartr = /^[a-zA-Z]+$/
+            for (i = 0; i < sUFcarMY.length; i++) {
+                if (chartr.test(sUFcarMY[i])) {
+                    sUFinvalidcarMY.empty();
+                    sUFinvalidcarMY.append("<div>Car Model Year Can't Contain Characters</div>")
+                    console.log("char")
+                }
+            }
+        }
+
+        //Modification validation
+
+        if (sUFcarMods.length < 2) {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidMods").style.display = "flex";
+            document.querySelector("#sUFinvalidMods").style.justifyContent = "center";
+            sUFinvalidMods.append("<div>Enter Valid Mods</div>")
+        }
+        if (sUFcarMods.length >= 2) {
+            document.querySelector("#sUFinvalidMods").style.display = "none";
+        }
+
+        //Drivetrain validation
+
+        if (sUFdrivetrain == "sUFdrivetrainEmpty") {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidCarDrivetr").style.display = "flex";
+            document.querySelector("#sUFinvalidCarDrivetr").style.justifyContent = "center";
+            sUFinvalidCarDrivetr.append("<div>Select Your Car's Drivetrain</div>")
+        }
+        if (sUFdrivetrain != "sUFdrivetrainEmpty") {
+            document.querySelector("#sUFinvalidCarDrivetr").style.display = "none";
+        }
+
+        // //Class validation
+
+        if (sUFclassEntry == "sUFclassEntryEmpty") {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidClass").style.display = "flex";
+            document.querySelector("#sUFinvalidClass").style.justifyContent = "center";
+            sUFinvalidClass.append("<div>Select The Class You'd Like To Compete In</div>")
+        }
+        if (sUFclassEntry != "sUFclassEntryEmpty") {
+            document.querySelector("#sUFinvalidClass").style.display = "none";
+        }
+
+        //Check for filled fields
+
+        if (sUFfirstN.length == 0 && sUFlastN.length == 0 && sUFage.length == 0 && sUFemail.length == 0 && sUFstate.length == 0 && sUFcarManufacturer.length == 0 && sUFcarModel.length == 0 && sUFcarMY.length == 0 && sUFcarMods.length == 0 && sUFdrivetrain == "sUFdrivetrainEmpty" && sUFclassEntry == "sUFclassEntryEmpty") {
+            event.preventDefault()
+            document.querySelector("#sUFinvalidFName").style.display = "none";
+            document.querySelector("#sUFinvalidLastN").style.display = "none";
+            document.querySelector("#sUFinvalidAge").style.display = "none";
+            document.querySelector("#sUFinvalidEmail").style.display = "none";
+            document.querySelector("#sUFinvalidState").style.display = "none";
+            document.querySelector("#sUFinvalidCarManuf").style.display = "none";
+            document.querySelector("#sUFinvalidCarModel").style.display = "none";
+            document.querySelector("#sUFinvalidcarMY").style.display = "none";
+            document.querySelector("#sUFinvalidMods").style.display = "none";
+            document.querySelector("#sUFinvalidCarDrivetr").style.display = "none";
+            document.querySelector("#sUFinvalidClass").style.display = "none";
+            document.querySelector("#sUFempty").style.display = "flex";
+            document.querySelector("#sUFempty").style.justifyContent = "center";
+            sUFempty.append("<div>Please Fill Out All Of The Required Fields!</div>")
+        }
     });
 });
