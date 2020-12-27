@@ -262,7 +262,7 @@ $(document).ready(function () {
         }
 
         //State validation
-        
+
 
         if (sUFstate.length < 2) {
             event.preventDefault()
@@ -271,9 +271,9 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidState").style.justifyContent = "center";
         }
         if (sUFstate.length > 2) {
-            var testSample = /^[a-zA-Z]+$/
+            var chart = /^[a-zA-Z]+$/
             for (i = 0; i < sUFstate.length; i++) {
-                if (testSample.test(sUFstate[i])) {
+                if (chart.test(sUFstate[i])) {
                     document.querySelector("#sUFinvalidState").style.display = "none";
                     console.log("yes")
                 } else {
@@ -282,6 +282,33 @@ $(document).ready(function () {
                     document.querySelector("#sUFinvalidState").style.display = "flex";
                     document.querySelector("#sUFinvalidState").style.justifyContent = "center";
                     console.log("No")
+                }
+            }
+        }
+
+        //Car Manufacturer validation
+
+        if (sUFcarManufacturer.length < 2) {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidCarManuf").style.display = "flex";
+            document.querySelector("#sUFinvalidCarManuf").style.justifyContent = "center";
+            sUFinvalidCarManuf.append("<div>Invalid Car Manufacturer</div>")
+        }
+        if (sUFcarManufacturer.length > 2) {
+            var numBr = /^[0-9]+$/
+            for (i = 0; i < sUFcarManufacturer.length; i++) {
+                if (numBr.test(sUFcarManufacturer[i])) {
+                    // event.preventDefault()
+                    sUFinvalidCarManuf.empty();
+                    sUFinvalidCarManuf.append("<div>Car Manufacturer Can't Contain Numbers</div>")
+                }
+            }
+            var chartr = /^[a-zA-Z]+$/
+            for (i = 0; i < sUFcarManufacturer.length; i++) {
+                if (chartr.test(sUFcarManufacturer[i])) {
+                    document.querySelector("#sUFinvalidCarManuf").style.display = "none";
+                    sUFinvalidCarManuf.empty();
                 }
             }
         }
