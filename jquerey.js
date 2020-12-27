@@ -1,37 +1,41 @@
-function getList() {
-    return $.ajax({
-        type: "GET",
-        url: "Trackname_table/trackinfo_full.json"
-    })
-}
+// function getList() {
+//     return $.ajax({
+//         type: "GET",
+//         url: "Trackname_table/trackinfo_full.json"
+//     })
+// }
+//
+// function getDate() {
+//     return $.ajax({
+//         type: "GET",
+//         url: "Trackname_table/trackinfo_Date.json"
+//     })
+// }
+//
+// getList().done(function (response) {
+//     var data = JSON.parse(response);
+//     if (data != null) {
+//         jQuery.each(data, function (index, value) {
+//             $("#tDate-back").append('<td>'  + value[0] + '</td>')
+//             $("#tVenue-back").append('<td>' + value[1] + '</td>')
+//             $("#tTrack-back").append('<td>' + value[2] + '</td>')
+//             $("#tFormat-back").append('<td>' + value[3] + '</td>')
+//         });
+//     };
+// });
+//
+// getDate().done(function (done) {
+//     var date =JSON.parse(done);
+//     if (date != null) {
+//         jQuery.each(date, function (index, value) {
+//             $("#tDate-short").append('<td id="tDate-short-style">' + value.DateShortened + '</td>')
+//         });
+//     };
+// });
 
-function getDate() {
-    return $.ajax({
-        type: "GET",
-        url: "Trackname_table/trackinfo_Date.json"
-    })
-}
 
-getList().done(function (response) {
-    var data = JSON.parse(response);
-    if (data != null) {
-        jQuery.each(data, function (index, value) {
-            $("#tDate-back").append('<td>'  + value[0] + '</td>')
-            $("#tVenue-back").append('<td>' + value[1] + '</td>')
-            $("#tTrack-back").append('<td>' + value[2] + '</td>')
-            $("#tFormat-back").append('<td>' + value[3] + '</td>')
-        });
-    };
-});
+//        Needs to be reworked!
 
-getDate().done(function (done) {
-    var date =JSON.parse(done);
-    if (date != null) {
-        jQuery.each(date, function (index, value) {
-            $("#tDate-short").append('<td id="tDate-short-style">' + value.DateShortened + '</td>')
-        });
-    };
-});
 
 $(function () {
     $("#seasonpass-button").hover(function () {
@@ -169,6 +173,8 @@ $(document).ready(function () {
 
         var sUFfirstN = $("#sUFfirstN").val();
         var sUFlastN = $("#sUFlastN").val();
+        var sUFage = $("#sUFage").val();
+        var sUFemail = $("#sUFemail").val();
         var sUFstate = $("#sUFstate").val();
         var sUFcarManufacturer = $("#sUFcarManufacturer").val();
         var sUFcarModel = $("#sUFcarModel").val();
@@ -181,6 +187,8 @@ $(document).ready(function () {
 
         var sUFinvalidFName = $("#sUFinvalidFName");
         var sUFinvalidLastN = $("#sUFinvalidLastN");
+        var sUFinvalidAge = $("#sUFinvalidAge");
+        var sUFinvalidEmail = $("#sUFinvalidEmail");
         var sUFinvalidState = $("#sUFinvalidState");
         var sUFinvalidCarManuf = $("#sUFinvalidCarManuf");
         var sUFinvalidCarModel = $("#sUFinvalidCarModel");
@@ -188,13 +196,49 @@ $(document).ready(function () {
         var sUFinvalidMods = $("#sUFinvalidMods");
         var sUFinvalidCarDrivetr = $("#sUFinvalidCarDrivetr");
         var sUFinvalidClass = $("#sUFinvalidClass");
+        var sUFempty = $("#sUFempty")
+        sUFinvalidFName.empty();
+        sUFinvalidLastN.empty();
+        sUFinvalidAge.empty();
+        sUFinvalidEmail.empty();
 
         //First Name validation
 
-        if (sUFfirstN.length == 0) {
+        if (sUFfirstN.length < 2 || sUFfirstN.includes("!") || sUFfirstN.includes("@")) {
             event.preventDefault()
-            console.log("janis")
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidFName").style.display = "flex";
+            document.querySelector("#sUFinvalidFName").style.justifyContent = "center";
+            sUFinvalidFName.append("<div>Invalid First Name</div>")
+        }
+        if (sUFfirstN.length > 2) {
+            document.querySelector("#sUFinvalidFName").style.display = "none";
         }
 
+        //Last Name validation
+
+        if (sUFlastN.length < 2) {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidLastN").style.display = "flex";
+            document.querySelector("#sUFinvalidLastN").style.justifyContent = "center";
+            sUFinvalidLastN.append("<div>Invalid Last Name</div>")
+        }
+        if (sUFlastN.length > 2) {
+            document.querySelector("#sUFinvalidLastN").style.display = "none";
+        }
+
+        //Age validation
+
+        if  (sUFage.length < 1) {
+            event.preventDefault()
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidAge").style.display = "flex";
+            document.querySelector("#sUFinvalidAge").style.justifyContent = "center";
+            sUFinvalidAge.append("<div>Please Enter Your Age</div>")
+        }
+        if (sUFage.includes("1") || sUFage.includes("2") || sUFage.includes("3") || sUFage.includes("4") || sUFage.includes("5") || sUFage.includes("6") || sUFage.includes("7") || sUFage.includes("8") || sUFage.includes("9") || sUFage.includes("10")) {
+            document.querySelector("#sUFinvalidAge").style.display = "none";
+        }
     });
 });
