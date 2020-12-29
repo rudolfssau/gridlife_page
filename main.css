@@ -859,8 +859,7 @@ tbody {
     margin-top: 1%;
     margin-right: 1%;
     margin-left: 1%;
-    display: none;
-    /*Temporary!!!*/
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -872,7 +871,7 @@ tbody {
     margin-top: 1%;
     margin-right: 1%;
     margin-left: 1%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -900,6 +899,12 @@ tbody {
     border-radius: 5px;
     border: 3px solid white;
     color: white;
+}
+#whatsnext-body-content-text {
+    color: white;
+    font-size: ;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {

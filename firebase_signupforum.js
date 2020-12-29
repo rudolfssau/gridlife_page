@@ -12,7 +12,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Refrence collection for firebase
-var collectionRef = firebase.database().ref("newSignUp");
+var collectionRef = firebase.database().ref("collection");
 
 //Submit forum
 document.getElementById("signUpForum").addEventListener('submit', submitformum);
@@ -40,8 +40,8 @@ function submitformum(a) {
 
     //Hide alert after completing function
     setTimeout(function () {
-        document.querySelector("#signUpForum-content").style.display = "none";
-        document.querySelector("#sUFsuccessful").style.display = "none";
+        document.querySelector("#signUpForum-container").style.display = "none";
+        document.querySelector("#whatsnext-container").style.display = "flex";
         document.querySelector("#signUpForum").style.display = "none";
     },3000);
 }
