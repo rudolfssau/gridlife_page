@@ -411,3 +411,5 @@ $(document).ready(function () {
         }
     });
 });
+
+//Terms And Services checkbox

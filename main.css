@@ -565,6 +565,17 @@ label {
     margin-bottom: 1%;
     padding: 9px;
 }
+#sUF-bottom {
+    display: flex;
+    flex-flow: row wrap;
+}
+#sUF-termsAndConditions {
+    width: 100%;
+    padding-bottom: 20px;
+}
+#sUFtermsandconditions-link {
+    color: rgb(9, 108, 152);
+}
 #contactform > #alert {
     width: 100%;
     display: none;
