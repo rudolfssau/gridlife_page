@@ -902,9 +902,22 @@ tbody {
 }
 #whatsnext-body-content-text {
     color: white;
-    font-size: ;
+    padding: 20px;
     margin-left: 10%;
     margin-right: 10%;
+}
+#whatsnext-body-rules {
+    display: flex;
+    flex-flow: row nowrap;
+}
+#whatsnext-body-rule {
+    border: 4px solid white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
+#whatsnext-body-rule a {
+    color: white;
 }
 @media only screen and (max-width: 1820px) {
     #button-underTable {
