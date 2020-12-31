@@ -214,18 +214,6 @@ $(document).ready(function () {
 
         //First Name validation
 
-        // if (sUFfirstN.length < 2) {
-        //     event.preventDefault();
-        //     console.log("<2")
-        //     window.scrollTo({
-        //         top: 4500,
-        //         behavior: "smooth",
-        //     });
-        // }
-        // if (sUFfirstN.length > 2) {
-        //     event.preventDefault();
-        //     console.log(">2")
-        // }
         if (sUFfirstN.length < 2 || sUFfirstN.includes("!") || sUFfirstN.includes("@")) {
             event.preventDefault()
             document.querySelector("#sUFempty").style.display = "none";
@@ -250,7 +238,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidLastN").style.justifyContent = "center";
             sUFinvalidLastN.append("<div>Invalid Last Name</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -267,12 +255,22 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidAge").style.justifyContent = "center";
             sUFinvalidAge.append("<div>Please Enter Your Age</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
         if (sUFage.includes("1") || sUFage.includes("2") || sUFage.includes("3") || sUFage.includes("4") || sUFage.includes("5") || sUFage.includes("6") || sUFage.includes("7") || sUFage.includes("8") || sUFage.includes("9") || sUFage.includes("10")) {
             document.querySelector("#sUFinvalidAge").style.display = "none";
+        } else {
+            sUFinvalidAge.empty();
+            document.querySelector("#sUFempty").style.display = "none";
+            document.querySelector("#sUFinvalidAge").style.display = "flex";
+            document.querySelector("#sUFinvalidAge").style.justifyContent = "center";
+            sUFinvalidAge.append("<div>Please Only Use Numbers For Your Age!</div>")
+            window.scrollTo({
+                top: 4600,
+                behavior: "smooth",
+            });
         }
 
         //E-Mail validation
@@ -284,7 +282,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidEmail").style.justifyContent = "center";
             sUFinvalidEmail.append("<div>Invalid E-Mail Address</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -301,7 +299,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidState").style.display = "flex";
             document.querySelector("#sUFinvalidState").style.justifyContent = "center";
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -316,7 +314,7 @@ $(document).ready(function () {
                     document.querySelector("#sUFinvalidState").style.display = "flex";
                     document.querySelector("#sUFinvalidState").style.justifyContent = "center";
                     window.scrollTo({
-                        top: 4500,
+                        top: 4600,
                         behavior: "smooth",
                     });
                 }
@@ -332,7 +330,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidCarManuf").style.justifyContent = "center";
             sUFinvalidCarManuf.append("<div>Invalid Car Manufacturer</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -344,7 +342,7 @@ $(document).ready(function () {
                     sUFinvalidCarManuf.empty();
                     sUFinvalidCarManuf.append("<div>Car Manufacturer Can't Contain Numbers</div>")
                     window.scrollTo({
-                        top: 4500,
+                        top: 4600,
                         behavior: "smooth",
                     });
                 }
@@ -366,7 +364,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidCarModel").style.justifyContent = "center";
             sUFinvalidCarModel.append("<div>Invalid Car Model</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -383,7 +381,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidcarMY").style.justifyContent = "center";
             sUFinvalidcarMY.append("<div>Invalid Car Model Year</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -401,7 +399,7 @@ $(document).ready(function () {
                     sUFinvalidcarMY.empty();
                     sUFinvalidcarMY.append("<div>Car Model Year Can't Contain Characters</div>")
                     window.scrollTo({
-                        top: 4500,
+                        top: 4600,
                         behavior: "smooth",
                     });
                 }
@@ -417,7 +415,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidMods").style.justifyContent = "center";
             sUFinvalidMods.append("<div>Enter Valid Mods</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -434,7 +432,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidCarDrivetr").style.justifyContent = "center";
             sUFinvalidCarDrivetr.append("<div>Select Your Car's Drivetrain</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -451,7 +449,7 @@ $(document).ready(function () {
             document.querySelector("#sUFinvalidClass").style.justifyContent = "center";
             sUFinvalidClass.append("<div>Select The Class You'd Like To Compete In</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }
@@ -471,7 +469,7 @@ $(document).ready(function () {
                 document.querySelector("#sUFinvalidCheckbox").style.justifyContent = "center";
                 sUFinvalidCheckbox.append("<div>Please Read And Agree to our Terms And Conditions!</div>")
                 window.scrollTo({
-                    top: 4500,
+                    top: 4600,
                     behavior: "smooth",
                 });
             }
@@ -496,7 +494,7 @@ $(document).ready(function () {
             document.querySelector("#sUFempty").style.justifyContent = "center";
             sUFempty.append("<div>Please Fill Out All Of The Required Fields!</div>")
             window.scrollTo({
-                top: 4500,
+                top: 4600,
                 behavior: "smooth",
             });
         }

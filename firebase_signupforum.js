@@ -43,6 +43,10 @@ function submitformum(a) {
         document.querySelector("#signUpForum-container").style.display = "none";
         document.querySelector("#whatsnext-container").style.display = "flex";
         document.querySelector("#signUpForum").style.display = "none";
+        window.scrollTo({
+            top: 4400,
+            behavior: "smooth",
+        });
     },3000);
 }
 function getInputValues(id) {
