@@ -627,7 +627,8 @@ label {
 #videomessage-h1 {
     font-size: 4rem;
     margin-bottom: 3%;
-}#videomessage-h2 {
+}
+#videomessage-h2 {
     font-size: 2rem;
     margin-bottom: 5%;
 }
@@ -981,7 +982,6 @@ tbody {
     #driver-text-container {
         position: absolute;
         z-index: 2;
-        /*background-color: rgba(9, 108, 152, 0.8);*/
     }
 }
 @media only screen and (max-width: 1438px) {
@@ -1204,9 +1204,19 @@ tbody {
     #previous-broadcasts-video-iframe2 {
         margin-right: 1%;
     }
+    #driver-text-name {
+        font-size: 3rem;
+    }
+    #driver-text-info {
+        font-size: 1.8rem;
+    }
+    #whatsnext-body-rules {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
 }
 @media only screen and (max-width: 959px) {
-    #videomessage-h1 {
+    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text {
         font-size: 3.2rem;
     }
     #videomessage-h2 {
@@ -1245,9 +1255,12 @@ tbody {
     #tdinfo-text1 {
         font-size: 70px;
     }
+    #whatsnext-body-content-text {
+        font-size: 1.2rem;
+    }
 }
 @media only screen and (max-width: 820px) {
-    #videomessage-h1 {
+    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text {
         font-size: 2.7rem;
     }
     #videomessage-h2 {
@@ -1367,7 +1380,7 @@ tbody {
         margin-top: -20px;
         margin-bottom: 25px;
     }
-    #videomessage-h1 {
+    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text {
         font-size: 1.7rem;
     }
     #videomessage-h2 {
@@ -1387,6 +1400,9 @@ tbody {
     }
     #uev > h1 {
         font-size: 30px;
+    }
+    #driver-text-info {
+        font-size: 1.2rem;
     }
 }
 
