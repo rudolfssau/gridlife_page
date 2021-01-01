@@ -1,41 +1,37 @@
-// function getList() {
-//     return $.ajax({
-//         type: "GET",
-//         url: "Trackname_table/trackinfo_full.json"
-//     })
-// }
-//
-// function getDate() {
-//     return $.ajax({
-//         type: "GET",
-//         url: "Trackname_table/trackinfo_Date.json"
-//     })
-// }
-//
-// getList().done(function (response) {
-//     var data = JSON.parse(response);
-//     if (data != null) {
-//         jQuery.each(data, function (index, value) {
-//             $("#tDate-back").append('<td>'  + value[0] + '</td>')
-//             $("#tVenue-back").append('<td>' + value[1] + '</td>')
-//             $("#tTrack-back").append('<td>' + value[2] + '</td>')
-//             $("#tFormat-back").append('<td>' + value[3] + '</td>')
-//         });
-//     };
-// });
-//
-// getDate().done(function (done) {
-//     var date =JSON.parse(done);
-//     if (date != null) {
-//         jQuery.each(date, function (index, value) {
-//             $("#tDate-short").append('<td id="tDate-short-style">' + value.DateShortened + '</td>')
-//         });
-//     };
-// });
+function getList() {
+    return $.ajax({
+        type: "GET",
+        url: "trackinfo_full.json"
+    })
+}
 
+function getDate() {
+    return $.ajax({
+        type: "GET",
+        url: "trackinfo_Date.json"
+    })
+}
 
-//        Needs to be reworked!
+getList().done(function (response) {
+    var data = JSON.parse(response);
+    if (data != null) {
+        jQuery.each(data, function (index, value) {
+            $("#tDate-back").append('<td>'  + value[0] + '</td>')
+            $("#tVenue-back").append('<td>' + value[1] + '</td>')
+            $("#tTrack-back").append('<td>' + value[2] + '</td>')
+            $("#tFormat-back").append('<td>' + value[3] + '</td>')
+        });
+    };
+});
 
+getDate().done(function (done) {
+    var date =JSON.parse(done);
+    if (date != null) {
+        jQuery.each(date, function (index, value) {
+            $("#tDate-short").append('<td id="tDate-short-style">' + value.DateShortened + '</td>')
+        });
+    };
+});
 
 $(function () {
     $("#seasonpass-button").hover(function () {
