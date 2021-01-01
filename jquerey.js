@@ -13,19 +13,19 @@ function getDate() {
 }
 
 getList().done(function (response) {
-    var data = JSON.parse(response);
+    var data = response;
     if (data != null) {
         jQuery.each(data, function (index, value) {
-            $("#tDate-back").append('<td>'  + value[0] + '</td>')
-            $("#tVenue-back").append('<td>' + value[1] + '</td>')
-            $("#tTrack-back").append('<td>' + value[2] + '</td>')
-            $("#tFormat-back").append('<td>' + value[3] + '</td>')
-        });
-    };
-});
+            $("#tDate").append('<td>'  + value[0] + '</td>')
+            $("#tVenue").append('<td>' + value[1] + '</td>')
+            $("#tTrack").append('<td>' + value[2] + '</td>')
+            $("#tFormat").append('<td>' + value[3] + '</td>')
+        })
+    }
+})
 
 getDate().done(function (done) {
-    var date =JSON.parse(done);
+    var date = done;
     if (date != null) {
         jQuery.each(date, function (index, value) {
             $("#tDate-short").append('<td id="tDate-short-style">' + value.DateShortened + '</td>')
