@@ -1214,13 +1214,23 @@ tbody {
         flex-flow: row wrap;
         justify-content: center;
     }
+    #discord-container-text-h2 {
+        font-size: 1.4rem;
+    }
+    #discord-container-text-h3 {
+        font-size: 1.1rem;
+    }
+
 }
 @media only screen and (max-width: 959px) {
-    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text {
+    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text, #layout-text, #compgroups-text {
         font-size: 3.2rem;
     }
-    #videomessage-h2 {
+    #videomessage-h2, #street-text {
         font-size: 1.7rem;
+    }
+    #rules-text {
+        font-size: 1.1rem;
     }
     #news-img-1 {
         padding: 10px;
@@ -1405,7 +1415,6 @@ tbody {
         font-size: 1.2rem;
     }
 }
-
 
 /* Footer Content: */
 
