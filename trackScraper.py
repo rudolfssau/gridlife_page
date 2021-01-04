@@ -15,7 +15,7 @@ for days in soup.find_all(class_="ddd-hide"):
     nameOfDate = days.text.strip()
     completeDate_n = nameOfDate + dateFormated
     dfD = {"DateShortened": nameOfDate + " " + dateFormated[1] + dateFormated[2]}
-    finalD = "Date: " + completeDate_n
+    finalD = {"Date": completeDate_n}
 #   For displaying the full date "'Date': 'Mon 14/12/20'":
     finalDate.append(finalD)
 

@@ -1,14 +1,7 @@
-// function getList() {
-//     return $.ajax({
-//         type: "GET",
-//         url: "trackinfo_full.json"
-//     })
-// }
-
 function getDate() {
     return $.ajax({
         type: "GET",
-        url: "trackInfo-JSON/track_date,json"
+        url: "trackInfo-JSON/track_date.json"
     })
 }
 // console.log(getDate())
@@ -22,9 +15,12 @@ function getDate() {
 // })
 
 getDate().done(function (done) {
-    var date = JSON.stringify(done);
+    var date = done;
     if (date != null) {
-        $("#tBody-date").append('<td id="tDate-short">' + date + '</td>')
+        jQuery.each(date, function (index, value) {
+            $("#tBody-date").append('<td id="tBody-date-data">' + value.Date + '</td>')
+            console.log(value.Date)
+        });
     };
 });
 
