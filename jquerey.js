@@ -4,22 +4,12 @@ function getDate() {
         url: "trackInfo-JSON/track_date.json"
     })
 }
-// console.log(getDate())
-// getDate().done(function (response) {
-//     var data = response;
-//     if (data != null) {
-//         jQuery.each(data, function (index, value) {
-//             $("#tBody-date").append()
-//         })
-//     }
-// })
 
 getDate().done(function (done) {
     var date = done;
     if (date != null) {
         jQuery.each(date, function (index, value) {
             $("#tBody-date").append('<td id="tBody-date-data">' + value.Date + '</td>')
-            console.log(value.Date)
         });
     };
 });
