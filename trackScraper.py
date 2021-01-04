@@ -18,9 +18,6 @@ for days in soup.find_all(class_="ddd-hide"):
     finalD = "Date: " + completeDate_n
 #   For displaying the full date "'Date': 'Mon 14/12/20'":
     finalDate.append(finalD)
-#   For displaying "Mon 12" for the element when not hovering over it:
-    dateForDiv.append(dfD)
-
 
 # Finds all of the venue names (example: Brand Hatch)
 
@@ -46,6 +43,7 @@ for row in value:
         trackName.append(item_trackName)
 
 
+
 # Finds all of the track formats (example: Open Pitlane Track Day)
 
 
@@ -66,13 +64,11 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
         trackFormat.append(fmat)
 
 
-zipped_values = list(zip(finalDate, nameOfVenue, trackName, trackFormat))
 
-
-with open("Trackname_table/trackinfo_full.json", "w") as write_file:
-        json.dump(zipped_values, write_file, indent=4)
-with open("Trackname_table/trackinfo_Date.json", "w") as write_file:
-        json.dump(dateForDiv, write_file, indent=4)
+with open("trackInfo-JSON/track_date.json", "w") as write_file:
+        json.dump(finalDate, write_file, indent=4)
+# with open("trackInfo-JSON/track_venue.json", "w") as write_file:
+#         json.dump(nameOfVenue, write_file, indent=4)
 
 
 

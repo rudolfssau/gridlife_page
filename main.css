@@ -666,11 +666,10 @@ label {
     height: 100%;
     margin: 1%;
 }
-tbody {
+#tBody {
     font-size: 2.3rem;
     height: auto;
     margin: 2%;
-    margin-bottom: 5%;
 }
 #button-underTable-container {
     margin-right: 9%;

@@ -1,35 +1,30 @@
-function getList() {
-    return $.ajax({
-        type: "GET",
-        url: "trackinfo_full.json"
-    })
-}
+// function getList() {
+//     return $.ajax({
+//         type: "GET",
+//         url: "trackinfo_full.json"
+//     })
+// }
 
 function getDate() {
     return $.ajax({
         type: "GET",
-        url: "trackinfo_Date.json"
+        url: "trackInfo-JSON/track_date,json"
     })
 }
-
-getList().done(function (response) {
-    var data = response;
-    if (data != null) {
-        jQuery.each(data, function (index, value) {
-            $("#tDate").append('<td>'  + value[0] + '</td>')
-            $("#tVenue").append('<td>' + value[1] + '</td>')
-            $("#tTrack").append('<td>' + value[2] + '</td>')
-            $("#tFormat").append('<td>' + value[3] + '</td>')
-        })
-    }
-})
+// console.log(getDate())
+// getDate().done(function (response) {
+//     var data = response;
+//     if (data != null) {
+//         jQuery.each(data, function (index, value) {
+//             $("#tBody-date").append()
+//         })
+//     }
+// })
 
 getDate().done(function (done) {
-    var date = done;
+    var date = JSON.stringify(done);
     if (date != null) {
-        jQuery.each(date, function (index, value) {
-            $("#tDate-short").append('<td id="tDate-short-style">' + value.DateShortened + '</td>')
-        });
+        $("#tBody-date").append('<td id="tDate-short">' + date + '</td>')
     };
 });
 
