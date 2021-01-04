@@ -4,12 +4,57 @@ function getDate() {
         url: "trackInfo-JSON/track_date.json"
     })
 }
+function getVenue() {
+    return $.ajax({
+        type: "GET",
+        url: "trackInfo-JSON/track_venue.json"
+    })
+}
+function getName() {
+    return $.ajax({
+        type: "GET",
+        url: "trackInfo-JSON/track_name.json"
+    })
+}
+function getFormat() {
+    return $.ajax({
+        type: "GET",
+        url: "trackInfo-JSON/track_format.json"
+    })
+}
 
 getDate().done(function (done) {
     var date = done;
     if (date != null) {
         jQuery.each(date, function (index, value) {
-            $("#tBody-date").append('<td id="tBody-date-data">' + value.Date + '</td>')
+            $("#tBody-date-data").append(value.Date)
+        });
+    };
+});
+
+getVenue().done(function (done) {
+    var venue = done;
+    if (venue != null) {
+        jQuery.each(venue, function (index, value) {
+            $("#tBody-venue-data").append(value.Venue)
+        });
+    };
+});
+
+getName().done(function (done) {
+    var tname = done;
+    if (tname != null) {
+        jQuery.each(tname, function (index, value) {
+            $("#tBody-name-data").append(value.TName)
+        });
+    };
+});
+
+getFormat().done(function (done) {
+    var format = done;
+    if (format != null) {
+        jQuery.each(format, function (index, value) {
+            $("#tBody-format-data").append(value.Format)
         });
     };
 });

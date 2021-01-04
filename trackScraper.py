@@ -36,7 +36,7 @@ item_trackName = {}
 value  = soup.find_all(class_="record-column column-center")
 for row in value:
     if "circuit" in row.text.strip():
-        item_trackName = {"Track Name:": row.text.strip()}
+        item_trackName = {"TName": row.text.strip()}
         trackName.append(item_trackName)
 
 
