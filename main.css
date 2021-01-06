@@ -670,6 +670,16 @@ label {
     font-size: 2.3rem;
     height: auto;
     margin: 2%;
+    display: flex;
+    flex-flow: row wrap;
+}
+#tBody-heading {
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+}
+#tBody-date, #tBody-venue, #tBody-track, #tBody-format {
+    width: 25%;
 }
 #button-underTable-container {
     margin-right: 9%;
