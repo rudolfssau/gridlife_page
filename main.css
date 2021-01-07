@@ -686,11 +686,15 @@ label {
     padding: 20px;
 }
 #tBody-date, #tBody-venue, #tBody-track, #tBody-format {
-    display: inline-grid;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
     width: 25%;
+    padding: 10px;
 }
 #tBody-date-data, #tBody-date-venue, #tBody-track-data, #tBody-format-data {
     padding: 20px;
+    white-space: nowrap;
 }
 #button-underTable-container {
     margin-right: 9%;

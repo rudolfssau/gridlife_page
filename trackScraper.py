@@ -46,7 +46,7 @@ for row in value:
 
 trackFormat = []
 for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
-    if "Pitlane" in format.text:
+    if "Open" in format.text:
         fmat = {"Format": format.text.strip()}
         trackFormat.append(fmat)
 
@@ -56,17 +56,7 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
         trackFormat.append(fmat)
 
 for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
-    if "Track Day" in format.text:
-        fmat = {"Format": format.text.strip()}
-        trackFormat.append(fmat)
-
-for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
-    if "Eve" in format.text:
-        fmat = {"Format": format.text.strip()}
-        trackFormat.append(fmat)
-
-for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
-    if "Evening" in format.text:
+    if "General" in format.text:
         fmat = {"Format": format.text.strip()}
         trackFormat.append(fmat)
 
