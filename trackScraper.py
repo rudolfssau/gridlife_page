@@ -60,6 +60,15 @@ for format in soup.find_all("div", {"class": "record-column pad-hide column-cent
         fmat = {"Format": format.text.strip()}
         trackFormat.append(fmat)
 
+for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
+    if "Eve" in format.text:
+        fmat = {"Format": format.text.strip()}
+        trackFormat.append(fmat)
+
+for format in soup.find_all("div", {"class": "record-column pad-hide column-center"}):
+    if "Evening" in format.text:
+        fmat = {"Format": format.text.strip()}
+        trackFormat.append(fmat)
 
 
 with open("trackInfo-JSON/track_date.json", "w") as write_file:
