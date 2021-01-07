@@ -27,7 +27,7 @@ getDate().done(function (done) {
     var date = done;
     if (date != null) {
         jQuery.each(date, function (index, value) {
-            $("#tBody-date-data").append("   " + value.Date + "   ")
+            $("#tBody-date").append('<td id="tBody-date-data">' + value.Date + '</td>>')
         });
     };
 });
@@ -36,7 +36,7 @@ getVenue().done(function (done) {
     var venue = done;
     if (venue != null) {
         jQuery.each(venue, function (index, value) {
-            $("#tBody-venue-data").append("   " + value.Venue + "   ")
+            $("#tBody-venue").append('<td id="tBody-date-venue">' + value.Venue + '</td>')
         });
     };
 });
@@ -45,7 +45,7 @@ getName().done(function (done) {
     var tname = done;
     if (tname != null) {
         jQuery.each(tname, function (index, value) {
-            $("#tBody-name-data").append("   " + value.TName + "   ")
+            $("#tBody-track").append('<td id="tBody-track-data">' + value.TName + '</td>>')
         });
     };
 });
@@ -54,7 +54,7 @@ getFormat().done(function (done) {
     var format = done;
     if (format != null) {
         jQuery.each(format, function (index, value) {
-            $("#tBody-format-data").append("   " + value.Format + "   ")
+            $("#tBody-format").append('<td id="tBody-format-data">' + value.Format + '</td>')
         });
     };
 });

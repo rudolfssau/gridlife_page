@@ -666,6 +666,9 @@ label {
     height: 100%;
     margin: 1%;
 }
+#table tr {
+    justify-content: space-around;
+}
 #tBody {
     font-size: 2.3rem;
     height: auto;
@@ -679,7 +682,8 @@ label {
     display: flex;
 }
 #tBody-date, #tBody-venue, #tBody-track, #tBody-format {
-
+    display: inline-grid;
+    width: 25%;
 }
 #button-underTable-container {
     margin-right: 9%;
