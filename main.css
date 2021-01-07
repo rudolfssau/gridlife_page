@@ -692,6 +692,9 @@ label {
     width: 25%;
     padding: 10px;
 }
+#tBody-date-data:hover ~ #tBody-date-data {
+    color: red;
+}
 #tBody-date-data, #tBody-date-venue, #tBody-track-data, #tBody-format-data {
     padding: 20px;
     white-space: nowrap;
