@@ -670,7 +670,6 @@ label {
 #table tr {
     border: 4px solid black;
     justify-content: space-around;
-    padding: 20px;
 }
 #tBody {
     font-size: 2.3rem;
@@ -691,6 +690,7 @@ label {
     flex-flow: row wrap;
     width: 25%;
     padding: 10px;
+    font-size: 2.1rem;
 }
 #tBody-date-data, #tBody-date-venue, #tBody-track-data, #tBody-format-data {
     padding: 20px;
@@ -960,6 +960,11 @@ label {
     font-weight: bold;
     white-space: nowrap;
 }
+@media only screen and (min-width: 1820px) {
+    #table tr {
+        padding: 20px;
+    }
+}
 @media only screen and (max-width: 1820px) {
     #button-underTable {
         margin-left: -1%;
@@ -975,6 +980,20 @@ label {
     #button-underTable2 {
         margin-left: 2%;
     }
+    #tBody-heading-venue {
+        display: none;
+    }
+    #tBody-venue {
+        display: none;
+    }
+    #tBody-date, #tBody-track, #tBody-format {
+        width: 33.3333333333%;
+        font-size: 2.7rem;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
 }
 @media only screen and (max-width: 1640px) {
     #button-underTable {
@@ -983,6 +1002,13 @@ label {
     #button-underTable2 {
         margin-left: 4%;
     }
+    #tBody-date, #tBody-track, #tBody-format {
+        font-size: 2.4rem;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
 }
 @media only screen and (max-width: 1540px) {
     #button-underTable {
@@ -990,6 +1016,13 @@ label {
     }
     #button-underTable2 {
         margin-left: 6%;
+    }
+    #tBody-date, #tBody-track, #tBody-format {
+        font-size: 2.2rem;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 }
 @media only screen and (max-width: 1498px) {
@@ -1012,10 +1045,33 @@ label {
     #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
         height: 28vw;
     }
+    #tBody-date, #tBody-track, #tBody-format {
+        font-size: 2.2rem;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+@media only screen and (max-width: 1389px) {
+    #tBody-date, #tBody-track, #tBody-format {
+        font-size: 2.1rem;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
 }
 @media only screen and (max-width: 1284px) {
     #news-container-1-nested-0, #news-container-1-nested-1, #news-container-1-nested-2, #news-container-2-nested-0, #news-container-2-nested-1, #news-container-2-nested-2 {
         height: 30vw;
+    }
+    #tBody-date, #tBody-track, #tBody-format {
+        font-size: 2rem;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 }
 @media only screen and (max-width: 1199px) {
