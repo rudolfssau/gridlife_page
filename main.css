@@ -241,6 +241,7 @@
     position: relative;
 }
 #seasonpass-text {
+    font-size: 4rem;
     width: 98%;
     margin: 1%;
     height: auto;
@@ -289,7 +290,6 @@
     opacity: 60%;
 }
 div > #seasonpass {
-    /*opacity: 100%;*/
     background-color: rgb(176, 58, 49);
     position:absolute;
     font-size: 4vw;
@@ -1314,7 +1314,7 @@ label {
 
 }
 @media only screen and (max-width: 959px) {
-    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text, #layout-text, #compgroups-text {
+    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text, #layout-text, #compgroups-text, #seasonpass-text {
         font-size: 3.2rem;
     }
     #videomessage-h2, #street-text {
@@ -1361,7 +1361,7 @@ label {
     }
 }
 @media only screen and (max-width: 820px) {
-    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text {
+    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text, #seasonpass-text {
         font-size: 2.7rem;
     }
     #videomessage-h2 {
@@ -1455,6 +1455,9 @@ label {
         padding-top: unset;
         padding-bottom: unset;
     }
+    #seasonpass-button {
+        margin-top: 300px;
+    }
 }
 @media only screen and (max-width: 654px) {
     #videomessage-logo {
@@ -1476,11 +1479,17 @@ label {
     #news-container-2-nested-2 {
         margin-bottom: -5%;
     }
+    #seasonpass-button {
+        margin-top: 250px;
+    }
 }
 @media only screen and (max-width: 540px) {
     #videomessage-logo {
         margin-top: -25px;
         margin-bottom: 20px;
+    }
+    #seasonpass-button {
+        margin-top: 200px;
     }
 }
 @media only screen and (max-width: 535px) {
@@ -1488,7 +1497,7 @@ label {
         margin-top: -20px;
         margin-bottom: 25px;
     }
-    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text {
+    #videomessage-h1, #lastSeasDrivers-text, #whatsnext-header, #signUpForum-heading-text, #seasonpass-text {
         font-size: 1.7rem;
     }
     #videomessage-h2 {
